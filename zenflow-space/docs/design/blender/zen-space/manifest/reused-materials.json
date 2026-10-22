@@ -1,0 +1,31 @@
+[
+  {
+    "source_local": "/Users/mark.ma/Documents/AI coding/zenflow/docs/prototypes/reading-room/assets/white-oak/diff.jpg",
+    "file": "assets/polyhaven/reused-white-oak/diff.jpg",
+    "sha256": "8fdec14fd3c06de907693c9c3241037dc93327ad907296371a2f74a0becd8187",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/white_oak_veneer"
+  },
+  {
+    "source_local": "/Users/mark.ma/Documents/AI coding/zenflow/docs/prototypes/reading-room/assets/white-oak/nor_gl.jpg",
+    "file": "assets/polyhaven/reused-white-oak/nor_gl.jpg",
+    "sha256": "9e8dd65e443d92107caa4cd30403d78946a8b8c5a6029e6446c7368865b1d1c0",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/white_oak_veneer"
+  },
+  {
+    "source_local": "/Users/mark.ma/Documents/AI coding/zenflow/docs/prototypes/reading-room/assets/white-oak/rough.jpg",
+    "file": "assets/polyhaven/reused-white-oak/rough.jpg",
+    "sha256": "a8670e80f203bd031ac3c80f0f606383be51a0ee108e016fa19cad6b9bd373e7",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/white_oak_veneer"
+  },
+  {
+    "file": "assets/textures/leaf-photo-cc0.png",
+    "derived_from": "tree_small_02_leaves_diff_1k.png",
+    "source": "https://polyhaven.com/a/tree_small_02",
+    "license": "CC0",
+    "modification": "single leaf atlas crop and resample; original alpha retained",
+    "author": "Rico Cilliers"
+  }
+]

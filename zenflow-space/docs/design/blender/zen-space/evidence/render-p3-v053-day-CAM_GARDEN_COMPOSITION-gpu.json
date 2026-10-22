@@ -1,0 +1,352 @@
+{
+  "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/zen-space-p3-v053.blend",
+  "version": "p3-v053",
+  "engine": "CYCLES",
+  "resolution": [
+    1600,
+    900
+  ],
+  "view_transform": "AgX",
+  "look": "AgX - Medium High Contrast",
+  "exposure": 0.3799999952316284,
+  "sun_direction": [
+    0.46841341257095337,
+    0.3869501054286957,
+    -0.7942659854888916
+  ],
+  "samples": 32,
+  "rig_lights": [
+    {
+      "name": "DAY_SUN",
+      "type": "SUN",
+      "energy": 2.299999952316284,
+      "color": [
+        1.0,
+        0.9200000166893005,
+        0.7900000214576721
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.001",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.002",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.003",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.004",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.005",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.006",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.007",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.008",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.009",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.010",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_COPY_LAMP.011",
+      "type": "POINT",
+      "energy": 4.0,
+      "color": [
+        1.0,
+        0.5199999809265137,
+        0.20000000298023224
+      ]
+    },
+    {
+      "name": "P2_WINDOW_FILL_Z04",
+      "type": "AREA",
+      "energy": 230.0,
+      "color": [
+        0.699999988079071,
+        0.8100000023841858,
+        1.0
+      ]
+    },
+    {
+      "name": "P2_WINDOW_FILL_Z05",
+      "type": "AREA",
+      "energy": 230.0,
+      "color": [
+        0.699999988079071,
+        0.8100000023841858,
+        1.0
+      ]
+    },
+    {
+      "name": "P2_WINDOW_FILL_Z05.001",
+      "type": "AREA",
+      "energy": 230.0,
+      "color": [
+        0.699999988079071,
+        0.8100000023841858,
+        1.0
+      ]
+    },
+    {
+      "name": "P2_VERANDA_BOUNCE",
+      "type": "AREA",
+      "energy": 100.0,
+      "color": [
+        1.0,
+        0.8199999928474426,
+        0.6200000047683716
+      ]
+    },
+    {
+      "name": "P3_LIBRARY_NORTH_WINDOW",
+      "type": "AREA",
+      "energy": 280.0,
+      "color": [
+        1.0,
+        0.8999999761581421,
+        0.7300000190734863
+      ]
+    },
+    {
+      "name": "P3_COTTAGE_LAMP",
+      "type": "POINT",
+      "energy": 0.800000011920929,
+      "color": [
+        1.0,
+        0.6399999856948853,
+        0.3199999928474426
+      ]
+    },
+    {
+      "name": "P3_PRIVATE_WINDOW",
+      "type": "AREA",
+      "energy": 165.0,
+      "color": [
+        0.800000011920929,
+        0.8999999761581421,
+        1.0
+      ]
+    },
+    {
+      "name": "P3_COTTAGE_WINDOW",
+      "type": "AREA",
+      "energy": 165.0,
+      "color": [
+        1.0,
+        0.8999999761581421,
+        0.7200000286102295
+      ]
+    }
+  ],
+  "render_device": "GPU",
+  "active_devices": [
+    "Apple M5 (GPU - 10 cores)"
+  ],
+  "geometry_policy": "same saved building/landscape/paper; explicit handedness variant state only; no camera-specific object relocation or image compositing",
+  "handedness_layout": "RH",
+  "renders": [
+    {
+      "camera": "CAM_GARDEN_COMPOSITION",
+      "layer": "WORLD_FULL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_GARDEN_COMPOSITION.png",
+      "seconds": 10.74,
+      "position": [
+        8.0,
+        -148.0,
+        113.0
+      ],
+      "rotation": [
+        0.9631493091583252,
+        5.604933850378302e-09,
+        0.08782383799552917
+      ],
+      "lens": 32.0,
+      "projection": "ORTHO"
+    },
+    {
+      "camera": "CAM_WORLD_FULL",
+      "layer": "WORLD_FULL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_WORLD_FULL.png",
+      "seconds": 9.77,
+      "position": [
+        8.0,
+        -148.0,
+        120.0
+      ],
+      "rotation": [
+        0.9279170036315918,
+        6.533877605630067e-12,
+        0.08261408656835556
+      ],
+      "lens": 32.0,
+      "projection": "ORTHO"
+    },
+    {
+      "camera": "CAM_WISH_APPROACH",
+      "layer": "EYE_LEVEL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_WISH_APPROACH.png",
+      "seconds": 10.75,
+      "position": [
+        -27.0,
+        27.0,
+        5.949999809265137
+      ],
+      "rotation": [
+        1.6988372802734375,
+        5.788495016645356e-09,
+        -0.3587706685066223
+      ],
+      "lens": 22.0,
+      "projection": "PERSP"
+    },
+    {
+      "camera": "CAM_OLD_TREE_PATH",
+      "layer": "EYE_LEVEL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_OLD_TREE_PATH.png",
+      "seconds": 10.31,
+      "position": [
+        4.0,
+        34.5,
+        9.0
+      ],
+      "rotation": [
+        1.5516420602798462,
+        -9.97686413484189e-08,
+        1.2793395519256592
+      ],
+      "lens": 24.0,
+      "projection": "PERSP"
+    },
+    {
+      "camera": "CAM_FRONT_GATE",
+      "layer": "EYE_LEVEL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_FRONT_GATE.png",
+      "seconds": 9.35,
+      "position": [
+        0.0,
+        -22.100000381469727,
+        1.5
+      ],
+      "rotation": [
+        1.592437982559204,
+        -0.0,
+        0.0
+      ],
+      "lens": 26.0,
+      "projection": "PERSP"
+    },
+    {
+      "camera": "CAM_ENTRY_SEATED",
+      "layer": "EYE_LEVEL",
+      "state": "day",
+      "file": "previews/p3-v053/day-gpu/CAM_ENTRY_SEATED.png",
+      "seconds": 10.17,
+      "position": [
+        -13.399999618530273,
+        7.5,
+        1.0499999523162842
+      ],
+      "rotation": [
+        1.5707963705062866,
+        -7.353028763645852e-08,
+        0.8627344369888306
+      ],
+      "lens": 26.0,
+      "projection": "PERSP"
+    }
+  ]
+}

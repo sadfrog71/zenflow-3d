@@ -1,0 +1,249 @@
+{
+  "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/zen-space-p3-v053.blend",
+  "version": "p3-v053",
+  "environment": "5.2.2 LTS",
+  "checks": [
+    {
+      "requirement": "Source reopened in separate Blender process",
+      "status": "PASS",
+      "actual": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/zen-space-p3-v053.blend"
+    },
+    {
+      "requirement": "Metric and axes",
+      "status": "PASS",
+      "actual": "1 Blender unit = 1m; +X east +Y north +Z up"
+    },
+    {
+      "requirement": "All 12 regions registered",
+      "status": "PASS",
+      "actual": [
+        "Z04",
+        "Z05",
+        "Z06",
+        "Z11",
+        "Z01",
+        "Z07",
+        "Z08",
+        "Z09",
+        "Z10",
+        "Z02",
+        "Z03",
+        "Z12"
+      ]
+    },
+    {
+      "requirement": "All named cameras present",
+      "status": "PASS",
+      "actual": 35
+    },
+    {
+      "requirement": "No negative or zero mesh scale",
+      "status": "PASS",
+      "actual": "all mesh scales inspected"
+    },
+    {
+      "requirement": "Exactly one outdoor cushion",
+      "status": "PASS",
+      "actual": "Z03_ONLY_ROUND_CUSHION"
+    },
+    {
+      "requirement": "Cushion directly on island",
+      "status": "PASS",
+      "actual": "bottom -0.30m; island top -0.30m"
+    },
+    {
+      "requirement": "Separate private and dialogue rooms",
+      "status": "PASS",
+      "actual": "two separate shells, roofs and independent branches"
+    },
+    {
+      "requirement": "Four independent book selection anchors",
+      "status": "PASS",
+      "actual": [
+        "SELECT_BOOK_heart-sutra",
+        "SELECT_BOOK_diamond-sutra",
+        "SELECT_BOOK_platform-sutra",
+        "SELECT_BOOK_middle-way"
+      ]
+    },
+    {
+      "requirement": "Water flows downwards",
+      "status": "PASS",
+      "actual": {
+        "lower": -1.2,
+        "cascade_top_to_bottom": [
+          6,
+          3.6,
+          1.2,
+          -1.2
+        ],
+        "island_ground": -0.3,
+        "island_cushion_diameter": 0.72,
+        "island_cushion_thickness": 0.12
+      }
+    },
+    {
+      "requirement": "Both bridges above water",
+      "status": "PASS",
+      "actual": [
+        {
+          "route": "Z02_LOWER_BRIDGE",
+          "from": [
+            -23.299999237060547,
+            3.0,
+            -0.30000001192092896
+          ],
+          "to": [
+            -15.800000190734863,
+            3.0,
+            0.0
+          ],
+          "width": 2.1999998092651367,
+          "rise": 0.3,
+          "steps": 0,
+          "max_riser": 0,
+          "min_water_clearance": 0.6199999999999999,
+          "tread_m": 10.5,
+          "curve_source": "shared bridge/shore deformation v044"
+        },
+        {
+          "route": "Z02_UPPER_BRIDGE",
+          "from": [
+            -32.0,
+            22.0,
+            0.0
+          ],
+          "to": [
+            -24.0,
+            20.0,
+            0.0
+          ],
+          "width": 2.1,
+          "rise": 0,
+          "steps": 0,
+          "max_riser": 0,
+          "min_water_clearance": 0.9199999999999999,
+          "tread_m": 17.5,
+          "curve_source": "shared bridge/shore deformation v044"
+        }
+      ]
+    },
+    {
+      "requirement": "Stair riser <= 0.15m",
+      "status": "PASS",
+      "actual": 0.15000000752900777
+    },
+    {
+      "requirement": "Stair tread >= 0.30m",
+      "status": "PASS",
+      "actual": 0.304
+    },
+    {
+      "requirement": "Public path minimum width 1.6m",
+      "status": "PASS",
+      "actual": {
+        "public_min": 1.6,
+        "private_entry": 1.3,
+        "private_interior": 1.0,
+        "scope": "declared path widths; actual body rays checked separately"
+      }
+    },
+    {
+      "requirement": "Continuous walking surfaces along route samples",
+      "status": "PASS",
+      "actual": {
+        "samples": 1341,
+        "missing": []
+      }
+    },
+    {
+      "requirement": "Full-model standing path clearance",
+      "status": "PASS",
+      "actual": {
+        "samples": 801,
+        "obstruction_count": 0,
+        "obstructions": []
+      }
+    },
+    {
+      "requirement": "All 16 scene reference images packed",
+      "status": "PASS",
+      "actual": {
+        "packed_reference_objects": 16,
+        "total_packed_images": 67
+      }
+    },
+    {
+      "requirement": "Four book titles face the shelf camera",
+      "status": "PASS",
+      "actual": [
+        [
+          "TITLE_heart-sutra",
+          0.9720435628779547
+        ],
+        [
+          "TITLE_diamond-sutra",
+          0.9971714576251955
+        ],
+        [
+          "TITLE_platform-sutra",
+          0.995435300831558
+        ],
+        [
+          "TITLE_middle-way",
+          0.9672421916347939
+        ]
+      ]
+    },
+    {
+      "requirement": "Red blossoms only on main courtyard tree",
+      "status": "PASS",
+      "actual": [
+        "SM_Z01_BOTANICAL_FLOWERS"
+      ]
+    },
+    {
+      "requirement": "Lower bridge overlaps low-island flat ground",
+      "status": "PASS",
+      "actual": {
+        "bridge_end_x": -23.299999237060547,
+        "island_flat_max_x": -22.245058059692383,
+        "ground_z": -0.3,
+        "scope": "measured current bridge landing rather than historical hardcoded coordinate"
+      }
+    },
+    {
+      "requirement": "All public route samples are screened from the seated eye",
+      "status": "PASS",
+      "actual": {
+        "samples": 508,
+        "unblocked": []
+      }
+    },
+    {
+      "requirement": "Shared geometry view layers",
+      "status": "PASS",
+      "actual": "No duplicated scene or relocated furnishings"
+    },
+    {
+      "requirement": "Core and outer terrain share the exact boundary",
+      "status": "PASS",
+      "actual": {
+        "samples": 800,
+        "max_gap_m": 0.0
+      }
+    },
+    {
+      "requirement": "Ground surfaces face upward",
+      "status": "PASS",
+      "actual": {
+        "outer_faces": 38400,
+        "core_faces": 40000
+      }
+    }
+  ],
+  "technical_status": "PASS",
+  "visual_status": "PENDING_USER_REVIEW",
+  "device_status": "NOT_CHECKED",
+  "business_status": "OUT_OF_SCOPE"
+}

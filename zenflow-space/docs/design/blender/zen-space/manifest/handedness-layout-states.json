@@ -1,0 +1,9 @@
+{
+  "version": "p3-v025",
+  "default": "RH",
+  "RH": "STATE_Z05_RH_PROPS",
+  "LH": "STATE_Z05_LH_PROPS",
+  "rule": "visibility state swaps actual alternate props; building/landscape/paper remain fixed; state must be explicitly selected, never inferred from a stroke",
+  "sample_text": "示意 only; no scripture quote or private content",
+  "source_version": "p3-v053"
+}

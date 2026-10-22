@@ -1,0 +1,14 @@
+from pathlib import Path
+import json,html,shutil
+R=Path(__file__).resolve().parents[1];V='p3-v039';old=(R/'scripts/make_review_gallery.py').read_text();ns={};exec(old[old.index('titles='):old.index('first=')],ns);titles=ns['titles'];refs=ns['refs'];refs['CAM_LOOKOUT_E']='10-right-lookout-dawn.png';titles['CAM_POND_LIFE']='锦鲤池 · 五鱼'
+notes={'CAM_WORLD_FULL':'新增后坡灌木、岩石衔接；四座主要屋顶的转角与脊线同步调整。整体布局、道路和建筑位置保持。前庭和草坡的大面积规则感仍未完全解决。','CAM_ENTRY_SEATED':'步道临水侧增加不规则叠石，许愿台前平直侧面改为岩石遮接；水色、天空饱和度与日光调整。长桥占比、低岸尺度仍有差距。','CAM_WATER_BRIDGE':'岸边叠石和跌水周边地形层次补充。桥体位置、通行宽度、水位不变；不把加石数量等同于自然度通过。','CAM_FRONT_GATE':'屋顶转角与脊线统一微调；试做的悬空瓦当已撤回。檐下重复构件与瓦面尺度仍列为后续修订。','CAM_COPY_VIEW':'共用材质和日照调整；案前构图尚未修完。','CAM_POND_LIFE':'仍为五条锦鲤，三条带红色；游动和摆尾保留。池底色略加深，保留真实鱼体透射。','CAM_LIBRARY_SEATED':'保持坐姿位置，重新调整观看方向；清理被新视角暴露的旧版穿地岩石。书架与厅内纵深仍未完全达到参考。这一视点相机方向改变，不作同镜头前后比较。','CAM_ISLAND_SEATED':'新朝向让桥更抢眼，已撤回，保留原坐姿方向；低岛构图问题仍开放。','CAM_CHAT_SEATED':'新增周边植被并调整共用日间照明，近庭的完整度仍不足。','CAM_LOOKOUT_E':'新远山挡住太阳，实验已撤回到 v035 地形与树林位置；云海和远山还原问题继续开放。'}
+order=['CAM_WORLD_FULL','CAM_ENTRY_SEATED','CAM_WATER_BRIDGE','CAM_FRONT_GATE','CAM_LIBRARY_SEATED','CAM_COPY_VIEW','CAM_POND_LIFE','CAM_ISLAND_SEATED','CAM_CHAT_SEATED','CAM_LOOKOUT_E'];rows=[]
+for name in order:
+ state='dawn' if name=='CAM_LOOKOUT_E' else 'day';im=f'{V}/{state}-gpu/{name}.png';before=f'p3-v035/{state}-gpu/{name}.png';ref=refs.get(name)
+ if not (R/'previews'/im).exists():continue
+ rows.append({'state':'晨景' if state=='dawn' else '日间','name':name,'title':titles.get(name,name),'image':im,'before':before if (R/'previews'/before).exists() and name!='CAM_LIBRARY_SEATED' else None,'reference':f'../../../style-studies-20261020/v8-first-person/{ref}' if ref else None,'notes':notes[name]})
+# Reuse established gallery UI; preserve v035 history before updating current entry.
+source=(R/'previews/final-review.html').read_text();history=R/'previews/final-review-p3-v035.html'
+if not history.exists():shutil.copy2(R/'previews/final-review.html',history)
+start=source.index('const items=');end=source.index(';let index=',start);source=source[:start]+'const items='+json.dumps(rows,ensure_ascii=False)+source[end:];source=source.replace('p3-v035 · 2026.10.21　｜　五条锦鲤（三条带红色） · 两只猫 · 屋顶与景观修正','p3-v039 · 2026.10.21　｜　景观与屋顶修理 · 10 张实际渲染').replace('当前实际模型 · p3-v035','当前实际模型 · p3-v039').replace('修改前实际模型 · p3-v031','修改前实际模型 · p3-v035').replace('p3-v035/motion/living-garden.mp4','p3-v039/motion/living-garden.mp4').replace('24 秒','12 秒').replace('living-garden-review-20261021.md','fidelity-repair-review-v039.md');source=source.replace('总览构图已变化，新增动物视点单独展示。','本轮总览相机与上轮一致；阅读位方向改变，单独展示。');source=source.replace('最新还原度审查 · 14 组对照','修理前审查 · 14 组对照').replace('上轮完整交付','历史完整交付');source=source.replace('播放锦鲤与猫的实际模型短片（12 秒）','播放锦鲤与猫的实际模型短片（12 秒）')
+(R/'previews/final-review.html').write_text(source);(R/'evidence/repair-view-inventory-v039.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2));print('REPAIR_REVIEW',len(rows))

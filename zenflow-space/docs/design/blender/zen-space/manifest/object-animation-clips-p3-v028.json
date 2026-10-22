@@ -1,0 +1,414 @@
+{
+  "version": "p3-v021",
+  "fps": 24,
+  "clips": [
+    {
+      "name": "Z01_BIRD_IDLE",
+      "object": "ANCHOR_Z01_SPARROW",
+      "channel": "location",
+      "frames": [
+        1,
+        480
+      ],
+      "seconds": 19.958333333333332,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z01_BIRD_HOP",
+      "object": "ANCHOR_Z01_SPARROW",
+      "channel": "location",
+      "frames": [
+        1,
+        12
+      ],
+      "seconds": 0.4583333333333333,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z01_BIRD_APPROACH",
+      "object": "ANCHOR_Z01_SPARROW",
+      "channel": "location",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z01_BIRD_LEAVE",
+      "object": "ANCHOR_Z01_SPARROW",
+      "channel": "location",
+      "frames": [
+        1,
+        48
+      ],
+      "seconds": 1.9583333333333333,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z01_BIRD_PECK",
+      "object": "PIVOT_Z01_SPARROW_HEAD",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        36
+      ],
+      "seconds": 1.4583333333333333,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_FISH_TURN",
+      "object": "ANCHOR_Z02_FISH",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        144
+      ],
+      "seconds": 5.958333333333333,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_FISH_TAIL_IDLE",
+      "object": "SM_Z02_FISH_TAIL",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        60
+      ],
+      "seconds": 2.4583333333333335,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_0",
+      "object": "SM_Z02_TOUCH_RIPPLE_0",
+      "channel": "scale",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_1",
+      "object": "SM_Z02_TOUCH_RIPPLE_1",
+      "channel": "scale",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_2",
+      "object": "SM_Z02_TOUCH_RIPPLE_2",
+      "channel": "scale",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z02_STONE_DROP",
+      "object": "SM_Z02_THROW_STONE",
+      "channel": "location",
+      "frames": [
+        1,
+        38
+      ],
+      "seconds": 1.5416666666666667,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z07_BELL_LIGHT_TOUCH",
+      "object": "PIVOT_Z07_BELL",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z07_BELL_HEAVY_STRIKE",
+      "object": "PIVOT_Z07_BELL",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        160
+      ],
+      "seconds": 6.625,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_0",
+      "object": "PIVOT_Z08_TAG_0",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_1",
+      "object": "PIVOT_Z08_TAG_1",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_2",
+      "object": "PIVOT_Z08_TAG_2",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_3",
+      "object": "PIVOT_Z08_TAG_3",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_4",
+      "object": "PIVOT_Z08_TAG_4",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_5",
+      "object": "PIVOT_Z08_TAG_5",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        360
+      ],
+      "seconds": 14.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z05_LAMP_STABLE",
+      "object": "SM_Z05_OIL_FLAME",
+      "channel": "scale",
+      "frames": [
+        1,
+        240
+      ],
+      "seconds": 9.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z05_LAMP_FLICKER",
+      "object": "SM_Z05_OIL_FLAME",
+      "channel": "scale",
+      "frames": [
+        1,
+        80
+      ],
+      "seconds": 3.2916666666666665,
+      "loop": true,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z05_LAMP_EXTINGUISH",
+      "object": "SM_Z05_OIL_FLAME",
+      "channel": "scale",
+      "frames": [
+        1,
+        24
+      ],
+      "seconds": 0.9583333333333334,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z05_LAMP_RELIGHT",
+      "object": "SM_Z05_OIL_FLAME",
+      "channel": "scale",
+      "frames": [
+        1,
+        24
+      ],
+      "seconds": 0.9583333333333334,
+      "loop": false,
+      "default_playing": false,
+      "type": "transform"
+    },
+    {
+      "name": "Z05_SHADOW_SHORT_WRITING",
+      "object": "SM_Z05_DOOR_SHADOW_ARM",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        96
+      ],
+      "seconds": 3.9583333333333335,
+      "default_playing": false,
+      "loop": false
+    },
+    {
+      "name": "Z05_SHADOW_LONG_PAUSE",
+      "object": "PIVOT_Z05_DOOR_SHADOW",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        1441
+      ],
+      "seconds": 60.0,
+      "default_playing": false,
+      "loop": false
+    },
+    {
+      "name": "Z05_SHADOW_POSTURE_SHIFT",
+      "object": "PIVOT_Z05_DOOR_SHADOW",
+      "channel": "rotation_euler",
+      "frames": [
+        1,
+        192
+      ],
+      "seconds": 7.958333333333333,
+      "default_playing": false,
+      "loop": false
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_STABLE",
+      "object": "P2_COPY_LAMP.005",
+      "target_kind": "LIGHT_DATA",
+      "channel": "energy",
+      "frames": [
+        1,
+        240
+      ],
+      "seconds": 9.958333333333334,
+      "loop": true,
+      "default_playing": false,
+      "export_policy": "source lighting action; runtime reconstructs intensity"
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_FLICKER",
+      "object": "P2_COPY_LAMP.005",
+      "target_kind": "LIGHT_DATA",
+      "channel": "energy",
+      "frames": [
+        1,
+        168
+      ],
+      "seconds": 6.958333333333333,
+      "loop": true,
+      "default_playing": false,
+      "export_policy": "source lighting action; runtime reconstructs intensity"
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_EXTINGUISH",
+      "object": "P2_COPY_LAMP.005",
+      "target_kind": "LIGHT_DATA",
+      "channel": "energy",
+      "frames": [
+        1,
+        24
+      ],
+      "seconds": 0.9583333333333334,
+      "loop": false,
+      "default_playing": false,
+      "export_policy": "source lighting action; runtime reconstructs intensity"
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_RELIGHT",
+      "object": "P2_COPY_LAMP.005",
+      "target_kind": "LIGHT_DATA",
+      "channel": "energy",
+      "frames": [
+        1,
+        24
+      ],
+      "seconds": 0.9583333333333334,
+      "loop": false,
+      "default_playing": false,
+      "export_policy": "source lighting action; runtime reconstructs intensity"
+    },
+    {
+      "name": "Z01_LEAF_WIND_DRIFT_AND_REST",
+      "object": "SM_Z01_LIFE_FALLEN_LEAF_0",
+      "channel": "location",
+      "frames": [
+        1,
+        1441
+      ],
+      "seconds": 60,
+      "loop": false,
+      "default_playing": false,
+      "state_variant": "optional leaf traces; source hidden at default clean visit"
+    }
+  ],
+  "preview_rule": "clips inactive by default; application schedules independently; reduced motion disables clips without removing content",
+  "scope": "source model clips, not application touch/privacy/device proof",
+  "source_version": "p3-v028",
+  "verified_source_version": "p3-v028"
+}

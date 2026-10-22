@@ -1,0 +1,106 @@
+{
+  "license_page": "https://polyhaven.com/license",
+  "api_terms": "https://github.com/Poly-Haven/Public-API/blob/master/ToS.md",
+  "fetched": "2026-10-20",
+  "files": [
+    {
+      "asset": "kloofendal_48d_partly_cloudy_puresky",
+      "map": "hdri",
+      "resolution": "2k",
+      "file": "assets/polyhaven/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "md5": "2eba3a4d7eeb23cbfbeca364c97e7980",
+      "size": 5451493,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky"
+    },
+    {
+      "asset": "wood_floor_deck",
+      "map": "Diffuse",
+      "resolution": "2k",
+      "file": "assets/polyhaven/wood_floor_deck_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor_deck/wood_floor_deck_diff_2k.jpg",
+      "md5": "c272fb52a326a8724a409bdb33db1ba0",
+      "size": 3804436,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/wood_floor_deck"
+    },
+    {
+      "asset": "wood_floor_deck",
+      "map": "nor_gl",
+      "resolution": "2k",
+      "file": "assets/polyhaven/wood_floor_deck_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor_deck/wood_floor_deck_nor_gl_2k.jpg",
+      "md5": "4c4b56a2db12514e0e96abe57a4f4d03",
+      "size": 3121998,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/wood_floor_deck"
+    },
+    {
+      "asset": "wood_floor_deck",
+      "map": "Rough",
+      "resolution": "2k",
+      "file": "assets/polyhaven/wood_floor_deck_rough_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor_deck/wood_floor_deck_rough_2k.jpg",
+      "md5": "96df63006351aa77d350a9a11fb5cc78",
+      "size": 2881541,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/wood_floor_deck"
+    },
+    {
+      "asset": "wood_floor_deck",
+      "map": "Displacement",
+      "resolution": "1k",
+      "file": "assets/polyhaven/wood_floor_deck_disp_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_floor_deck/wood_floor_deck_disp_1k.jpg",
+      "md5": "6b498dfb70a191483b144b2a41c8cac1",
+      "size": 233901,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/wood_floor_deck"
+    },
+    {
+      "asset": "rock_boulder_cracked",
+      "map": "Diffuse",
+      "resolution": "2k",
+      "file": "assets/polyhaven/rock_boulder_cracked_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_diff_2k.jpg",
+      "md5": "91b7d0b3d18b1d7b7705cd493149c969",
+      "size": 3962095,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/rock_boulder_cracked"
+    },
+    {
+      "asset": "rock_boulder_cracked",
+      "map": "nor_gl",
+      "resolution": "2k",
+      "file": "assets/polyhaven/rock_boulder_cracked_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_nor_gl_2k.jpg",
+      "md5": "978143a19ebc1a6acea5c4c52e954b9b",
+      "size": 4144084,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/rock_boulder_cracked"
+    },
+    {
+      "asset": "rock_boulder_cracked",
+      "map": "Rough",
+      "resolution": "2k",
+      "file": "assets/polyhaven/rock_boulder_cracked_rough_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rock_boulder_cracked/rock_boulder_cracked_rough_2k.jpg",
+      "md5": "750c41770beb04180ee936a45c15aecf",
+      "size": 1680734,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/rock_boulder_cracked"
+    },
+    {
+      "asset": "rock_boulder_cracked",
+      "map": "Displacement",
+      "resolution": "1k",
+      "file": "assets/polyhaven/rock_boulder_cracked_disp_1k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rock_boulder_cracked/rock_boulder_cracked_disp_1k.jpg",
+      "md5": "72ffeb8afc2bcac39a2c55678827607e",
+      "size": 213877,
+      "license": "CC0",
+      "source_page": "https://polyhaven.com/a/rock_boulder_cracked"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "source_version": "p3-v053",
+  "fps": 24,
+  "clips": [
+    {
+      "name": "P6_SM_P6_KOI_BLACK_FINS_TAIL_LOOP",
+      "object": "SM_P6_KOI_BLACK_FINS",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_BLACK_VOLUME_TAIL_LOOP",
+      "object": "SM_P6_KOI_BLACK_VOLUME",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_PEARL_FINS_TAIL_LOOP",
+      "object": "SM_P6_KOI_PEARL_FINS",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_PEARL_VOLUME_TAIL_LOOP",
+      "object": "SM_P6_KOI_PEARL_VOLUME",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_A_FINS_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_WHITE_A_FINS",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_A_VOLUME_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_WHITE_A_VOLUME",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_GOLD_FINS_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_GOLD_FINS",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_GOLD_VOLUME_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_GOLD_VOLUME",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_B_FINS_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_WHITE_B_FINS",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_B_VOLUME_TAIL_LOOP",
+      "object": "SM_P6_KOI_RED_WHITE_B_VOLUME",
+      "target_kind": "SHAPE_KEYS",
+      "seconds": 2,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_CAT_WATCH_SCULPT_BREATH_LOOP",
+      "object": "SM_P6_CAT_WATCH_SCULPT",
+      "seconds": 8,
+      "loop": true
+    },
+    {
+      "name": "P6_SM_P6_CAT_SLEEP_SCULPT_BREATH_LOOP",
+      "object": "SM_P6_CAT_SLEEP_SCULPT",
+      "seconds": 8,
+      "loop": true
+    },
+    {
+      "name": "P6_KOI_BLACK_SWIM_VISIBLE_LOOP",
+      "object": "P6_KOI_BLACK_ROOT",
+      "seconds": 60,
+      "loop": true
+    },
+    {
+      "name": "P6_KOI_PEARL_SWIM_VISIBLE_LOOP",
+      "object": "P6_KOI_PEARL_ROOT",
+      "seconds": 60,
+      "loop": true
+    },
+    {
+      "name": "P6_KOI_RED_WHITE_A_SWIM_VISIBLE_LOOP",
+      "object": "P6_KOI_RED_WHITE_A_ROOT",
+      "seconds": 60,
+      "loop": true
+    },
+    {
+      "name": "P6_KOI_RED_GOLD_SWIM_VISIBLE_LOOP",
+      "object": "P6_KOI_RED_GOLD_ROOT",
+      "seconds": 60,
+      "loop": true
+    },
+    {
+      "name": "P6_KOI_RED_WHITE_B_SWIM_VISIBLE_LOOP",
+      "object": "P6_KOI_RED_WHITE_B_ROOT",
+      "seconds": 60,
+      "loop": true
+    }
+  ],
+  "default_playing": true,
+  "pause_policy": "all living clips can be stopped or time frozen; no mandatory surprises"
+}

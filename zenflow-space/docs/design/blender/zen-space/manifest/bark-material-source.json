@@ -1,0 +1,21 @@
+[
+  {
+    "file": "assets/polyhaven/bark_brown_01_nor_gl_1k.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_01/bark_brown_01_nor_gl_1k.jpg",
+    "license": "CC0",
+    "asset": "bark_brown_01"
+  },
+  {
+    "file": "assets/polyhaven/bark_brown_01_rough_1k.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/bark_brown_01/bark_brown_01_rough_1k.jpg",
+    "license": "CC0",
+    "asset": "bark_brown_01"
+  },
+  {
+    "file": "assets/polyhaven/bark_brown_01_diff_reused.jpg",
+    "source_local": "/Users/mark.ma/Documents/AI coding/zenflow/docs/prototypes/reading-room/assets/bark_brown_01-color.jpg",
+    "source": "https://polyhaven.com/a/bark_brown_01",
+    "license": "CC0",
+    "sha256": "4213441aebcb72b9911f5a860e9ce74a61a8f6ce3b9c23d1f204173e7e7f6066"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "source": "https://polyhaven.com/a/tree_small_02",
+  "license": "CC0",
+  "author": "Rico Cilliers",
+  "derivation": "Cycles transparent orthographic render of source tree trunk/branches/leaf cards, enlarged whole-leaf coverage 1.25x; no reference-image planes",
+  "use": "far context only, outside functional garden",
+  "sprite_world_aspect": 1,
+  "source_tree_height": 4.582284450531006,
+  "files": [
+    {
+      "file": "assets/derived/forest-impostors/tree-1.png",
+      "angle_rad": 0.55
+    },
+    {
+      "file": "assets/derived/forest-impostors/tree-2.png",
+      "angle_rad": 2.1
+    },
+    {
+      "file": "assets/derived/forest-impostors/tree-3.png",
+      "angle_rad": 4.3
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "source_version": "p3-v053",
+  "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/zen-space-p3-v053.blend",
+  "file": "exports/zen-space-p3-v053.glb",
+  "bytes": 178592280,
+  "seconds": 112.2866399170016,
+  "nodes": 6073,
+  "meshes": 1140,
+  "materials": 92,
+  "images": 56,
+  "animations": [
+    "P6_SM_P6_CAT_SLEEP_SCULPT_BREATH_LOOP",
+    "P6_SM_P6_CAT_WATCH_SCULPT_BREATH_LOOP",
+    "P6_KOI_BLACK_SWIM_VISIBLE_LOOP",
+    "P6_SM_P6_KOI_BLACK_FINS_TAIL_LOOP",
+    "P6_SM_P6_KOI_BLACK_VOLUME_TAIL_LOOP",
+    "P6_KOI_PEARL_SWIM_VISIBLE_LOOP",
+    "P6_SM_P6_KOI_PEARL_FINS_TAIL_LOOP",
+    "P6_SM_P6_KOI_PEARL_VOLUME_TAIL_LOOP",
+    "P6_KOI_RED_GOLD_SWIM_VISIBLE_LOOP",
+    "P6_SM_P6_KOI_RED_GOLD_FINS_TAIL_LOOP",
+    "P6_SM_P6_KOI_RED_GOLD_VOLUME_TAIL_LOOP",
+    "P6_KOI_RED_WHITE_A_SWIM_VISIBLE_LOOP",
+    "P6_SM_P6_KOI_RED_WHITE_A_FINS_TAIL_LOOP",
+    "P6_SM_P6_KOI_RED_WHITE_A_VOLUME_TAIL_LOOP",
+    "P6_KOI_RED_WHITE_B_SWIM_VISIBLE_LOOP",
+    "P6_SM_P6_KOI_RED_WHITE_B_FINS_TAIL_LOOP",
+    "P6_SM_P6_KOI_RED_WHITE_B_VOLUME_TAIL_LOOP"
+  ],
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_transmission",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular",
+    "KHR_materials_ior",
+    "KHR_lights_punctual",
+    "KHR_materials_sheen",
+    "EXT_texture_webp",
+    "KHR_texture_transform"
+  ],
+  "alpha_mask_materials": [
+    "fern_02",
+    "CC0_TREE_LEAF_CARDS",
+    "P4_FAR_FOREST_SPRITE_0",
+    "P4_FAR_FOREST_SPRITE_1",
+    "P4_FAR_FOREST_SPRITE_2"
+  ],
+  "adapted_materials": [
+    {
+      "material": "CC0_TREE_LEAF_CARDS",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "fern_02",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "P12_LIVING_LEAF_0",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P12_LIVING_LEAF_1",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P12_LIVING_LEAF_2",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P12_LIVING_LEAF_3",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P12_LIVING_LEAF_4",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P12_LIVING_LEAF_5",
+      "change": "thin-leaf transmission becomes source Principled fallback; runtime leaf scattering is approximate"
+    },
+    {
+      "material": "P2_Leaf",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "P2_Soil",
+      "change": "procedural colour becomes neutral PBR factor; source effect requires runtime recreation"
+    },
+    {
+      "material": "P3_BRONZE",
+      "change": "procedural colour becomes neutral PBR factor; source effect requires runtime recreation"
+    },
+    {
+      "material": "P3_COTTAGE_SHADE",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P3_FALLING_WATER",
+      "change": "procedural colour becomes neutral PBR factor; source effect requires runtime recreation"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_0",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_0",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_1",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_1",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_2",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P4_FAR_FOREST_SPRITE_2",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    },
+    {
+      "material": "P4_WINDOW_PAPER_DIFFUSE_TRANSMISSION",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P5_WASHI_FIBRE_LIGHT",
+      "change": "diffuse thin-paper transmission becomes source Principled fallback; recreate scattering/light transport in runtime"
+    },
+    {
+      "material": "P6_CAT_GINGER_TABBY_FUR",
+      "change": "procedural colour becomes neutral PBR factor; source effect requires runtime recreation"
+    },
+    {
+      "material": "P6_HAND_FINISHED_SATIN_FLOOR",
+      "change": "photograph and constant warm tint exported; source HSV value boost requires runtime colour correction"
+    },
+    {
+      "material": "tree_small_02_leaves",
+      "change": "alpha MASK at .35 for stable tree/fern/sprite cutouts in glTF"
+    }
+  ],
+  "master_saved_after_export_adaptation": false,
+  "merged_static_groups": [
+    {
+      "node": "SM_EXPORT_Z02_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 98
+    },
+    {
+      "node": "SM_EXPORT_Z02_STATIC_P2_Water",
+      "source_objects": 5
+    },
+    {
+      "node": "SM_EXPORT_Z12_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 3
+    },
+    {
+      "node": "SM_EXPORT_Z04_STATIC_P6_HAND_FINISHED_SATIN_FLOOR",
+      "source_objects": 388
+    },
+    {
+      "node": "SM_EXPORT_Z04_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z04_STATIC_P2_Plaster",
+      "source_objects": 3
+    },
+    {
+      "node": "SM_EXPORT_Z04_STATIC_P2_Cedar",
+      "source_objects": 70
+    },
+    {
+      "node": "SM_EXPORT_Z04_ROOF_P2_Cedar",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z04_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 116
+    },
+    {
+      "node": "SM_EXPORT_Z04_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z05_STATIC_P6_HAND_FINISHED_SATIN_FLOOR",
+      "source_objects": 485
+    },
+    {
+      "node": "SM_EXPORT_Z05_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 14
+    },
+    {
+      "node": "SM_EXPORT_Z05_STATIC_P5_FINE_FLAX_WEAVE",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z05_ROOF_P2_Cedar",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z05_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 119
+    },
+    {
+      "node": "SM_EXPORT_Z05_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z06_STATIC_P2_Cedar",
+      "source_objects": 87
+    },
+    {
+      "node": "SM_EXPORT_Z06_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z06_STATIC_P2_Plaster",
+      "source_objects": 13
+    },
+    {
+      "node": "SM_EXPORT_Z06_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 9
+    },
+    {
+      "node": "SM_EXPORT_Z06_ROOF_P2_Cedar",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z06_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 99
+    },
+    {
+      "node": "SM_EXPORT_Z06_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z11_STATIC_P2_Cedar",
+      "source_objects": 64
+    },
+    {
+      "node": "SM_EXPORT_Z11_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z11_STATIC_P2_Plaster",
+      "source_objects": 8
+    },
+    {
+      "node": "SM_EXPORT_Z11_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 4
+    },
+    {
+      "node": "SM_EXPORT_Z11_ROOF_P2_Cedar",
+      "source_objects": 6
+    },
+    {
+      "node": "SM_EXPORT_Z11_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 96
+    },
+    {
+      "node": "SM_EXPORT_Z11_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P6_HAND_FINISHED_SATIN_FLOOR",
+      "source_objects": 103
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 558
+    },
+    {
+      "node": "SM_EXPORT_Z01_ROOF_P2_Cedar",
+      "source_objects": 20
+    },
+    {
+      "node": "SM_EXPORT_Z01_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 491
+    },
+    {
+      "node": "SM_EXPORT_Z01_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 48
+    },
+    {
+      "node": "SM_EXPORT_Z07_STATIC_P2_Cedar",
+      "source_objects": 7
+    },
+    {
+      "node": "SM_EXPORT_Z07_ROOF_P2_Cedar",
+      "source_objects": 15
+    },
+    {
+      "node": "SM_EXPORT_Z07_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 333
+    },
+    {
+      "node": "SM_EXPORT_Z07_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 36
+    },
+    {
+      "node": "SM_EXPORT_Z12_ROOF_P2_Cedar",
+      "source_objects": 5
+    },
+    {
+      "node": "SM_EXPORT_Z12_ROOF_P6_FIRED_CLAY_1",
+      "source_objects": 92
+    },
+    {
+      "node": "SM_EXPORT_Z12_ROOF_P6_FIRED_CLAY_0",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z08_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 3
+    },
+    {
+      "node": "SM_EXPORT_Z10_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 23
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P2_Linen",
+      "source_objects": 15
+    },
+    {
+      "node": "SM_EXPORT_Z02_STATIC_P4_MOSSY_BANK_ROCK",
+      "source_objects": 109
+    },
+    {
+      "node": "SM_EXPORT_Z05_STATIC_P2_Cedar",
+      "source_objects": 64
+    },
+    {
+      "node": "SM_EXPORT_Z06_STATIC_P6_HAND_FINISHED_SATIN_FLOOR",
+      "source_objects": 86
+    },
+    {
+      "node": "SM_EXPORT_Z11_STATIC_P6_HAND_FINISHED_SATIN_FLOOR",
+      "source_objects": 58
+    },
+    {
+      "node": "SM_EXPORT_Z12_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 438
+    },
+    {
+      "node": "SM_EXPORT_Z07_STATIC_P5_FINE_DRESSED_LIMESTONE",
+      "source_objects": 105
+    },
+    {
+      "node": "SM_EXPORT_Z08_STATIC_P2_Darkwood",
+      "source_objects": 7
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P2_Paper",
+      "source_objects": 18
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P2_Cedar",
+      "source_objects": 12
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P3_Weathered_Gray_Rock",
+      "source_objects": 16
+    },
+    {
+      "node": "SM_EXPORT_Z01_STATIC_P2_Soil",
+      "source_objects": 4
+    },
+    {
+      "node": "SM_EXPORT_Z12_STATIC_P6_FIRED_CLAY_0",
+      "source_objects": 324
+    },
+    {
+      "node": "SM_EXPORT_Z12_STATIC_P4_PHOTOGRAPHED_FOREST_SOIL",
+      "source_objects": 4
+    }
+  ],
+  "scope": "Desktop exchange with 17 active living clips; water and procedural materials approximate Blender",
+  "primary_vertex_colour_repairs": [
+    "SM_P6_CAT_WATCH_SCULPT",
+    "SM_P6_KOI_BLACK_FINS",
+    "SM_P6_KOI_BLACK_VOLUME",
+    "SM_P6_KOI_PEARL_FINS",
+    "SM_P6_KOI_PEARL_VOLUME",
+    "SM_P6_KOI_RED_GOLD_FINS",
+    "SM_P6_KOI_RED_GOLD_VOLUME",
+    "SM_P6_KOI_RED_WHITE_A_FINS",
+    "SM_P6_KOI_RED_WHITE_A_VOLUME",
+    "SM_P6_KOI_RED_WHITE_B_FINS",
+    "SM_P6_KOI_RED_WHITE_B_VOLUME"
+  ]
+}

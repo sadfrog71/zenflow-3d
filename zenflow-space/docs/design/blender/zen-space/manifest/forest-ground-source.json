@@ -1,0 +1,32 @@
+{
+  "source": "https://polyhaven.com/a/forest_ground_04",
+  "license": "CC0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "Rob Tuytel": "Photography, Processing",
+    "Rico Cilliers": "Minor adjustment"
+  },
+  "files": [
+    {
+      "role": "diff",
+      "file": "assets/polyhaven/forest_ground_04/forest_ground_04_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_diff_2k.jpg",
+      "bytes": 4529321,
+      "sha256": "24b8aaf4c8547305d80b0e029ec365219ab1b90748d4ca5651bdc9e75bfde5e6"
+    },
+    {
+      "role": "nor_gl",
+      "file": "assets/polyhaven/forest_ground_04/forest_ground_04_nor_gl_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_nor_gl_2k.jpg",
+      "bytes": 5288849,
+      "sha256": "b37ac799ed410976541e0011c246fca254e74eaa3f096ae7a7d74178db5a6d9b"
+    },
+    {
+      "role": "rough",
+      "file": "assets/polyhaven/forest_ground_04/forest_ground_04_rough_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/forest_ground_04/forest_ground_04_rough_2k.jpg",
+      "bytes": 2509805,
+      "sha256": "24194662948424c323c75e0918461ad9d38bc0a275022000144f248b3efb4119"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "objects": [
+    "SM_P6_CAT_WATCH_SCULPT",
+    "SM_P6_KOI_BLACK_FINS",
+    "SM_P6_KOI_BLACK_VOLUME",
+    "SM_P6_KOI_PEARL_FINS",
+    "SM_P6_KOI_PEARL_VOLUME",
+    "SM_P6_KOI_RED_GOLD_FINS",
+    "SM_P6_KOI_RED_GOLD_VOLUME",
+    "SM_P6_KOI_RED_WHITE_A_FINS",
+    "SM_P6_KOI_RED_WHITE_A_VOLUME",
+    "SM_P6_KOI_RED_WHITE_B_FINS",
+    "SM_P6_KOI_RED_WHITE_B_VOLUME"
+  ],
+  "reason": "authored colour exported to COLOR_1 beside white dummy COLOR_0; promote authored attribute for all glTF viewers"
+}

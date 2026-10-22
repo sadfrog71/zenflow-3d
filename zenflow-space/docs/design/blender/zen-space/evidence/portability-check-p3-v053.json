@@ -1,0 +1,357 @@
+{
+  "source": "/tmp/zen-space-portability-v053/scene.blend",
+  "images": [
+    {
+      "name": "00-overview-courtyard-blossoms.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "01-waterside-veranda.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "02-dialogue-cottage-entry.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "02-water-garden-bridge.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "03-entry-tang.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "03-island-meditation.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "04-library-seat.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "05-copy-hall-seated.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "06-private-side-room.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "07-bell-court.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "08-wish-tree-platform.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "09-old-tree-path.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "10-right-lookout-dawn.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "11-conversation-cottage-seat.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "12-front-court-threshold.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "13-bookshelf-select.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "bark_brown_01_diff_reused.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "bark_brown_01_nor_gl_1k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "bark_brown_01_rough_1k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "cedar-soft.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "darkwood.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "diff.jpg",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "dressed-limestone-base.png",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "dressed-limestone-normal.png",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "dressed-limestone-rough.png",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "fern_02_diff-fern_02_alpha",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "fern_02_nor_gl",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "fern_02_rough",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "flax-weave-base.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "flax-weave-normal.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "flax-weave-rough.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "forest_ground_04_diff_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "forest_ground_04_nor_gl_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "forest_ground_04_rough_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "iron-speckled-glaze-base.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "iron-speckled-glaze-normal.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "iron-speckled-glaze-rough.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "koi-atlas.webp",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "leaf-photo-cc0.png",
+      "packed": true,
+      "used": 3
+    },
+    {
+      "name": "leafy_grass_diff_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "leafy_grass_nor_gl_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "leafy_grass_rough_2k.jpg",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "paper.png",
+      "packed": true,
+      "used": 3
+    },
+    {
+      "name": "rock-gray-derived.png",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "rock_boulder_cracked_nor_gl_2k.jpg",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "rock_boulder_cracked_rough_2k.jpg",
+      "packed": true,
+      "used": 2
+    },
+    {
+      "name": "stone.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree-1.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree-2.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree-3.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_branch_diff",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_branch_nor_gl",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_branch_rough",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_diff",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_diff-tree_small_02_leaves_alpha",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_diff_1k.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_nor_gl",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_nor_gl.001",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_rough",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_leaves_rough.001",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_nor_gl",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "tree_small_02_rough",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "washi-base.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "washi-normal.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "washi-rough.png",
+      "packed": true,
+      "used": 1
+    },
+    {
+      "name": "woven.png",
+      "packed": true,
+      "used": 1
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Bfont Regular",
+      "packed": false,
+      "builtin": true
+    },
+    {
+      "name": "Noto Sans CJK SC Regular",
+      "packed": true,
+      "builtin": false
+    }
+  ],
+  "linked_libraries": 0,
+  "all_used_images_packed": true,
+  "all_used_fonts_packed_or_builtin": true,
+  "action_count": 54,
+  "render_exists": true
+}

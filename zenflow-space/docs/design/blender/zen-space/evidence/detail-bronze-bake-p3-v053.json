@@ -1,0 +1,69 @@
+{
+  "source_version": "p3-v053",
+  "baked": [
+    {
+      "object": "SM_Z07_BRONZE_BELL",
+      "material": "P5_BAKED_BRONZE_0",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/0-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/0-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_Z07_BELL_BAND",
+      "material": "P5_BAKED_BRONZE_1",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/1-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/1-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_Z07_BELL_BAND.001",
+      "material": "P5_BAKED_BRONZE_2",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/2-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/2-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_Z07_BELL_BAND.002",
+      "material": "P5_BAKED_BRONZE_3",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/3-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/3-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_Z07_BELL_HANGER",
+      "material": "P5_BAKED_BRONZE_4",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/4-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/4-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_P5_BELL_FINE_CASTING_RING",
+      "material": "P5_BAKED_BRONZE_5",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/5-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/5-normal.png"
+      ],
+      "resolution": 512
+    },
+    {
+      "object": "SM_P5_BELL_FINE_CASTING_RING.001",
+      "material": "P5_BAKED_BRONZE_6",
+      "maps": [
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/6-base.png",
+        "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/bronze-bake/6-normal.png"
+      ],
+      "resolution": 512
+    }
+  ],
+  "source_saved": false
+}

@@ -1,0 +1,245 @@
+{
+  "ready": true,
+  "events": [
+    "camera:CAM_GARDEN_COMPOSITION",
+    "loaded"
+  ],
+  "metrics": {
+    "loadMs": 645,
+    "medianFrameIntervalMs": 33.3999999910593,
+    "drawCalls": 7387,
+    "triangles": 21728344,
+    "geometries": 1239,
+    "textures": 67,
+    "viewport": [
+      1291,
+      748
+    ],
+    "renderer": "WebGL2",
+    "camera": "CAM_GARDEN_COMPOSITION"
+  },
+  "error": null,
+  "animations": [
+    {
+      "name": "P6_SM_P6_CAT_SLEEP_SCULPT_BREATH_LOOP",
+      "duration": 8
+    },
+    {
+      "name": "P6_SM_P6_CAT_WATCH_SCULPT_BREATH_LOOP",
+      "duration": 8
+    },
+    {
+      "name": "P6_KOI_BLACK_SWIM_VISIBLE_LOOP",
+      "duration": 60
+    },
+    {
+      "name": "P6_SM_P6_KOI_BLACK_FINS_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_SM_P6_KOI_BLACK_VOLUME_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_KOI_PEARL_SWIM_VISIBLE_LOOP",
+      "duration": 60
+    },
+    {
+      "name": "P6_SM_P6_KOI_PEARL_FINS_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_SM_P6_KOI_PEARL_VOLUME_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_KOI_RED_GOLD_SWIM_VISIBLE_LOOP",
+      "duration": 60
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_GOLD_FINS_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_GOLD_VOLUME_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_KOI_RED_WHITE_A_SWIM_VISIBLE_LOOP",
+      "duration": 60
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_A_FINS_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_A_VOLUME_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_KOI_RED_WHITE_B_SWIM_VISIBLE_LOOP",
+      "duration": 60
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_B_FINS_TAIL_LOOP",
+      "duration": 2
+    },
+    {
+      "name": "P6_SM_P6_KOI_RED_WHITE_B_VOLUME_TAIL_LOOP",
+      "duration": 2
+    }
+  ],
+  "cameras": [
+    "CAM_BELL_COURT",
+    "CAM_CAT_SLEEP",
+    "CAM_CATS_VERANDA",
+    "CAM_CHAT_SEATED",
+    "CAM_COPY_LH",
+    "CAM_COPY_RH",
+    "CAM_COPY_VIEW",
+    "CAM_ENTRY_SEATED",
+    "CAM_FRONT_GATE",
+    "CAM_GARDEN_COMPOSITION",
+    "CAM_ISLAND_SEATED",
+    "CAM_KOI_CLOSE",
+    "CAM_LIBRARY_SEATED",
+    "CAM_LIBRARY_SHELF",
+    "CAM_LOOKOUT_E",
+    "CAM_OLD_TREE_PATH",
+    "CAM_POND_LIFE",
+    "CAM_PRIVATE_SEATED",
+    "CAM_WATER_BRIDGE",
+    "CAM_WISH_APPROACH",
+    "CAM_WORLD_FULL"
+  ],
+  "animationTime": 7.597700000003031,
+  "livingClipCount": 17,
+  "targets": {
+    "ANCHOR_Z01_SPARROW": {
+      "position": [
+        -14.800000190734863,
+        0.03999999910593033,
+        -9.550000190734863
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "PIVOT_Z07_BELL": {
+      "position": [
+        -3,
+        2.9000000953674316,
+        -22
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "SM_Z05_OIL_FLAME": {
+      "position": [
+        9.850000381469727,
+        0.8600000143051147,
+        3
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        0.00800000037997961,
+        0.02199999988079071,
+        0.00800000037997961
+      ]
+    },
+    "P6_KOI_BLACK_ROOT": {
+      "position": [
+        -28.92660568867875,
+        -1.4407569913890814,
+        -9.167332061795694
+      ],
+      "rotation": [
+        3.141592653589793,
+        0.6360378763061938,
+        -3.141592653589793,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "P6_KOI_RED_WHITE_A_ROOT": {
+      "position": [
+        -32.87516734481781,
+        -1.4739476107402272,
+        -13.031670483430293
+      ],
+      "rotation": [
+        0,
+        -1.1771238516745222,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "P6_KOI_RED_GOLD_ROOT": {
+      "position": [
+        -33.487324297721784,
+        -1.4775197677355028,
+        -10.084190633860446
+      ],
+      "rotation": [
+        0,
+        0.13761103424065305,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "P6_KOI_RED_WHITE_B_ROOT": {
+      "position": [
+        -32.17419008696444,
+        -1.4961600955148078,
+        -7.898242187068048
+      ],
+      "rotation": [
+        0,
+        1.4680727136007048,
+        0,
+        "XYZ"
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

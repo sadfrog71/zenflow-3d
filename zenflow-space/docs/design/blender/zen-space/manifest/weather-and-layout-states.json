@@ -1,0 +1,62 @@
+{
+  "version": "p3-v015",
+  "weather": {
+    "day": {
+      "sun_energy": 1.8,
+      "world_strength": 0.5,
+      "exposure": 0.55
+    },
+    "dusk": {
+      "sun_energy": 0.8,
+      "world_strength": 0.22,
+      "exposure": 0.7
+    },
+    "night": {
+      "sun_energy": 0.025,
+      "world_strength": 0.1,
+      "exposure": 1.1
+    },
+    "rain": {
+      "sun_energy": 0.2,
+      "world_strength": 0.45,
+      "exposure": 0.8,
+      "stone_roughness": 0.28,
+      "outdoor_cushion_darkening": 0.82
+    },
+    "reduced_motion": {
+      "enabled_clips": [],
+      "waterfall_flow_speed": 0,
+      "paper_and_tags_stay_readable": true
+    },
+    "lamp_off": {
+      "lamp_emission": 0,
+      "ambient_window_and_sky_kept": true
+    }
+  },
+  "layout_states": {
+    "Z01": [
+      "CUP",
+      "CUP_REMOVED",
+      "HOLLOW_BOWL"
+    ],
+    "Z05_PAPER": [
+      "BLANK",
+      "TWO_CHARACTERS",
+      "CORRECTED",
+      "USER_SAMPLE",
+      "WET_INK",
+      "DRY_INK"
+    ]
+  },
+  "private_content": "none; authored samples explicitly marked",
+  "default_motion": "none",
+  "source_version": "p3-v053",
+  "life_trace_states": {
+    "collection": "STATE_Z01_LIFE_TRACES",
+    "default": "clean visit, optional source variants hidden",
+    "scattered": "show all 36 leaf meshes",
+    "half_swept": "show leaf meshes with half_swept_removed=false",
+    "runtime_rule": "world time may move/replace traces; no cleaning obligation"
+  },
+  "verified_source_version": "p3-v028"
+}

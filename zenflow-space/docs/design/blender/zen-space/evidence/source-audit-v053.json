@@ -1,0 +1,1000 @@
+{
+  "version": "p3-v053",
+  "source": "zen-space-p3-v053.blend",
+  "visible_mesh_objects": 10624,
+  "visible_base_triangles_instanced_total": 20178658,
+  "unique_visible_meshes": 5725,
+  "negative_or_zero_scale": [],
+  "degenerate_unique_source_polygons": 0,
+  "missing_images": [],
+  "images": [
+    {
+      "name": "00-overview-courtyard-blossoms.png",
+      "size": [
+        1692,
+        929
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//../../style-studies-20261020/v8-first-person/00-overview-courtyard-blossoms.png"
+    },
+    {
+      "name": "01-waterside-veranda.png",
+      "size": [
+        1672,
+        940
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/01-waterside-veranda.png"
+    },
+    {
+      "name": "02-dialogue-cottage-entry.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//../../style-studies-20261020/v7/02-dialogue-cottage-entry.png"
+    },
+    {
+      "name": "02-water-garden-bridge.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/02-water-garden-bridge.png"
+    },
+    {
+      "name": "03-entry-tang.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//../../style-studies-20261020/v3/03-entry-tang.png"
+    },
+    {
+      "name": "03-island-meditation.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/03-island-meditation.png"
+    },
+    {
+      "name": "04-library-seat.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/04-library-seat.png"
+    },
+    {
+      "name": "05-copy-hall-seated.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/05-copy-hall-seated.png"
+    },
+    {
+      "name": "06-private-side-room.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/06-private-side-room.png"
+    },
+    {
+      "name": "07-bell-court.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/07-bell-court.png"
+    },
+    {
+      "name": "08-wish-tree-platform.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/08-wish-tree-platform.png"
+    },
+    {
+      "name": "09-old-tree-path.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/09-old-tree-path.png"
+    },
+    {
+      "name": "10-right-lookout-dawn.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/10-right-lookout-dawn.png"
+    },
+    {
+      "name": "11-conversation-cottage-seat.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/11-conversation-cottage-seat.png"
+    },
+    {
+      "name": "12-front-court-threshold.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/12-front-court-threshold.png"
+    },
+    {
+      "name": "13-bookshelf-select.png",
+      "size": [
+        1672,
+        941
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/style-studies-20261020/v8-first-person/13-bookshelf-select.png"
+    },
+    {
+      "name": "bark_brown_01_diff_reused.jpg",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/bark_brown_01_diff_reused.jpg"
+    },
+    {
+      "name": "bark_brown_01_nor_gl_1k.jpg",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/bark_brown_01_nor_gl_1k.jpg"
+    },
+    {
+      "name": "bark_brown_01_rough_1k.jpg",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/bark_brown_01_rough_1k.jpg"
+    },
+    {
+      "name": "cedar-soft.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/cedar-soft.png"
+    },
+    {
+      "name": "darkwood.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/darkwood.png"
+    },
+    {
+      "name": "diff.jpg",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/reused-white-oak/diff.jpg"
+    },
+    {
+      "name": "dressed-limestone-base.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/dressed-limestone-base.png"
+    },
+    {
+      "name": "dressed-limestone-normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/dressed-limestone-normal.png"
+    },
+    {
+      "name": "dressed-limestone-rough.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/dressed-limestone-rough.png"
+    },
+    {
+      "name": "fern_02_diff-fern_02_alpha",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/fern_02/textures/fern_02_diff_1k.jpg"
+    },
+    {
+      "name": "fern_02_nor_gl",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/fern_02/textures/fern_02_nor_gl_1k.jpg"
+    },
+    {
+      "name": "fern_02_rough",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/fern_02/textures/fern_02_arm_1k.jpg"
+    },
+    {
+      "name": "flax-weave-base.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/flax-weave-base.png"
+    },
+    {
+      "name": "flax-weave-normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/flax-weave-normal.png"
+    },
+    {
+      "name": "flax-weave-rough.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/flax-weave-rough.png"
+    },
+    {
+      "name": "forest_ground_04_diff_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/forest_ground_04/forest_ground_04_diff_2k.jpg"
+    },
+    {
+      "name": "forest_ground_04_nor_gl_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/forest_ground_04/forest_ground_04_nor_gl_2k.jpg"
+    },
+    {
+      "name": "forest_ground_04_rough_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/forest_ground_04/forest_ground_04_rough_2k.jpg"
+    },
+    {
+      "name": "iron-speckled-glaze-base.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/iron-speckled-glaze-base.png"
+    },
+    {
+      "name": "iron-speckled-glaze-normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/iron-speckled-glaze-normal.png"
+    },
+    {
+      "name": "iron-speckled-glaze-rough.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/iron-speckled-glaze-rough.png"
+    },
+    {
+      "name": "kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/kloofendal_48d_partly_cloudy_puresky_2k.hdr"
+    },
+    {
+      "name": "koi-atlas.webp",
+      "size": [
+        1536,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/living/zenflow-koi/koi-atlas.webp"
+    },
+    {
+      "name": "leaf-photo-cc0.png",
+      "size": [
+        512,
+        432
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/leaf-photo-cc0.png"
+    },
+    {
+      "name": "leafy_grass_diff_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/leafy_grass/leafy_grass_diff_2k.jpg"
+    },
+    {
+      "name": "leafy_grass_nor_gl_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/leafy_grass/leafy_grass_nor_gl_2k.jpg"
+    },
+    {
+      "name": "leafy_grass_rough_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/leafy_grass/leafy_grass_rough_2k.jpg"
+    },
+    {
+      "name": "paper.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/paper.png"
+    },
+    {
+      "name": "rock-gray-derived.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/rock-gray-derived.png"
+    },
+    {
+      "name": "rock_boulder_cracked_nor_gl_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/rock_boulder_cracked_nor_gl_2k.jpg"
+    },
+    {
+      "name": "rock_boulder_cracked_rough_2k.jpg",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/rock_boulder_cracked_rough_2k.jpg"
+    },
+    {
+      "name": "stone.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/stone.png"
+    },
+    {
+      "name": "tree-1.png",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/derived/forest-impostors/tree-1.png"
+    },
+    {
+      "name": "tree-2.png",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/derived/forest-impostors/tree-2.png"
+    },
+    {
+      "name": "tree-3.png",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/derived/forest-impostors/tree-3.png"
+    },
+    {
+      "name": "tree_small_02_branch_diff",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_branch_diff_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_branch_nor_gl",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_branch_nor_gl_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_branch_rough",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_branch_arm_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_diff",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_diff_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_leaves_diff-tree_small_02_leaves_alpha",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_leaves_diff_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_leaves_diff_1k.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/polyhaven/tree_small_02/tree_small_02_leaves_diff_1k.png"
+    },
+    {
+      "name": "tree_small_02_leaves_nor_gl",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_leaves_nor_gl_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_leaves_nor_gl.001",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_leaves_nor_gl_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_leaves_rough",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_leaves_arm_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_leaves_rough.001",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_leaves_arm_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_nor_gl",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_nor_gl_1k.jpg"
+    },
+    {
+      "name": "tree_small_02_rough",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "//assets/polyhaven/tree_small_02/textures/tree_small_02_arm_1k.jpg"
+    },
+    {
+      "name": "washi-base.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/washi-base.png"
+    },
+    {
+      "name": "washi-normal.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/washi-normal.png"
+    },
+    {
+      "name": "washi-rough.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/detail-20261021/washi-rough.png"
+    },
+    {
+      "name": "woven.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true,
+      "external_exists": true,
+      "source": "/Users/mark.ma/Documents/AI coding/zenflow-space/docs/design/blender/zen-space/assets/textures/woven.png"
+    }
+  ],
+  "clips": [
+    {
+      "name": "Z01_BIRD_IDLE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        480.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z01_BIRD_HOP",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        12.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z01_BIRD_APPROACH",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z01_BIRD_LEAVE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        48.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z01_BIRD_PECK",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        36.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_FISH_TURN",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        144.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_FISH_TAIL_IDLE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        60.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_0",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_1",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_RIPPLE_EXPAND_2",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z02_STONE_DROP",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        38.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z07_BELL_LIGHT_TOUCH",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z07_BELL_HEAVY_STRIKE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        160.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_0",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_1",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_2",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_3",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_4",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z08_TAG_GENTLE_WIND_5",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        360.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_STABLE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        240.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_FLICKER",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        80.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_EXTINGUISH",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        24.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_RELIGHT",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        24.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_SHADOW_SHORT_WRITING",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        96.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_SHADOW_LONG_PAUSE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        1441.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_SHADOW_POSTURE_SHIFT",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        192.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_STABLE",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        240.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_FLICKER",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        168.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_EXTINGUISH",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        24.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z05_LAMP_LIGHT_RELIGHT",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        24.0
+      ],
+      "default_playing": false
+    },
+    {
+      "name": "Z01_LEAF_WIND_DRIFT_AND_REST",
+      "action_exists": true,
+      "object_exists": true,
+      "range": [
+        1.0,
+        1441.0
+      ],
+      "default_playing": false
+    }
+  ],
+  "notes": [
+    "Base triangles excludes evaluated modifiers; full export gets its own measured count",
+    "thin leaf/water/paper surfaces intentionally have open boundaries; no blanket watertightness claim",
+    "UV overlap is intentional for repeating timber, rock and leaf atlases",
+    "no private user text is included"
+  ]
+}

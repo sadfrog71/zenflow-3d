@@ -1,0 +1,43 @@
+{
+  "leaf_prototypes": [
+    {
+      "mesh": "P12_OLD_WIDE_B_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 23800,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_COURT_FLOWER_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 23800,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_OLD_WIDE_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 23800,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_BROAD_2_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 7920,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_BROAD_1_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 7920,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_BROAD_0_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 7920,
+      "triangles_per_leaf": 6
+    },
+    {
+      "mesh": "P12_PINE_0_FOLDED_LEAVES_COVERAGE_FINISH_OVATE",
+      "leaves": 17820,
+      "triangles_per_leaf": 6
+    }
+  ],
+  "thin_leaf_mix_weight": 0.18,
+  "coherent_branch_canopy_curvature": true,
+  "root_flare_restrained": true,
+  "layout_lighting_camera_unchanged": true
+}

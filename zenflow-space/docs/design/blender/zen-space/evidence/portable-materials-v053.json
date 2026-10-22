@@ -1,0 +1,62 @@
+[
+  {
+    "material": "P4_PHOTOGRAPHED_LEAFY_GROUND",
+    "base_image": "leafy_grass_diff_2k.jpg",
+    "tint": [
+      0.6,
+      0.68,
+      0.49,
+      1
+    ],
+    "roughness": 0.9,
+    "source_saved": false
+  },
+  {
+    "material": "P4_MOSSY_BANK_ROCK",
+    "base_image": "rock-gray-derived.png",
+    "tint": [
+      0.7,
+      0.74,
+      0.65,
+      1
+    ],
+    "roughness": 0.65,
+    "source_saved": false
+  },
+  {
+    "material": "P5_FINE_DRESSED_LIMESTONE",
+    "base_image": "dressed-limestone-base.png",
+    "tint": [
+      0.68,
+      0.68,
+      0.61,
+      1
+    ],
+    "roughness": 0.76,
+    "source_saved": false
+  },
+  {
+    "material": "P3_Weathered_Gray_Rock",
+    "base_image": "rock-gray-derived.png",
+    "tint": [
+      0.29,
+      0.31,
+      0.28,
+      1
+    ],
+    "roughness": 0.78,
+    "source_saved": false
+  },
+  {
+    "material": "P2_Cedar",
+    "base_image": "diff.jpg",
+    "tint": [
+      0.88,
+      0.77,
+      0.6,
+      1
+    ],
+    "roughness": 0.47,
+    "source_saved": false
+  }
+]

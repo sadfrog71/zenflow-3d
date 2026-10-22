@@ -1,0 +1,132 @@
+{
+  "source_project": "/Users/mark.ma/Documents/AI coding/zenflow",
+  "project": "/Users/mark.ma/Documents/AI coding/zenflow-space",
+  "copied_on": "2026-10-20",
+  "files": [
+    {
+      "path": "docs/design/禅意空间-设计总纲-v1.2-Blender制作版-20261020.md",
+      "sha256": "c5e6741ca60cecc1ec39b1d852c092253eac3ccbedce5e2035b3e93c7db79092",
+      "bytes": 93515
+    },
+    {
+      "path": "docs/design/空间尺度与入场视角修订-20261020.md",
+      "sha256": "e4dbf1a393c8559d18ab9d0a19d6745c97b16f0f4d456b8ff3924f1a8f5cc222",
+      "bytes": 18095
+    },
+    {
+      "path": "docs/design/Blender技能评审与选型-20261020.md",
+      "sha256": "5bf5e21d4594941c72a6671d4ecc688ebf5a4083377ee72b8ca1817b1d65005d",
+      "bytes": 10250
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v3/03-entry-tang.png",
+      "sha256": "9879e7d910cbadced261b3e3404af12edbc2cf3b7c6b47d3d87285dc344ff969",
+      "bytes": 2808368
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v7/02-dialogue-cottage-entry.png",
+      "sha256": "8289d3911caa71b33700e5bea3671b1405b2186cdb5c5f735ebce240dc50cb33",
+      "bytes": 2749986
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/scene-briefs.json",
+      "sha256": "18bbfe18712472c2bbb47926ae86500fce478730dfcc8278e93a2faf9e1d64a2",
+      "bytes": 27844
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/02-water-garden-bridge.png",
+      "sha256": "203d884f5335f9b4e0d735c9bd0cda5bf468d6006e4a8bd2b9f268ed8969f8d3",
+      "bytes": 3869548
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/00-overview-courtyard-blossoms.png",
+      "sha256": "6c92196bbb703e1c3f2b55ab58d6bedaf50323a070a253eb0e16bd6a21ef90b7",
+      "bytes": 3286883
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/08-wish-tree-platform.png",
+      "sha256": "3866a8b87c8a35a6a5fae4222c5aa8d1311361e7a5f9100a93cdc53a77dc843b",
+      "bytes": 3552437
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/11-conversation-cottage-seat.png",
+      "sha256": "1b3a6fb097a7b4312fd1dbcc9a5b9ee247188f5f787f6e5b0d5795699802c49b",
+      "bytes": 2647120
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/06-private-side-room.png",
+      "sha256": "0e6eae12105b3f85320e62b9bc5dbe468f1fae1e93333d8863021dbaad0e5c1a",
+      "bytes": 2619851
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/01-waterside-veranda.png",
+      "sha256": "9b4df698ffa1f341490a4e4242d1a3c74266d6d702b8fac93a5e74e72525435c",
+      "bytes": 2916817
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/09-old-tree-path.png",
+      "sha256": "07581de922b69cf67be7e655f27f39ec188dac801fceb32714634708360f01c9",
+      "bytes": 3656823
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/07-bell-court.png",
+      "sha256": "d31f69a03bc6f4f5bfcd78aaca9c4d15158033344d07cd2f205768561404b39b",
+      "bytes": 2992388
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/13-bookshelf-select.png",
+      "sha256": "a225e25b680a1b8971d282dc0d9cc26e049169b9772d17550e500c0e797f18a8",
+      "bytes": 2357587
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/00-overview-meditation-cushion.png",
+      "sha256": "5946f725ce9a13f4e5d809ef7dfd08bec4f2273ea36fc840d4961548065f0335",
+      "bytes": 3371410
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/README.md",
+      "sha256": "fd4d5510e6cddbd95e87e9e1355fa16e827a64b3d8fcda0ebff9e6ee979187dd",
+      "bytes": 7325
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/12-front-court-threshold.png",
+      "sha256": "f8d369bdd4a35c659cf51e328765a370eb4dbf083fe0b9a82bb58ba0589edeeb",
+      "bytes": 2759226
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/03-island-meditation.png",
+      "sha256": "389f9c5c8dd1b74f558041b7636a28ec629ea232fe3eb158330f8b0358b4926a",
+      "bytes": 3584191
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/image-sources.json",
+      "sha256": "955d47ea37c26757b1846b3afecc0e43b2c7512bc4377f12e3f34d1152be3924",
+      "bytes": 3270
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/05-copy-hall-seated.png",
+      "sha256": "88e74def71328823e25aad193e1cf8baaa5785b7a777bb80f0ae39677d0dcd09",
+      "bytes": 2121178
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/04-library-seat.png",
+      "sha256": "d63a06b70ee5d02588a0cea9a8c8309c9eb37486bc24b079ff32feed59f60a8b",
+      "bytes": 2702571
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/prompts.md",
+      "sha256": "317941e5566f3bb00b3cb0cdd2123df49ca761bf813065f919c9e9f76d2c2e2c",
+      "bytes": 26583
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/10-right-lookout-dawn.png",
+      "sha256": "98fe778547750a041ba4979e09eb47a48854a07e453646ef2d1ecc931dadbd4a",
+      "bytes": 2752523
+    },
+    {
+      "path": "docs/design/style-studies-20261020/v8-first-person/references/user-reader-reference.png",
+      "sha256": "544c2ae3fa7a3a4b64d8bd0cacfbf450cf21425c6a7d4c299ed6efb35bbe5b4a",
+      "bytes": 90689
+    }
+  ]
+}

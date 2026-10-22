@@ -1,0 +1,3796 @@
+{
+  "project": "Zenflow Space",
+  "version": "p3-v048",
+  "blender": "5.2.2 LTS",
+  "unit": "metre",
+  "axes": {
+    "east": "+X",
+    "north": "+Y",
+    "up": "+Z"
+  },
+  "color": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.38,
+    "gamma": 1.0
+  },
+  "zones": [
+    {
+      "code": "Z04",
+      "name": "LIBRARY",
+      "center": [
+        -11,
+        -6.5,
+        0.3
+      ],
+      "dimensions": [
+        18,
+        10.8
+      ],
+      "neighbors": "Z12 Z01",
+      "collection": "Z04_LIBRARY"
+    },
+    {
+      "code": "Z05",
+      "name": "COPY_HALL",
+      "center": [
+        12,
+        -6.5,
+        0.3
+      ],
+      "dimensions": [
+        19.8,
+        12.6
+      ],
+      "neighbors": "Z12 Z01",
+      "collection": "Z05_COPY_HALL"
+    },
+    {
+      "code": "Z06",
+      "name": "PRIVATE_SIDE_ROOM",
+      "center": [
+        20,
+        16,
+        0.3
+      ],
+      "dimensions": [
+        7.2,
+        5.4
+      ],
+      "neighbors": "PUBLIC_EAST_ROUTE",
+      "collection": "Z06_PRIVATE_SIDE_ROOM"
+    },
+    {
+      "code": "Z11",
+      "name": "DIALOGUE_COTTAGE",
+      "center": [
+        29,
+        24,
+        0.3
+      ],
+      "dimensions": [
+        5.4,
+        4.5
+      ],
+      "neighbors": "PUBLIC_EAST_ROUTE",
+      "collection": "Z11_DIALOGUE_COTTAGE"
+    },
+    {
+      "code": "Z01",
+      "name": "COURT_VERANDA",
+      "center": [
+        1,
+        9,
+        0
+      ],
+      "dimensions": [
+        28,
+        22
+      ],
+      "neighbors": "Z02 Z04 Z05 Z07 Z06",
+      "collection": "Z01_COURT_VERANDA",
+      "veranda": {
+        "center": [
+          -14,
+          9,
+          0
+        ],
+        "dimensions": [
+          2.8,
+          20
+        ]
+      }
+    },
+    {
+      "code": "Z07",
+      "name": "BELL_COURT",
+      "center": [
+        1,
+        22,
+        0
+      ],
+      "dimensions": [
+        18,
+        7
+      ],
+      "neighbors": "Z01 Z09",
+      "collection": "Z07_BELL_COURT"
+    },
+    {
+      "code": "Z08",
+      "name": "WISH_TREE",
+      "center": [
+        -26,
+        31,
+        4.5
+      ],
+      "dimensions": [
+        10,
+        10
+      ],
+      "neighbors": "Z02 Z09",
+      "collection": "Z08_WISH_TREE"
+    },
+    {
+      "code": "Z09",
+      "name": "OLD_TREE",
+      "center": [
+        0,
+        36,
+        7.5
+      ],
+      "dimensions": [
+        8.8,
+        8.8
+      ],
+      "neighbors": "Z08 Z07 Z10",
+      "collection": "Z09_OLD_TREE"
+    },
+    {
+      "code": "Z10",
+      "name": "LOOKOUT",
+      "center": [
+        25,
+        35,
+        7.5
+      ],
+      "dimensions": [
+        10,
+        10
+      ],
+      "neighbors": "PUBLIC_EAST_ROUTE Z09",
+      "collection": "Z10_LOOKOUT"
+    },
+    {
+      "code": "Z02",
+      "name": "WATER_GARDEN_DOUBLE_BRIDGE",
+      "center": [
+        -29,
+        10,
+        -1.2
+      ],
+      "dimensions": [
+        26,
+        40
+      ],
+      "neighbors": "Z01 Z03 Z08"
+    },
+    {
+      "code": "Z03",
+      "name": "LOW_ISLAND_MEDITATION",
+      "center": [
+        -28,
+        3,
+        -0.3
+      ],
+      "dimensions": [
+        6.437,
+        5.467
+      ],
+      "neighbors": "Z02 WEST_BANK",
+      "flat_ground_z": -0.3
+    },
+    {
+      "code": "Z12",
+      "name": "GATE_FORECOURT",
+      "center": [
+        0,
+        -19,
+        0
+      ],
+      "dimensions": [
+        47,
+        9
+      ],
+      "neighbors": "Z04 Z05 Z01"
+    }
+  ],
+  "cameras": [
+    {
+      "name": "CAM_WORLD_FULL",
+      "region": "WORLD",
+      "position": [
+        8.0,
+        -148.0,
+        120.0
+      ],
+      "target": [
+        7.339530944824219,
+        -140.02357482910156,
+        114.00497436523438
+      ],
+      "lens_mm": 32.0,
+      "ortho_m": 108.0,
+      "display_state": "WORLD_FULL",
+      "rotation_euler": [
+        0.9279170036315918,
+        6.533877605630067e-12,
+        0.08261408656835556
+      ]
+    },
+    {
+      "name": "CAM_LAYOUT_TOP",
+      "region": "LAYOUT",
+      "position": [
+        -5.0,
+        6.0,
+        115.0
+      ],
+      "target": [
+        -5.0,
+        6.0,
+        105.0
+      ],
+      "lens_mm": 32.0,
+      "ortho_m": 116.0,
+      "display_state": "LAYOUT_CUTAWAY",
+      "rotation_euler": [
+        0.0,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_LAYOUT_AXON",
+      "region": "LAYOUT",
+      "position": [
+        70.0,
+        -105.0,
+        105.0
+      ],
+      "target": [
+        65.61170959472656,
+        -98.3883056640625,
+        98.91490173339844
+      ],
+      "lens_mm": 32.0,
+      "ortho_m": 100.0,
+      "display_state": "LAYOUT_CUTAWAY",
+      "rotation_euler": [
+        0.9166150689125061,
+        -5.451729734318178e-08,
+        0.5859577059745789
+      ]
+    },
+    {
+      "name": "CAM_ENTRY_SEATED",
+      "region": "ENTRY",
+      "position": [
+        -13.399999618530273,
+        7.5,
+        1.0499999523162842
+      ],
+      "target": [
+        -20.99623680114746,
+        14.00362777709961,
+        1.0500004291534424
+      ],
+      "lens_mm": 26.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5707963705062866,
+        -7.353028763645852e-08,
+        0.8627344369888306
+      ]
+    },
+    {
+      "name": "CAM_WATER_BRIDGE",
+      "region": "WATER",
+      "position": [
+        -17.700000762939453,
+        2.4000000953674316,
+        1.5
+      ],
+      "target": [
+        -23.04602813720703,
+        10.848968505859375,
+        1.3130756616592407
+      ],
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.55210280418396,
+        1.2714433950122839e-08,
+        0.5641480684280396
+      ]
+    },
+    {
+      "name": "CAM_ISLAND_SEATED",
+      "region": "ISLAND",
+      "position": [
+        -25.618751525878906,
+        3.25,
+        0.3499999940395355
+      ],
+      "target": [
+        -18.93663215637207,
+        -4.08403205871582,
+        -0.8995015621185303
+      ],
+      "lens_mm": 20.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.4455187320709229,
+        2.7141297209709592e-08,
+        -2.402672529220581
+      ]
+    },
+    {
+      "name": "CAM_ISLAND_APPROACH",
+      "region": "ISLAND",
+      "position": [
+        -27.75,
+        -0.5,
+        1.2999999523162842
+      ],
+      "target": [
+        -23.115299224853516,
+        7.610722541809082,
+        -2.268716335296631
+      ],
+      "lens_mm": 35.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.2058794498443604,
+        -3.139123450068837e-08,
+        -0.5191462635993958
+      ]
+    },
+    {
+      "name": "CAM_ISLAND_SECTION",
+      "region": "ISLAND",
+      "position": [
+        -36.0,
+        -12.0,
+        12.0
+      ],
+      "target": [
+        -32.09539794921875,
+        -4.624641418457031,
+        6.490174293518066
+      ],
+      "lens_mm": 32.0,
+      "ortho_m": 18.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        0.9872550964355469,
+        2.0722115579019373e-08,
+        -0.4868992269039154
+      ]
+    },
+    {
+      "name": "CAM_LIBRARY_SEATED",
+      "region": "LIBRARY",
+      "position": [
+        -18.549999237060547,
+        -8.199999809265137,
+        1.149999976158142
+      ],
+      "target": [
+        -15.994933128356934,
+        1.4678268432617188,
+        1.2190577983856201
+      ],
+      "lens_mm": 22.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5777021646499634,
+        8.753202607181265e-09,
+        -0.2583779990673065
+      ]
+    },
+    {
+      "name": "CAM_LIBRARY_SHELF",
+      "region": "LIBRARY",
+      "position": [
+        -5.800000190734863,
+        -6.5,
+        1.2999999523162842
+      ],
+      "target": [
+        4.197185516357422,
+        -6.499999046325684,
+        1.0627806186676025
+      ],
+      "lens_mm": 45.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.547072172164917,
+        -8.763311853954292e-08,
+        -1.570796251296997
+      ]
+    },
+    {
+      "name": "CAM_LIBRARY_ENTRY",
+      "region": "LIBRARY",
+      "position": [
+        -9.199999809265137,
+        -13.800000190734863,
+        1.5
+      ],
+      "target": [
+        -11.006152153015137,
+        -3.9665098190307617,
+        1.2993167638778687
+      ],
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5507266521453857,
+        9.357297159340305e-09,
+        0.18164889514446259
+      ]
+    },
+    {
+      "name": "CAM_COPY_VIEW",
+      "region": "COPY",
+      "position": [
+        9.199999809265137,
+        -1.649999976158142,
+        0.949999988079071
+      ],
+      "target": [
+        12.276634216308594,
+        -11.16478157043457,
+        1.0069738626480103
+      ],
+      "lens_mm": 27.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.576493740081787,
+        5.944779246647158e-08,
+        -2.8288509845733643
+      ]
+    },
+    {
+      "name": "CAM_COPY_RH",
+      "region": "COPY",
+      "position": [
+        9.125,
+        -2.9800000190734863,
+        1.2400000095367432
+      ],
+      "target": [
+        9.125,
+        -3.3467252254486084,
+        -8.753273963928223
+      ],
+      "lens_mm": 26.061420440673828,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        0.03668074682354927,
+        -0.0,
+        -3.141592502593994
+      ]
+    },
+    {
+      "name": "CAM_COPY_LH",
+      "region": "COPY",
+      "position": [
+        9.074999809265137,
+        -2.9800000190734863,
+        1.2400000095367432
+      ],
+      "target": [
+        9.074999809265137,
+        -3.3467252254486084,
+        -8.753273963928223
+      ],
+      "lens_mm": 26.061420440673828,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        0.03668074682354927,
+        -0.0,
+        -3.141592502593994
+      ]
+    },
+    {
+      "name": "CAM_COPY_ENTRY",
+      "region": "COPY",
+      "position": [
+        13.800000190734863,
+        -14.800000190734863,
+        1.5
+      ],
+      "target": [
+        11.994937896728516,
+        -4.972444534301758,
+        1.0988781452178955
+      ],
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5306733846664429,
+        -8.08470090873925e-09,
+        0.18164891004562378
+      ]
+    },
+    {
+      "name": "CAM_PRIVATE_SEATED",
+      "region": "PRIVATE",
+      "position": [
+        19.399999618530273,
+        14.800000190734863,
+        1.149999976158142
+      ],
+      "target": [
+        28.50485610961914,
+        18.9118709564209,
+        0.7094429731369019
+      ],
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5267263650894165,
+        -1.9027328335141647e-07,
+        -1.146601915359497
+      ]
+    },
+    {
+      "name": "CAM_PRIVATE_ENTRY",
+      "region": "PRIVATE",
+      "position": [
+        21.799999237060547,
+        11.800000190734863,
+        1.5
+      ],
+      "target": [
+        21.799999237060547,
+        21.754955291748047,
+        0.5519090890884399
+      ],
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.4758446216583252,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_BELL_COURT",
+      "region": "BELL",
+      "position": [
+        -5.0,
+        18.0,
+        1.399999976158142
+      ],
+      "target": [
+        2.07106876373291,
+        25.071067810058594,
+        1.4000016450881958
+      ],
+      "lens_mm": 26.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        -0.7853983044624329
+      ]
+    },
+    {
+      "name": "CAM_WISH_APPROACH",
+      "region": "WISH",
+      "position": [
+        -27.0,
+        27.0,
+        5.949999809265137
+      ],
+      "target": [
+        -23.51750946044922,
+        36.286643981933594,
+        7.2269134521484375
+      ],
+      "lens_mm": 22.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.6988372802734375,
+        5.788495016645356e-09,
+        -0.3587706685066223
+      ]
+    },
+    {
+      "name": "CAM_WISH_READ",
+      "region": "WISH",
+      "position": [
+        -26.0,
+        28.5,
+        5.949999809265137
+      ],
+      "target": [
+        -26.0,
+        38.20142364501953,
+        8.375357627868652
+      ],
+      "lens_mm": 45.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.8157751560211182,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_OLD_TREE_PATH",
+      "region": "OLD",
+      "position": [
+        4.0,
+        34.5,
+        9.0
+      ],
+      "target": [
+        -5.576505661010742,
+        37.37295150756836,
+        8.80846881866455
+      ],
+      "lens_mm": 24.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5516420602798462,
+        -9.97686413484189e-08,
+        1.2793395519256592
+      ]
+    },
+    {
+      "name": "CAM_LOOKOUT_N",
+      "region": "LOOKOUT",
+      "position": [
+        24.0,
+        33.0,
+        8.550000190734863
+      ],
+      "target": [
+        24.845739364624023,
+        42.937435150146484,
+        9.279451370239258
+      ],
+      "lens_mm": 30.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.6438063383102417,
+        1.180194786343236e-08,
+        -0.08490180224180222
+      ]
+    },
+    {
+      "name": "CAM_LOOKOUT_E",
+      "region": "LOOKOUT",
+      "position": [
+        27.5,
+        36.0,
+        8.550000190734863
+      ],
+      "target": [
+        37.32062530517578,
+        37.88555908203125,
+        8.550000190734863
+      ],
+      "lens_mm": 30.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5707963705062866,
+        -8.618274449645469e-08,
+        -1.3811049461364746
+      ]
+    },
+    {
+      "name": "CAM_LOOKOUT_W",
+      "region": "LOOKOUT",
+      "position": [
+        27.5,
+        36.0,
+        8.550000190734863
+      ],
+      "target": [
+        17.9639949798584,
+        38.98966598510742,
+        8.905667304992676
+      ],
+      "lens_mm": 30.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.6063705682754517,
+        5.879408604414493e-08,
+        1.2669883966445923
+      ]
+    },
+    {
+      "name": "CAM_CHAT_ENTRY",
+      "region": "CHAT",
+      "position": [
+        24.700000762939453,
+        20.5,
+        1.5
+      ],
+      "target": [
+        30.491436004638672,
+        28.644214630126953,
+        1.1380361318588257
+      ],
+      "lens_mm": 30.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.5345920324325562,
+        2.2611848393694345e-08,
+        -0.6181437969207764
+      ]
+    },
+    {
+      "name": "CAM_CHAT_SEATED",
+      "region": "CHAT",
+      "position": [
+        28.950000762939453,
+        24.0,
+        1.399999976158142
+      ],
+      "target": [
+        38.91637420654297,
+        23.239206314086914,
+        1.704317331314087
+      ],
+      "lens_mm": 26.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.6012327671051025,
+        2.097708495796269e-08,
+        -1.6469846963882446
+      ]
+    },
+    {
+      "name": "CAM_FRONT_GATE",
+      "region": "FRONT",
+      "position": [
+        0.0,
+        -22.100000381469727,
+        1.5
+      ],
+      "target": [
+        0.0,
+        -12.10234260559082,
+        1.7163996696472168
+      ],
+      "lens_mm": 26.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.592437982559204,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CAM_HELP_READ",
+      "region": "HELP",
+      "position": [
+        -13.800000190734863,
+        10.300000190734863,
+        1.2000000476837158
+      ],
+      "target": [
+        -5.393442153930664,
+        15.688819885253906,
+        1.7388824224472046
+      ],
+      "lens_mm": 45.0,
+      "ortho_m": 6.0,
+      "display_state": "EYE_LEVEL",
+      "rotation_euler": [
+        1.6247106790542603,
+        3.551738103624302e-08,
+        -1.000755786895752
+      ]
+    },
+    {
+      "name": "CAM_P2_CORE_OVERVIEW",
+      "region": "P2",
+      "position": [
+        45.0,
+        -65.0,
+        47.0
+      ],
+      "target": [
+        39.640445709228516,
+        -58.02246856689453,
+        42.247188568115234
+      ],
+      "lens_mm": 37.0,
+      "ortho_m": 6.0,
+      "display_state": "WORLD_FULL",
+      "rotation_euler": [
+        1.0755127668380737,
+        -5.544369940935212e-08,
+        0.6549949645996094
+      ]
+    },
+    {
+      "name": "CAM_POND_LIFE",
+      "position": [
+        -32.0,
+        6.0,
+        6.0
+      ],
+      "rotation_euler": [
+        0.5521104335784912,
+        1.7705388266620048e-09,
+        -0.1106572225689888
+      ],
+      "projection": "PERSP",
+      "lens": 28.0,
+      "purpose": "living-garden actual source inspection",
+      "lens_mm": 28.0,
+      "ortho_m": 6.0,
+      "target": [
+        -31.42080307006836,
+        11.212774276733398,
+        -2.514195442199707
+      ]
+    },
+    {
+      "name": "CAM_CATS_VERANDA",
+      "position": [
+        -16.399999618530273,
+        10.300000190734863,
+        0.7300000190734863
+      ],
+      "rotation_euler": [
+        1.367368459701538,
+        -1.4476782439487579e-08,
+        -0.7109093070030212
+      ],
+      "projection": "PERSP",
+      "lens": 55.0,
+      "purpose": "living-garden actual source inspection",
+      "lens_mm": 55.0,
+      "ortho_m": 6.0,
+      "target": [
+        -10.009320259094238,
+        17.721435546875,
+        -1.2902770042419434
+      ]
+    },
+    {
+      "name": "CAM_CAT_SLEEP",
+      "position": [
+        -13.800000190734863,
+        14.699999809265137,
+        0.6200000047683716
+      ],
+      "rotation_euler": [
+        1.2745016813278198,
+        -3.231379253065825e-08,
+        -0.5456551313400269
+      ],
+      "projection": "PERSP",
+      "lens": 60.0,
+      "purpose": "living-garden actual source inspection",
+      "lens_mm": 60.0,
+      "ortho_m": 6.0,
+      "target": [
+        -8.836362838745117,
+        22.87540054321289,
+        -2.299783229827881
+      ]
+    },
+    {
+      "name": "CAM_KOI_CLOSE",
+      "position": [
+        -30.5,
+        8.319999694824219,
+        1.2000000476837158
+      ],
+      "rotation_euler": [
+        0.881007730960846,
+        -8.729510625471448e-08,
+        -0.7292774319648743
+      ],
+      "projection": "PERSP",
+      "lens": 65.0,
+      "purpose": "living-garden actual source inspection",
+      "lens_mm": 65.0,
+      "ortho_m": 6.0,
+      "target": [
+        -25.36005210876465,
+        14.071846008300781,
+        -5.163741111755371
+      ]
+    },
+    {
+      "name": "CAM_WORLD_FULL_V039_ORIGINAL",
+      "region": "WORLD",
+      "display_state": "HISTORICAL",
+      "position": [
+        48.0,
+        -140.0,
+        112.0
+      ],
+      "rotation_euler": [
+        0.9602522253990173,
+        -1.979474184565788e-08,
+        0.343879759311676
+      ],
+      "lens_mm": 32.0,
+      "ortho_m": 116.0,
+      "target": [
+        45.2376708984375,
+        -132.2863311767578,
+        106.2668685913086
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -25.0,
+        3.0,
+        -0.30000001192092896
+      ],
+      "to": [
+        -25.458332061767578,
+        2.5,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -25.458332061767578,
+        2.5,
+        -0.30000001192092896
+      ],
+      "to": [
+        -25.916667938232422,
+        1.9999998807907104,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -25.916667938232422,
+        1.9999998807907104,
+        -0.30000001192092896
+      ],
+      "to": [
+        -26.375,
+        1.5,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -26.375,
+        1.5,
+        -0.30000001192092896
+      ],
+      "to": [
+        -26.833332061767578,
+        0.9999999403953552,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -26.833332061767578,
+        0.9999999403953552,
+        -0.30000001192092896
+      ],
+      "to": [
+        -27.291667938232422,
+        0.5000000596046448,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -27.291667938232422,
+        0.5000000596046448,
+        -0.30000001192092896
+      ],
+      "to": [
+        -27.75,
+        0.0,
+        -0.30000001192092896
+      ],
+      "width": 2.2201573252677917,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.605551275463989,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -27.75,
+        0.0,
+        -0.30000001192092896
+      ],
+      "to": [
+        -28.265625,
+        -0.5,
+        -0.2812500298023224
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -28.265625,
+        -0.5,
+        -0.2812500298023224
+      ],
+      "to": [
+        -28.848766326904297,
+        -1.0,
+        -0.26250001788139343
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -28.848766326904297,
+        -1.0,
+        -0.26250001788139343
+      ],
+      "to": [
+        -29.527584075927734,
+        -1.5,
+        -0.24375000596046448
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -29.527584075927734,
+        -1.5,
+        -0.24375000596046448
+      ],
+      "to": [
+        -30.25,
+        -2.0,
+        -0.22500000894069672
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -30.25,
+        -2.0,
+        -0.22500000894069672
+      ],
+      "to": [
+        -30.973186492919922,
+        -2.5,
+        -0.20625001192092896
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -30.973186492919922,
+        -2.5,
+        -0.20625001192092896
+      ],
+      "to": [
+        -31.6635799407959,
+        -3.0,
+        -0.1875
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -31.6635799407959,
+        -3.0,
+        -0.1875
+      ],
+      "to": [
+        -32.296875,
+        -3.5,
+        -0.16875001788139343
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -32.296875,
+        -3.5,
+        -0.16875001788139343
+      ],
+      "to": [
+        -32.85802459716797,
+        -4.0,
+        -0.15000000596046448
+      ],
+      "width": 1.7464864253997803,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 5.0,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -32.85802459716797,
+        -4.0,
+        -0.15000000596046448
+      ],
+      "to": [
+        -33.207332611083984,
+        -4.277777671813965,
+        -0.14166668057441711
+      ],
+      "width": 1.82426118850708,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -33.207332611083984,
+        -4.277777671813965,
+        -0.14166668057441711
+      ],
+      "to": [
+        -33.53049850463867,
+        -4.55555534362793,
+        -0.13333334028720856
+      ],
+      "width": 1.82426118850708,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -33.53049850463867,
+        -4.55555534362793,
+        -0.13333334028720856
+      ],
+      "to": [
+        -33.830074310302734,
+        -4.8333330154418945,
+        -0.125
+      ],
+      "width": 1.9261106252670288,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -33.830074310302734,
+        -4.8333330154418945,
+        -0.125
+      ],
+      "to": [
+        -34.11111068725586,
+        -5.111111164093018,
+        -0.11666667461395264
+      ],
+      "width": 1.9261106252670288,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -34.11111068725586,
+        -5.111111164093018,
+        -0.11666667461395264
+      ],
+      "to": [
+        -34.666664123535156,
+        -5.6666669845581055,
+        -0.10000000149011612
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -34.666664123535156,
+        -5.6666669845581055,
+        -0.10000000149011612
+      ],
+      "to": [
+        -35.22222137451172,
+        -6.222222328186035,
+        -0.0833333432674408
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -35.22222137451172,
+        -6.222222328186035,
+        -0.0833333432674408
+      ],
+      "to": [
+        -35.77777862548828,
+        -6.777777671813965,
+        -0.06666666269302368
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -35.77777862548828,
+        -6.777777671813965,
+        -0.06666666269302368
+      ],
+      "to": [
+        -36.33333206176758,
+        -7.3333330154418945,
+        -0.05000000074505806
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -36.33333206176758,
+        -7.3333330154418945,
+        -0.05000000074505806
+      ],
+      "to": [
+        -36.88888931274414,
+        -7.888888835906982,
+        -0.03333333134651184
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -36.88888931274414,
+        -7.888888835906982,
+        -0.03333333134651184
+      ],
+      "to": [
+        -37.46449279785156,
+        -8.44444465637207,
+        -0.01666666567325592
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "ISLAND_SHORE_LINK",
+      "from": [
+        -37.46449279785156,
+        -8.44444465637207,
+        -0.01666666567325592
+      ],
+      "to": [
+        -38.102848052978516,
+        -9.0,
+        0.0
+      ],
+      "width": 1.6,
+      "rise": 0.15000000596046448,
+      "steps": 1,
+      "max_riser": 0.15000000596046448,
+      "tread_m": 7.0710678118654755,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "Z02_LOWER_BRIDGE",
+      "from": [
+        -23.299999237060547,
+        3.0,
+        -0.30000001192092896
+      ],
+      "to": [
+        -15.800000190734863,
+        3.0,
+        0.0
+      ],
+      "width": 2.1999998092651367,
+      "rise": 0.3,
+      "steps": 0,
+      "max_riser": 0,
+      "min_water_clearance": 0.6199999999999999,
+      "tread_m": 10.5,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "Z02_UPPER_BRIDGE",
+      "from": [
+        -32.0,
+        22.0,
+        0.0
+      ],
+      "to": [
+        -24.0,
+        20.0,
+        0.0
+      ],
+      "width": 2.1,
+      "rise": 0,
+      "steps": 0,
+      "max_riser": 0,
+      "min_water_clearance": 0.9199999999999999,
+      "tread_m": 17.5,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.102848052978516,
+        -9.0,
+        0.0
+      ],
+      "to": [
+        -38.405174255371094,
+        -8.263157844543457,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.405174255371094,
+        -8.263157844543457,
+        0.0
+      ],
+      "to": [
+        -38.69874954223633,
+        -7.526315689086914,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.69874954223633,
+        -7.526315689086914,
+        0.0
+      ],
+      "to": [
+        -38.976226806640625,
+        -6.789474010467529,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.976226806640625,
+        -6.789474010467529,
+        0.0
+      ],
+      "to": [
+        -39.23110580444336,
+        -6.05263090133667,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.23110580444336,
+        -6.05263090133667,
+        0.0
+      ],
+      "to": [
+        -39.458251953125,
+        -5.315789222717285,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.458251953125,
+        -5.315789222717285,
+        0.0
+      ],
+      "to": [
+        -39.654327392578125,
+        -4.578948020935059,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.654327392578125,
+        -4.578948020935059,
+        0.0
+      ],
+      "to": [
+        -39.818111419677734,
+        -3.842104911804199,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.818111419677734,
+        -3.842104911804199,
+        0.0
+      ],
+      "to": [
+        -39.95069122314453,
+        -3.1052632331848145,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.95069122314453,
+        -3.1052632331848145,
+        0.0
+      ],
+      "to": [
+        -40.05549240112305,
+        -2.3684210777282715,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.05549240112305,
+        -2.3684210777282715,
+        0.0
+      ],
+      "to": [
+        -40.138153076171875,
+        -1.6315789222717285,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.138153076171875,
+        -1.6315789222717285,
+        0.0
+      ],
+      "to": [
+        -40.20627975463867,
+        -0.8947370052337646,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.20627975463867,
+        -0.8947370052337646,
+        0.0
+      ],
+      "to": [
+        -40.269046783447266,
+        -0.15789508819580078,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.269046783447266,
+        -0.15789508819580078,
+        0.0
+      ],
+      "to": [
+        -40.33668899536133,
+        0.5789475440979004,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.33668899536133,
+        0.5789475440979004,
+        0.0
+      ],
+      "to": [
+        -40.41990280151367,
+        1.3157894611358643,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.41990280151367,
+        1.3157894611358643,
+        0.0
+      ],
+      "to": [
+        -40.52919387817383,
+        2.0526320934295654,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.52919387817383,
+        2.0526320934295654,
+        0.0
+      ],
+      "to": [
+        -40.6741943359375,
+        2.7894740104675293,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.6741943359375,
+        2.7894740104675293,
+        0.0
+      ],
+      "to": [
+        -40.86301040649414,
+        3.526315689086914,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.86301040649414,
+        3.526315689086914,
+        0.0
+      ],
+      "to": [
+        -41.10157775878906,
+        4.263158321380615,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.10157775878906,
+        4.263158321380615,
+        0.0
+      ],
+      "to": [
+        -41.393150329589844,
+        5.0,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.866068747318506,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.393150329589844,
+        5.0,
+        0.0
+      ],
+      "to": [
+        -41.27019500732422,
+        5.733333110809326,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.27019500732422,
+        5.733333110809326,
+        0.0
+      ],
+      "to": [
+        -41.18840026855469,
+        6.4666666984558105,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.18840026855469,
+        6.4666666984558105,
+        0.0
+      ],
+      "to": [
+        -41.14211654663086,
+        7.199999809265137,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.14211654663086,
+        7.199999809265137,
+        0.0
+      ],
+      "to": [
+        -41.124305725097656,
+        7.933333396911621,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.124305725097656,
+        7.933333396911621,
+        0.0
+      ],
+      "to": [
+        -41.12696838378906,
+        8.666666984558105,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.12696838378906,
+        8.666666984558105,
+        0.0
+      ],
+      "to": [
+        -41.14155578613281,
+        9.399999618530273,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.14155578613281,
+        9.399999618530273,
+        0.0
+      ],
+      "to": [
+        -41.15940856933594,
+        10.133333206176758,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "continuous west-bank deformation v042"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.15940856933594,
+        10.133333206176758,
+        0.0
+      ],
+      "to": [
+        -41.16577911376953,
+        10.5,
+        0.0
+      ],
+      "width": 1.989553774241358,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.16577911376953,
+        10.5,
+        0.0
+      ],
+      "to": [
+        -41.140525817871094,
+        10.89477825164795,
+        0.0
+      ],
+      "width": 1.989553774241358,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.140525817871094,
+        10.89477825164795,
+        0.0
+      ],
+      "to": [
+        -41.05097961425781,
+        11.34100341796875,
+        0.0
+      ],
+      "width": 1.9471379406750202,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -41.05097961425781,
+        11.34100341796875,
+        0.0
+      ],
+      "to": [
+        -40.91161346435547,
+        11.831512451171875,
+        0.0
+      ],
+      "width": 1.9471379406750202,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.91161346435547,
+        11.831512451171875,
+        0.0
+      ],
+      "to": [
+        -40.720245361328125,
+        12.359577178955078,
+        0.0
+      ],
+      "width": 1.928000190295279,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.720245361328125,
+        12.359577178955078,
+        0.0
+      ],
+      "to": [
+        -40.494693756103516,
+        12.918023109436035,
+        0.0
+      ],
+      "width": 1.928000190295279,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.494693756103516,
+        12.918023109436035,
+        0.0
+      ],
+      "to": [
+        -40.229190826416016,
+        13.500887870788574,
+        0.0
+      ],
+      "width": 1.9148509576916695,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -40.229190826416016,
+        13.500887870788574,
+        0.0
+      ],
+      "to": [
+        -39.944766998291016,
+        14.100573539733887,
+        0.0
+      ],
+      "width": 1.9148509576916695,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.944766998291016,
+        14.100573539733887,
+        0.0
+      ],
+      "to": [
+        -39.632625579833984,
+        14.712038040161133,
+        0.0
+      ],
+      "width": 1.9221344590187073,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.632625579833984,
+        14.712038040161133,
+        0.0
+      ],
+      "to": [
+        -39.31676483154297,
+        15.326805114746094,
+        0.0
+      ],
+      "width": 1.9221344590187073,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -39.31676483154297,
+        15.326805114746094,
+        0.0
+      ],
+      "to": [
+        -38.98625946044922,
+        15.940668106079102,
+        0.0
+      ],
+      "width": 1.953820362687111,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.98625946044922,
+        15.940668106079102,
+        0.0
+      ],
+      "to": [
+        -38.66769790649414,
+        16.543916702270508,
+        0.0
+      ],
+      "width": 1.953820362687111,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.66769790649414,
+        16.543916702270508,
+        0.0
+      ],
+      "to": [
+        -38.34918212890625,
+        17.132843017578125,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.34918212890625,
+        17.132843017578125,
+        0.0
+      ],
+      "to": [
+        -38.059261322021484,
+        17.696346282958984,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -38.059261322021484,
+        17.696346282958984,
+        0.0
+      ],
+      "to": [
+        -37.78653335571289,
+        18.230642318725586,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -37.78653335571289,
+        18.230642318725586,
+        0.0
+      ],
+      "to": [
+        -37.56064224243164,
+        18.72330665588379,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.40175425099138,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -37.56064224243164,
+        18.72330665588379,
+        0.0
+      ],
+      "to": [
+        -37.035743713378906,
+        19.028305053710938,
+        0.0
+      ],
+      "width": 1.9980121552944183,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -37.035743713378906,
+        19.028305053710938,
+        0.0
+      ],
+      "to": [
+        -36.52206802368164,
+        19.32332420349121,
+        0.0
+      ],
+      "width": 1.9980121552944183,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -36.52206802368164,
+        19.32332420349121,
+        0.0
+      ],
+      "to": [
+        -36.01810836791992,
+        19.607088088989258,
+        0.0
+      ],
+      "width": 1.9597037136554718,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -36.01810836791992,
+        19.607088088989258,
+        0.0
+      ],
+      "to": [
+        -35.52180099487305,
+        19.88404655456543,
+        0.0
+      ],
+      "width": 1.9597037136554718,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -35.52180099487305,
+        19.88404655456543,
+        0.0
+      ],
+      "to": [
+        -35.035064697265625,
+        20.15887451171875,
+        0.0
+      ],
+      "width": 1.9295939207077026,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -35.035064697265625,
+        20.15887451171875,
+        0.0
+      ],
+      "to": [
+        -34.54832458496094,
+        20.433706283569336,
+        0.0
+      ],
+      "width": 1.9295939207077026,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -34.54832458496094,
+        20.433706283569336,
+        0.0
+      ],
+      "to": [
+        -34.08597946166992,
+        20.703115463256836,
+        0.0
+      ],
+      "width": 1.917722761631012,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -34.08597946166992,
+        20.703115463256836,
+        0.0
+      ],
+      "to": [
+        -33.623626708984375,
+        20.97252655029297,
+        0.0
+      ],
+      "width": 1.917722761631012,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -33.623626708984375,
+        20.97252655029297,
+        0.0
+      ],
+      "to": [
+        -33.2012825012207,
+        21.233047485351562,
+        0.0
+      ],
+      "width": 1.9234529733657837,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -33.2012825012207,
+        21.233047485351562,
+        0.0
+      ],
+      "to": [
+        -32.77894592285156,
+        21.493568420410156,
+        0.0
+      ],
+      "width": 1.9234529733657837,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -32.77894592285156,
+        21.493568420410156,
+        0.0
+      ],
+      "to": [
+        -32.38947677612305,
+        21.746784210205078,
+        0.0
+      ],
+      "width": 1.851800262928009,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_UPPER_BANK",
+      "from": [
+        -32.38947677612305,
+        21.746784210205078,
+        0.0
+      ],
+      "to": [
+        -32.0,
+        22.0,
+        0.0
+      ],
+      "width": 1.851800262928009,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.031128874149275,
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "CENTRAL_ENTRY",
+      "from": [
+        0.0,
+        -23.0,
+        0.0
+      ],
+      "to": [
+        0.0,
+        -14.0,
+        0.0
+      ],
+      "width": 3.2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 9.0
+    },
+    {
+      "route": "CENTRAL_ENTRY",
+      "from": [
+        0.0,
+        -14.0,
+        0.0
+      ],
+      "to": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "width": 3.2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 15.0
+    },
+    {
+      "route": "CENTRAL_ENTRY",
+      "from": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "to": [
+        0.0,
+        6.0,
+        0.0
+      ],
+      "width": 3.2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.0
+    },
+    {
+      "route": "PRIVATE_BRANCH",
+      "from": [
+        25.0,
+        11.0,
+        0.0
+      ],
+      "to": [
+        21.799999237060547,
+        11.0,
+        0.0
+      ],
+      "width": 1.8,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2000007092951943
+    },
+    {
+      "route": "PRIVATE_BRANCH",
+      "from": [
+        21.799999237060547,
+        11.0,
+        0.0
+      ],
+      "to": [
+        21.799999237060547,
+        13.300000190734863,
+        0.30000001192092896
+      ],
+      "width": 1.8,
+      "rise": 0.30000001192092896,
+      "steps": 3,
+      "max_riser": 0.10000000397364299,
+      "tread_m": 0.7666667330092248
+    },
+    {
+      "route": "HILL_TREE_TO_LOOKOUT",
+      "from": [
+        0.0,
+        38.0,
+        7.5
+      ],
+      "to": [
+        14.0,
+        39.0,
+        7.5
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 14.035668847618199
+    },
+    {
+      "route": "HILL_TREE_TO_LOOKOUT",
+      "from": [
+        14.0,
+        39.0,
+        7.5
+      ],
+      "to": [
+        25.0,
+        35.0,
+        7.5
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.704699910719626
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -15.800000190734863,
+        3.0,
+        0.0
+      ],
+      "to": [
+        -14.0,
+        3.0,
+        0.0
+      ],
+      "width": 2.2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 1.8000002013312333,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -14.0,
+        3.0,
+        0.0
+      ],
+      "to": [
+        -14.0,
+        16.0,
+        0.0
+      ],
+      "width": 2.2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 13.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -14.0,
+        16.0,
+        0.0
+      ],
+      "to": [
+        -14.55555534362793,
+        16.22222137451172,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -14.55555534362793,
+        16.22222137451172,
+        0.0
+      ],
+      "to": [
+        -15.11111068725586,
+        16.44444465637207,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -15.11111068725586,
+        16.44444465637207,
+        0.0
+      ],
+      "to": [
+        -15.666666984558105,
+        16.666667938232422,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -15.666666984558105,
+        16.666667938232422,
+        0.0
+      ],
+      "to": [
+        -16.22222137451172,
+        16.88888931274414,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -16.22222137451172,
+        16.88888931274414,
+        0.0
+      ],
+      "to": [
+        -17.333335876464844,
+        17.33333396911621,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -17.333335876464844,
+        17.33333396911621,
+        0.0
+      ],
+      "to": [
+        -19.000001907348633,
+        18.0,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -19.000001907348633,
+        18.0,
+        0.0
+      ],
+      "to": [
+        -20.666667938232422,
+        18.66666603088379,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -20.666667938232422,
+        18.66666603088379,
+        0.0
+      ],
+      "to": [
+        -22.33333396911621,
+        19.33333396911621,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "EAST_BANK_TO_UPPER",
+      "from": [
+        -22.33333396911621,
+        19.33333396911621,
+        0.0
+      ],
+      "to": [
+        -24.0,
+        20.0,
+        0.0
+      ],
+      "width": 2.39563250541687,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.385164807134504,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "COURT_TO_BELL",
+      "from": [
+        6.0,
+        9.0,
+        0.0
+      ],
+      "to": [
+        6.0,
+        19.0,
+        0.0
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 10.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "COURT_TO_BELL",
+      "from": [
+        6.0,
+        19.0,
+        0.0
+      ],
+      "to": [
+        5.0,
+        23.0,
+        0.0
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.123105625617661,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        14.0,
+        9.0,
+        0.0
+      ],
+      "to": [
+        25.0,
+        10.0,
+        0.0
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 11.045361017187261,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        25.0,
+        10.0,
+        0.0
+      ],
+      "to": [
+        25.0,
+        28.799999237060547,
+        0.0
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 18.799999253293286,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        25.0,
+        28.799999237060547,
+        0.0
+      ],
+      "to": [
+        35.0,
+        28.799999237060547,
+        3.75
+      ],
+      "width": 2.4,
+      "rise": 3.75,
+      "steps": 25,
+      "max_riser": 0.15,
+      "tread_m": 0.304,
+      "landing_pad_m": 1.2,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        35.0,
+        28.799999237060547,
+        3.75
+      ],
+      "to": [
+        35.0,
+        32.20000076293945,
+        3.75
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.400001464170253,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        35.0,
+        32.20000076293945,
+        3.75
+      ],
+      "to": [
+        35.0,
+        42.20000076293945,
+        7.5
+      ],
+      "width": 2.4,
+      "rise": 3.75,
+      "steps": 25,
+      "max_riser": 0.15,
+      "tread_m": 0.304,
+      "landing_pad_m": 1.2,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        35.0,
+        42.20000076293945,
+        7.5
+      ],
+      "to": [
+        31.0,
+        42.20000076293945,
+        7.5
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 4.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        31.0,
+        42.20000076293945,
+        7.5
+      ],
+      "to": [
+        31.0,
+        35.0,
+        7.5
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 7.200000805324933,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "PUBLIC_EAST_ROUTE",
+      "from": [
+        31.0,
+        35.0,
+        7.5
+      ],
+      "to": [
+        25.0,
+        35.0,
+        7.5
+      ],
+      "width": 2.4,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 6.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -24.0,
+        20.0,
+        0.0
+      ],
+      "to": [
+        -22.5,
+        20.0,
+        0.0
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2015621187164243,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -22.5,
+        20.0,
+        0.0
+      ],
+      "to": [
+        -21.0,
+        20.0,
+        0.0
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2015621187164243,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -21.0,
+        20.0,
+        0.0
+      ],
+      "to": [
+        -19.5,
+        20.0,
+        0.0
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2015621187164243,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -19.5,
+        20.0,
+        0.0
+      ],
+      "to": [
+        -17.99970245361328,
+        19.999881744384766,
+        0.0
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2015621187164243,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -17.99970245361328,
+        19.999881744384766,
+        0.0
+      ],
+      "to": [
+        -16.5,
+        20.0,
+        0.0
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 3.2015621187164243,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight",
+      "curve_source": "shared bridge/shore deformation v044"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -16.5,
+        20.0,
+        0.0
+      ],
+      "to": [
+        -12.0,
+        25.0,
+        2.25
+      ],
+      "width": 2.0,
+      "rise": 2.25,
+      "steps": 15,
+      "max_riser": 0.15,
+      "tread_m": 0.31512080156912364,
+      "landing_pad_m": 1.0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -12.0,
+        25.0,
+        2.25
+      ],
+      "to": [
+        -20.0,
+        31.0,
+        4.5
+      ],
+      "width": 2.0,
+      "rise": 2.25,
+      "steps": 15,
+      "max_riser": 0.15,
+      "tread_m": 0.5333333333333333,
+      "landing_pad_m": 1.0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "WEST_HILL_STAIRS",
+      "from": [
+        -20.0,
+        31.0,
+        4.5
+      ],
+      "to": [
+        -25.0,
+        31.0,
+        4.5
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "HILL_WEST_TO_TREE",
+      "from": [
+        -25.0,
+        31.0,
+        4.5
+      ],
+      "to": [
+        -20.0,
+        34.0,
+        4.5
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 5.830951894845301,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "HILL_WEST_TO_TREE",
+      "from": [
+        -20.0,
+        34.0,
+        4.5
+      ],
+      "to": [
+        -6.0,
+        40.0,
+        7.5
+      ],
+      "width": 2.0,
+      "rise": 3.0,
+      "steps": 20,
+      "max_riser": 0.15,
+      "tread_m": 0.6615773105863909,
+      "landing_pad_m": 1.0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "HILL_WEST_TO_TREE",
+      "from": [
+        -6.0,
+        40.0,
+        7.5
+      ],
+      "to": [
+        0.0,
+        38.0,
+        7.5
+      ],
+      "width": 2.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 6.324555320336759,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        5.0,
+        23.0,
+        0.0
+      ],
+      "to": [
+        5.0,
+        23.799999237060547,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 0.7999992460008882,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        5.0,
+        23.799999237060547,
+        0.0
+      ],
+      "to": [
+        12.0,
+        23.799999237060547,
+        0.0
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 7.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        12.0,
+        23.799999237060547,
+        0.0
+      ],
+      "to": [
+        12.0,
+        29.799999237060547,
+        1.7999999523162842
+      ],
+      "width": 2,
+      "rise": 1.7999999523162842,
+      "steps": 12,
+      "max_riser": 0.14999999602635702,
+      "tread_m": 0.35000000000000003,
+      "landing_pad_m": 0.8999999999999999,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        12.0,
+        29.799999237060547,
+        1.7999999523162842
+      ],
+      "to": [
+        18.0,
+        35.0,
+        4.650000095367432
+      ],
+      "width": 2,
+      "rise": 2.8500001430511475,
+      "steps": 19,
+      "max_riser": 0.15000000752900777,
+      "tread_m": 0.312619675506334,
+      "landing_pad_m": 1,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        18.0,
+        35.0,
+        4.650000095367432
+      ],
+      "to": [
+        10.0,
+        37.0,
+        7.5
+      ],
+      "width": 2,
+      "rise": 2.8499999046325684,
+      "steps": 19,
+      "max_riser": 0.1499999949806615,
+      "tread_m": 0.3287479605913327,
+      "landing_pad_m": 1,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        10.0,
+        37.0,
+        7.5
+      ],
+      "to": [
+        10.0,
+        39.0,
+        7.5
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 2.0,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "BELL_TO_HILL",
+      "from": [
+        10.0,
+        39.0,
+        7.5
+      ],
+      "to": [
+        0.0,
+        38.0,
+        7.5
+      ],
+      "width": 2,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 10.04987562112089,
+      "landing_pad_m": 0,
+      "profile": "flat-landings-linear-flight"
+    },
+    {
+      "route": "CHAT_BRANCH",
+      "from": [
+        25,
+        22.75,
+        0
+      ],
+      "to": [
+        25.9,
+        22.75,
+        0.3
+      ],
+      "width": 1.3,
+      "rise": 0.3,
+      "steps": 2,
+      "max_riser": 0.15,
+      "tread_m": 0.4499999999999993,
+      "landing_pad_m": 0,
+      "scope": "private_entry",
+      "profile": "linear_stair",
+      "walk_support": "stone threshold"
+    },
+    {
+      "route": "CHAT_BRANCH",
+      "from": [
+        25.9,
+        22.75,
+        0.3
+      ],
+      "to": [
+        26.45,
+        22.75,
+        0.3
+      ],
+      "width": 1.3,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 0.5500000000000007,
+      "landing_pad_m": 0,
+      "scope": "private_entry",
+      "profile": "flat",
+      "walk_support": "stone threshold"
+    },
+    {
+      "route": "CHAT_PRIVATE_INTERIOR",
+      "from": [
+        26.45,
+        22.75,
+        0.3
+      ],
+      "to": [
+        28.4,
+        22.3,
+        0.3
+      ],
+      "width": 1.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 2.001249609618949,
+      "landing_pad_m": 0,
+      "scope": "private_interior",
+      "profile": "flat",
+      "walk_support": "existing timber floor"
+    },
+    {
+      "route": "CHAT_PRIVATE_INTERIOR",
+      "from": [
+        28.4,
+        22.3,
+        0.3
+      ],
+      "to": [
+        28.4,
+        23.1,
+        0.3
+      ],
+      "width": 1.0,
+      "rise": 0.0,
+      "steps": 1,
+      "max_riser": 0.0,
+      "tread_m": 0.8000000000000007,
+      "landing_pad_m": 0,
+      "scope": "private_interior",
+      "profile": "flat",
+      "walk_support": "existing timber floor"
+    }
+  ],
+  "water_levels": {
+    "lower": -1.2,
+    "cascade_top_to_bottom": [
+      6,
+      3.6,
+      1.2,
+      -1.2
+    ],
+    "island_ground": -0.3,
+    "island_cushion_diameter": 0.72,
+    "island_cushion_thickness": 0.12
+  },
+  "limitations": [
+    "reference fidelity requires rendered comparison; no invented percentage",
+    "runtime water/wetness/lighting reconstruction differs from Cycles source",
+    "iOS/device/application behavior not verified"
+  ],
+  "source_snapshot": "zen-space-p3-v048.blend",
+  "review_corrections": [
+    "stair tread minimum 0.30m using switchbacks",
+    "reading desk aligned to reading seat",
+    "island seated eye remains 0.65m above ground; wider lens includes cushion edge",
+    "old tree camera stands on actual terrace",
+    "lookout cameras aligned with actual stone seats; distant tree corridor opens north",
+    "single fixed model, no per-camera removals or relocations",
+    "Landing pads keep overlapping flight corners at the same elevation",
+    "Hill paths reach terrace elevation before crossing retaining faces",
+    "Bell hill path goes around east end of retained background wall",
+    "Waterside path uses clear veranda centre; conflicting proxy bank rocks removed",
+    "Cottage entry joins level public path and climbs before floor boundary",
+    "Terrain physically graded below road and stairs; no hidden terrain through walking surfaces",
+    "Stone stair foundations extend into graded beds",
+    "Tag box moved northwest of wish tree clear of the hill path and supplied with support legs",
+    "Bell route crosses the side colonnade away from posts, reaches 7.50m before joining the rear traverse",
+    "Bell route crosses the side colonnade away from posts, reaches 7.50m before joining the rear traverse",
+    "Lower bridge extends 0.50m onto the flat island coast, same deck and rails; no meditation pedestal added",
+    "North lookout has no extra foreground seat; west view shares the east stone seat",
+    "Dialogue eye point is inside the actual chair near the backrest, with arm edge and side table in view",
+    "Three small red blossom proxies placed on outside of main courtyard green canopy",
+    "Cottage north face is opaque enclosure facing public stairs; east garden window remains open to the private garden",
+    "P3 v006: opaque west facade + 1.30m side door, actual chair moved east, internal 1.0m turn separated from >=1.6m public paths; two measured low pine tufts pruned; route union regenerated",
+    "Close obsolete generic south opening of private cottage; west side-turn entrance and east garden window retained; expand privacy rays to all public route segments, not only hillside y>=20"
+  ],
+  "master_file": "zen-space.blend",
+  "scope": "phase1 editable greybox; visual review pending",
+  "skills": {
+    "environment-artist": "8f778d2405a214b508d4c7d80742be8e43acdd52",
+    "set-dressing": "8f778d2405a214b508d4c7d80742be8e43acdd52"
+  },
+  "packed_reference_images": 16,
+  "editing_font_dependency": "Blender Bfont Regular <builtin>; Chinese readability verified locally; cross-platform text consistency remains a phase4 check",
+  "phase": "full model production, not final acceptance",
+  "animation_clips": "object-animation-clips.json",
+  "weather_and_layout_states": "weather-and-layout-states.json",
+  "source_version": "p3-v048",
+  "living_garden": {
+    "fish": 5,
+    "red_pattern_fish": 3,
+    "cats": 2,
+    "clip_registry": "living-garden-clips.json",
+    "active_clips": 17,
+    "fps": 24
+  },
+  "bank_recomposition": {
+    "max_horizontal_offset_m": 1.65,
+    "bridge_endpoints_unchanged": true,
+    "walking_width_requirements_unchanged": true,
+    "resampled_routes": [
+      {
+        "route": "ISLAND_SHORE_LINK",
+        "old_from": [
+          -33.0,
+          -4.0,
+          -0.15000000596046448
+        ],
+        "old_to": [
+          -38.0,
+          -9.0,
+          0.0
+        ],
+        "sampled_segments": 9,
+        "width_unchanged": 1.6
+      },
+      {
+        "route": "WEST_UPPER_BANK",
+        "old_from": [
+          -38.0,
+          -9.0,
+          0.0
+        ],
+        "old_to": [
+          -43.0,
+          5.0,
+          0.0
+        ],
+        "sampled_segments": 19,
+        "width_unchanged": 2
+      },
+      {
+        "route": "WEST_UPPER_BANK",
+        "old_from": [
+          -43.0,
+          5.0,
+          0.0
+        ],
+        "old_to": [
+          -40.0,
+          16.0,
+          0.0
+        ],
+        "sampled_segments": 15,
+        "width_unchanged": 2
+      },
+      {
+        "route": "WEST_UPPER_BANK",
+        "old_from": [
+          -40.0,
+          16.0,
+          0.0
+        ],
+        "old_to": [
+          -36.5,
+          18.0,
+          0.0
+        ],
+        "sampled_segments": 6,
+        "width_unchanged": 2
+      }
+    ],
+    "applies_to_version": "p3-v042"
+  },
+  "quality_review_v044": {
+    "bridge_and_shore_recomposition": true,
+    "roof_mass_corrections": [
+      {
+        "roof": "Z04_FULL_ROOF",
+        "components": 135,
+        "vertices": 137644,
+        "xy_scale": [
+          0.965,
+          0.91
+        ],
+        "ridge_rise_above_eave_scale": 1.18
+      },
+      {
+        "roof": "Z05_FULL_ROOF",
+        "components": 138,
+        "vertices": 165200,
+        "xy_scale": [
+          0.965,
+          0.91
+        ],
+        "ridge_rise_above_eave_scale": 1.18
+      },
+      {
+        "roof": "Z06_FULL_ROOF",
+        "components": 118,
+        "vertices": 46620,
+        "xy_scale": [
+          0.965,
+          0.91
+        ],
+        "ridge_rise_above_eave_scale": 1.18
+      },
+      {
+        "roof": "Z11_FULL_ROOF",
+        "components": 115,
+        "vertices": 35468,
+        "xy_scale": [
+          0.965,
+          0.91
+        ],
+        "ridge_rise_above_eave_scale": 1.18
+      }
+    ],
+    "quality_benchmark": "official Game Science images via Unreal Engine and PlayStation; reference quality only, original v8 garden layout remains governing"
+  },
+  "quality_review_v045": {
+    "understory_instances": 305,
+    "sapling_mesh_instances": 9,
+    "zero_area_path_faces_removed": 208,
+    "terrain_map": "coherent XY map, preserves all z values and outer boundary"
+  },
+  "surface_finish_v046": {
+    "path_collapsed_faces_removed": 0,
+    "rafter_uv_meshes": 9,
+    "bank_wet_transition_z_m": [
+      -1.45,
+      -0.68
+    ]
+  },
+  "final_degenerate_cleanup": {
+    "measured_blender_polygon_area_threshold": 1e-10,
+    "faces_removed": 52,
+    "geometry": "only already zero-area path triangles"
+  },
+  "wall_head_repair": [
+    {
+      "building": "Z04",
+      "panels": 128,
+      "wall_top_bottom": 3.38,
+      "fitted_top_range": [
+        3.945736312866211,
+        3.9644521713256835
+      ]
+    },
+    {
+      "building": "Z05",
+      "panels": 146,
+      "wall_top_bottom": 3.38,
+      "fitted_top_range": [
+        3.945967102050781,
+        3.964992904663086
+      ]
+    },
+    {
+      "building": "Z06",
+      "panels": 60,
+      "wall_top_bottom": 3.38,
+      "fitted_top_range": [
+        3.920674705505371,
+        4.326761627197266
+      ]
+    },
+    {
+      "building": "Z11",
+      "panels": 46,
+      "wall_top_bottom": 3.38,
+      "fitted_top_range": [
+        3.968495750427246,
+        4.671546363830567
+      ]
+    }
+  ],
+  "current_bridge_recomposition": {
+    "source_version": "p3-v048",
+    "bridge_endpoints_changed_from_v042": true,
+    "width_requirements_preserved": true,
+    "bridge_rows": [
+      {
+        "route": "Z02_LOWER_BRIDGE",
+        "from": [
+          -23.299999237060547,
+          3.0,
+          -0.30000001192092896
+        ],
+        "to": [
+          -15.800000190734863,
+          3.0,
+          0.0
+        ],
+        "width": 2.1999998092651367,
+        "rise": 0.3,
+        "steps": 0,
+        "max_riser": 0,
+        "min_water_clearance": 0.6199999999999999,
+        "tread_m": 10.5,
+        "curve_source": "shared bridge/shore deformation v044"
+      },
+      {
+        "route": "Z02_UPPER_BRIDGE",
+        "from": [
+          -32.0,
+          22.0,
+          0.0
+        ],
+        "to": [
+          -24.0,
+          20.0,
+          0.0
+        ],
+        "width": 2.1,
+        "rise": 0,
+        "steps": 0,
+        "max_riser": 0,
+        "min_water_clearance": 0.9199999999999999,
+        "tread_m": 17.5,
+        "curve_source": "shared bridge/shore deformation v044"
+      }
+    ],
+    "historical_process": "recomposition-v044.json",
+    "final_structural_checks": "structure-check-p3-v048.json"
+  }
+}
