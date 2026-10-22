@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "ChatDB Intelligent Database Chat",
+    "description": "ChatDB is a professional database expert positioned as LLM As DBA. It provides comprehensive data analysis capabilities including report analysis (generative BI for Dashboard scenarios), database dialogue (performance analysis and optimization), Excel dialogue (data interpretation and analysis), and structured data dialogue (structured and semi-structured data analysis insights).",
+    "tags": ["chatdb", "database", "ai", "dba", "excel", "dashboard", "gbi", "data chat", "intelligent analysis", "report analysis"]
+  }
+}

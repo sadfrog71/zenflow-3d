@@ -1,0 +1,76 @@
+/*
+ *    Copyright (c) 2018-2025, deepdimen All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ * Neither the name of the deepdimen.com developer nor the names of its
+ * contributors may be used to endorse or promote products derived from
+ * this software without specific prior written permission.
+ * Author: caoyuan (caoyuanchn@gmail.com)
+ */
+
+package com.deepdimen.matrix.codegen.service;
+
+import java.util.List;
+import java.util.Map;
+import java.util.zip.ZipOutputStream;
+
+/**
+ * @author caoyuan
+ * @date 2018/7/29
+ */
+public interface GeneratorService {
+
+    /**
+     * 生成代码zip写出
+     *
+     * @param tableId 表
+     * @param zip     输出流
+     */
+    void downloadCode(Long tableId, ZipOutputStream zip);
+
+    /**
+     * 预览代码
+     *
+     * @param tableId 表
+     * @return [{模板名称:渲染结果}]
+     */
+    List<Map<String, String>> preview(Long tableId);
+
+    /**
+     * 目标目录写入渲染结果
+     *
+     * @param tableId 表
+     */
+    void generatorCode(Long tableId);
+
+    /**
+     * 获取表单设计器需要的 JSON
+     *
+     * @param dsName    数据源名称
+     * @param tableName 表名称
+     * @return json string
+     */
+    String vform(String dsName, String tableName);
+
+    /**
+     * 获取表单设计器需要的 JSON
+     *
+     * @param formId 数据源名称
+     * @return json string
+     */
+    String vformSfc(Long formId);
+
+    /**
+     * 同步路由和菜单
+     *
+     * @param tableId 表ID
+     */
+    void syncRouteAndMenu(Long tableId);
+}

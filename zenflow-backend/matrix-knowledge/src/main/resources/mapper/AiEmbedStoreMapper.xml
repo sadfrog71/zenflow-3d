@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiEmbedStoreMapper">
+
+  <resultMap id="aiEmbedStoreMap" type="com.deepdimen.matrix.knowledge.entity.AiEmbedStoreEntity">
+        <id property="storeId" column="store_id"/>
+        <result property="name" column="name"/>
+        <result property="storeType" column="store_type"/>
+        <result property="host" column="host"/>
+        <result property="port" column="port"/>
+        <result property="extData" column="ext_data"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+  </resultMap>
+</mapper>

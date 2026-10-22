@@ -1,0 +1,13 @@
+com.deepdimen.matrix.common.security.service.MatrixDefaultUserDetailsServiceImpl
+com.deepdimen.matrix.common.security.service.MatrixTocDefaultUserDetailsServiceImpl
+com.deepdimen.matrix.common.security.service.MatrixMobileUserDetailServiceImpl
+com.deepdimen.matrix.common.security.service.MatrixTocMobileUserDetailsServiceImpl
+com.deepdimen.matrix.common.security.service.MatrixWechatWorkUserDetailsServiceImpl
+com.deepdimen.matrix.common.security.service.MatrixRedisOAuth2AuthorizationService
+com.deepdimen.matrix.common.security.service.MatrixRedisOAuth2AuthorizationConsentService
+com.deepdimen.matrix.common.security.component.MatrixBootCorsProperties
+com.deepdimen.matrix.common.security.component.MatrixSecurityInnerAspect
+com.deepdimen.matrix.common.security.component.MatrixInnerHeaderRemoveFilter
+com.deepdimen.matrix.common.security.component.MatrixSecurityMessageSourceConfiguration
+com.deepdimen.matrix.common.security.service.MatrixRemoteRegisteredClientRepository
+

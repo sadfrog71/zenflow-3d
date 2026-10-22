@@ -1,0 +1,186 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.deepdimen</groupId>
+        <artifactId>matrix</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>matrix-discover</artifactId>
+    <packaging>jar</packaging>
+
+    <name>matrix-discover</name>
+    <description>ai agents助手模块</description>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-skill-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-work-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-matrix</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-biz</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-provider-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--必备：matrix-upms-biz（用户部门关联Mapper）-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-upms-biz</artifactId>
+            <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.deepdimen</groupId>
+                    <artifactId>matrix-common-gateway</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--必备：matrix安全模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-security</artifactId>
+        </dependency>
+        <!--必备：数据库操作 MyBatis-Plus-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-data</artifactId>
+        </dependency>
+        <!--必备：xss 过滤模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-xss</artifactId>
+        </dependency>
+        <!--必备: feign 依赖-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-feign</artifactId>
+        </dependency>
+        <!--可选：流量治理-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-sentinel</artifactId>
+        </dependency>
+        <!--必备: log 依赖-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-log</artifactId>
+        </dependency>
+        <!--选配: swagger文档-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-swagger</artifactId>
+        </dependency>
+        <!--  必备： webclient-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+        <!--  必备： 安全相关-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-crypto</artifactId>
+        </dependency>
+        <!-- 必备： 缓存 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-cache</artifactId>
+        </dependency>
+        <!--必备:  API加解密 -->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-encrypt-api</artifactId>
+        </dependency>
+        <!--注册中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <!-- 必备：测试 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <!-- Caffeine 本地缓存 -->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+        <!-- 文档文本提取（PDF/DOCX/XLSX 等） -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-parsers-standard-package</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+    </dependencies>
+    <profiles>
+        <profile>
+            <id>cloud</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>repackage</goal>
+                                </goals>
+                                <configuration>
+                                    <loaderImplementation>CLASSIC</loaderImplementation>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <configuration>
+                            <skip>false</skip>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>boot</id>
+        </profile>
+    </profiles>
+</project>

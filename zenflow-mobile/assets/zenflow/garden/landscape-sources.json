@@ -1,0 +1,81 @@
+{
+  "licenseUrl": "https://polyhaven.com/license",
+  "files": [
+    {
+      "file": "assets/lake-panorama.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/extra/Tonemapped%20JPG/shudu_lake.jpg",
+      "sha256": "8d249510cc5380f1dca7305226981f6b0fa8871f95df6dd7a1c2a7b0f530b7e8",
+      "license": "CC0",
+      "asset": "shudu_lake",
+      "conversion": "Original tonemapped panorama resized to 4096x2048, JPEG quality 86 for mobile delivery; no scene content altered",
+      "reusedFrom": "docs/prototypes/reading-room/assets/shudu-lake-panorama.jpg"
+    },
+    {
+      "file": "assets/deck-color.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_diff_1k.jpg",
+      "sha256": "8fdec14fd3c06de907693c9c3241037dc93327ad907296371a2f74a0becd8187",
+      "asset": "white_oak_veneer",
+      "license": "CC0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "reusedFrom": "docs/prototypes/reading-room/assets/white-oak/diff.jpg"
+    },
+    {
+      "file": "assets/deck-normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_nor_gl_1k.jpg",
+      "sha256": "9e8dd65e443d92107caa4cd30403d78946a8b8c5a6029e6446c7368865b1d1c0",
+      "asset": "white_oak_veneer",
+      "license": "CC0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "reusedFrom": "docs/prototypes/reading-room/assets/white-oak/nor_gl.jpg"
+    },
+    {
+      "file": "assets/deck-roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/white_oak_veneer/white_oak_veneer_rough_1k.jpg",
+      "sha256": "a8670e80f203bd031ac3c80f0f606383be51a0ee108e016fa19cad6b9bd373e7",
+      "asset": "white_oak_veneer",
+      "license": "CC0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "reusedFrom": "docs/prototypes/reading-room/assets/white-oak/rough.jpg"
+    },
+    {
+      "file": "assets/moss-color.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_diff_1k.jpg",
+      "sha256": "f8aa5cd3ff053fa2025dd55ca49cc83a57b201a0bfbd68c120052d90ae69c445",
+      "license": "CC0",
+      "asset": "mossy_rock",
+      "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+      "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/color.jpg"
+    },
+    {
+      "file": "assets/moss-normal.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+      "sha256": "c2f71b0d152b06d1e0d57f66e22004c109a90ec00482457e0d481f7a6e211be3",
+      "license": "CC0",
+      "asset": "mossy_rock",
+      "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+      "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/normal.jpg"
+    },
+    {
+      "file": "assets/moss-roughness.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_rough_1k.jpg",
+      "sha256": "b42e62800ac9d1692b6fbb9eb1cd744995ae14812d4039093b5171db2746457e",
+      "license": "CC0",
+      "asset": "mossy_rock",
+      "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+      "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/roughness.jpg"
+    },
+    {
+      "file": "assets/cinematic-lake-20261015.png",
+      "origin": "OpenAI built-in ImageGen, generated for this Invelle task on 2026-10-15",
+      "kind": "AI-generated scenic image; not a photograph or surveyed location",
+      "width": 1774,
+      "height": 887,
+      "bytes": 2373602,
+      "sha256": "30a6055aa9f80f8cd28cd4fb7eb1be2c811d4d04d11fba566fc91feb626ba1b3",
+      "conversion": "Original generated PNG copied without resizing, sharpening or other image edits",
+      "usage": "Forward 86-degree cylindrical distant backdrop and reflected environment in garden and reading room; foreground remains geometry",
+      "promptFile": "cinematic-lake-20261015-prompt.txt"
+    }
+  ],
+  "currentBackdrop": "assets/cinematic-lake-20261015.png"
+}

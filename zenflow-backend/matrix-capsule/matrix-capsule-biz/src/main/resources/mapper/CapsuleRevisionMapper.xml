@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deepdimen.matrix.capsule.mapper.CapsuleRevisionMapper">
+    <select id="selectOwnedVersionsPage" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleVersionVO">
+        SELECT id,capsule_id,revision_no,content_format,content,content_hash,change_reason,create_time
+        FROM ai_capsule_revision WHERE tenant_id=#{tenantId} AND owner_user_id=#{ownerUserId} AND owner_subject_type=#{subjectType} AND capsule_id=#{capsuleId}
+        <if test="beforeRevision != null">AND revision_no &lt; #{beforeRevision}</if>
+        ORDER BY revision_no DESC LIMIT #{limit}
+    </select>
+    <select id="selectOwnedVersions" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleVersionVO">
+        SELECT id,
+               capsule_id,
+               revision_no,
+               content_format,
+               content,
+               content_hash,
+               change_reason,
+               create_time
+        FROM ai_capsule_revision
+        WHERE tenant_id = #{tenantId}
+          AND owner_user_id = #{ownerUserId}
+          AND owner_subject_type = #{subjectType}
+          AND capsule_id = #{capsuleId}
+        ORDER BY revision_no DESC
+    </select>
+</mapper>

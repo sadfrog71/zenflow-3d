@@ -1,0 +1,7 @@
+magic-api:
+  show-url: false
+  banner: false
+  web: /magic/web
+  resource:
+    location: ~/.api
+  editor-config: classpath:lowcode/magic-editor.js

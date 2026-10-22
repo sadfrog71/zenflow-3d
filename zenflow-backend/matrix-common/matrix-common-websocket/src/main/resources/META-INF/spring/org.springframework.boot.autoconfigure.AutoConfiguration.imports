@@ -1,0 +1,3 @@
+com.deepdimen.matrix.common.websocket.config.WebSocketAutoConfiguration
+com.deepdimen.matrix.common.websocket.config.RedisMessageDistributorConfiguration
+com.deepdimen.matrix.common.websocket.config.LocalMessageDistributorConfiguration

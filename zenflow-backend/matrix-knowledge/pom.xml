@@ -1,0 +1,420 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.deepdimen</groupId>
+        <artifactId>matrix</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>matrix-knowledge</artifactId>
+    <packaging>jar</packaging>
+
+    <name>matrix-knowledge</name>
+    <description>知识库模块</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tika.version>2.9.4</tika.version>
+        <json.repair.version>0.3.0</json.repair.version>
+        <liteflow.version>2.12.0</liteflow.version>
+        <magic.version>3.0.0</magic.version>
+        <easyword.version>1.1.5</easyword.version>
+        <torchv.version>1.0.1</torchv.version>
+        <poi.version>5.4.0</poi.version>
+        <kumocore.version>1.28</kumocore.version>
+        <js.engine.version>15.4</js.engine.version>
+        <luhuiguo.version>23.1</luhuiguo.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-skill-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-biz</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-provider-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-assistant-provider-testkit</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!--必备: 操作数据源相关-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-data</artifactId>
+        </dependency>
+        <!--必备：matrix安全模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-security</artifactId>
+        </dependency>
+        <!--必备：脱敏工具类-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-sensitive</artifactId>
+        </dependency>
+        <!--必备：xss 过滤模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-xss</artifactId>
+        </dependency>
+        <!--必备: feign 依赖-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-feign</artifactId>
+        </dependency>
+        <!--可选：流量治理-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-sentinel</artifactId>
+        </dependency>
+        <!--必备: 依赖api模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-app-server-api</artifactId>
+        </dependency>
+        <!--必备: log 依赖-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-log</artifactId>
+        </dependency>
+        <!--选配: mybatis 依赖 -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+        <!-- druid 连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-3-starter</artifactId>
+        </dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+        <!--选配: swagger文档-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-swagger</artifactId>
+        </dependency>
+        <!-- 必备：资源解析-->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>${tika.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-parsers-standard-package</artifactId>
+            <version>${tika.version}</version>
+        </dependency>
+        <!-- 必备：大模型工具链 -->
+        <dependency>
+            <groupId>io.github.haibiiin</groupId>
+            <artifactId>json-repair</artifactId>
+            <version>${json.repair.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-mcp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-jina</artifactId>
+        </dependency>
+        <!-- 必备： langchain4j-reactor 依赖-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-reactor</artifactId>
+        </dependency>
+        <!-- 必备： qdrant 存储-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-qdrant</artifactId>
+        </dependency>
+        <!--- 选配： milvus 存储-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-milvus</artifactId>
+        </dependency>
+        <!--- 选配： chroma 存储-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-chroma</artifactId>
+        </dependency>
+        <!--- 选配： pgvector 存储-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-pgvector</artifactId>
+        </dependency>
+        <!--- 选配： neo4j 存储-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-neo4j</artifactId>
+        </dependency>
+        <!-- 必备： apache-pdfbox 解析-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-document-parser-apache-pdfbox</artifactId>
+        </dependency>
+        <!-- 必备： apache-poi 解析-->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-document-parser-apache-poi</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sushengren</groupId>
+            <artifactId>easyword</artifactId>
+            <version>${easyword.version}</version>
+        </dependency>
+        <!-- 必备：torchv 解析-->
+        <dependency>
+            <groupId>io.github.pig-mesh</groupId>
+            <artifactId>torchv-unstructured</artifactId>
+            <version>${torchv.version}</version>
+        </dependency>
+        <!-- 选配： html-word 解析-->
+        <dependency>
+            <groupId>com.luhuiguo</groupId>
+            <artifactId>aspose-words</artifactId>
+            <version>${luhuiguo.version}</version>
+        </dependency>
+        <!-- 必备：HTML解析 -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+        </dependency>
+        <!-- 选配：本地搜索 -->
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-community-web-search-engine-searxng</artifactId>
+            <version>${langchain4j.beta.version}</version>
+        </dependency>
+        <!-- 必备： 百炼大模型（音频）-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dashscope-sdk-java</artifactId>
+        </dependency>
+        <!--  必备： 低代码相关-->
+        <dependency>
+            <groupId>io.github.pig-mesh</groupId>
+            <artifactId>magic-api-spring-boot-starter</artifactId>
+            <version>${magic.version}</version>
+        </dependency>
+        <!--  必备： webclient-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+        </dependency>
+        <!--  必备： 安全相关-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-crypto</artifactId>
+        </dependency>
+        <!-- 必备： 缓存 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-cache</artifactId>
+        </dependency>
+        <!--必备:  API加解密 -->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-encrypt-api</artifactId>
+        </dependency>
+        <!--必备：执行脚本-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-script</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.nashorn</groupId>
+            <artifactId>nashorn-core</artifactId>
+            <version>${js.engine.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- 必备：规则引擎-->
+        <dependency>
+            <groupId>com.yomahub</groupId>
+            <artifactId>liteflow-spring-boot-starter</artifactId>
+            <version>${liteflow.version}</version>
+        </dependency>
+        <!-- 必备：词云生成 kumo -->
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-core</artifactId>
+            <version>${kumocore.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-tokenizers</artifactId>
+            <version>${kumocore.version}</version>
+            <!--  不支持 Java 25 排除掉-->
+            <exclusions>
+                <exclusion>
+                    <artifactId>jna</artifactId>
+                    <groupId>net.java.dev.jna</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-flow-api</artifactId>
+        </dependency>
+        <!-- 节点执行规则渲染 -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+        <!--注册中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--配置中心客户端-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+        <!-- AI 问数必备，需要链接什么数据源、就加什么驱动 -->
+        <dependency>
+            <groupId>org.anyline</groupId>
+            <artifactId>anyline-environment-spring-data-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.anyline</groupId>
+            <artifactId>anyline-data-jdbc-mysql</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-scratchpad</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring.ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-bom</artifactId>
+                <version>${langchain4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <profiles>
+        <!-- Scoped verification: the inherited Surefire 2.x does not discover JUnit 5. -->
+        <profile>
+            <id>dataquery-tests</id>
+            <dependencies>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                    <version>2.3.232</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.5.4</version>
+                        <configuration>
+                            <failIfNoTests>true</failIfNoTests>
+                            <includes>
+                                <include>**/support/dataquery/*Test.java</include>
+                                <include>**/service/impl/AiDataFieldSelectionTest.java</include>
+                                <include>**/service/impl/AiTerminology*Test.java</include>
+                            </includes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>cloud</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>repackage</goal>
+                                </goals>
+                                <configuration>
+                                    <loaderImplementation>CLASSIC</loaderImplementation>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.fabric8</groupId>
+                        <artifactId>docker-maven-plugin</artifactId>
+                        <configuration>
+                            <skip>false</skip>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>boot</id>
+        </profile>
+    </profiles>
+</project>

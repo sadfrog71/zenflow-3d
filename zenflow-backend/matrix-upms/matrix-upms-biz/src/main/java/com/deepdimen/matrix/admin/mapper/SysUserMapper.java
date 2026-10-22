@@ -1,0 +1,80 @@
+/*
+ *
+ *      Copyright (c) 2018-2025, deepdimen All rights reserved.
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ * Redistributions of source code must retain the above copyright notice,
+ *  this list of conditions and the following disclaimer.
+ *  Redistributions in binary form must reproduce the above copyright
+ *  notice, this list of conditions and the following disclaimer in the
+ *  documentation and/or other materials provided with the distribution.
+ *  Neither the name of the deepdimen.com developer nor the names of its
+ *  contributors may be used to endorse or promote products derived from
+ *  this software without specific prior written permission.
+ *  Author: caoyuan (caoyuanchn@gmail.com)
+ *
+ */
+
+package com.deepdimen.matrix.admin.mapper;
+
+import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.deepdimen.matrix.admin.api.dto.UserDTO;
+import com.deepdimen.matrix.admin.api.entity.SysUser;
+import com.deepdimen.matrix.admin.api.vo.UserVO;
+import com.deepdimen.matrix.common.data.datascope.DataScope;
+import com.deepdimen.matrix.common.data.datascope.MatrixBaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+/**
+ * 用户表 Mapper 接口
+ *
+ * @author caoyuan
+ * @date 2025/06/30
+ */
+@Mapper
+public interface SysUserMapper extends MatrixBaseMapper<SysUser> {
+
+	/**
+	 * 通过用户DTO查询用户信息（包含角色信息）
+	 * @param userDTO 用户查询DTO
+	 * @return 包含角色信息的用户VO
+	 */
+	@InterceptorIgnore(tenantLine = "true")
+	UserVO getUserVo(@Param("query") UserDTO userDTO);
+
+	/**
+	 * 分页查询用户信息（含角色）
+	 * @param page 分页对象
+	 * @param userDTO 用户查询参数
+	 * @param dataScope 数据权限范围
+	 * @return 分页用户信息列表
+	 */
+	@InterceptorIgnore(tenantLine = "true")
+	IPage<UserVO> getUserVosPage(Page page, @Param("query") UserDTO userDTO, DataScope dataScope);
+
+	/**
+	 * 通过ID查询用户信息
+	 * @param id 用户ID
+	 * @return 用户信息VO对象
+	 */
+	@InterceptorIgnore(tenantLine = "true")
+	UserVO getUserVoById(@Param("id") Long id, @Param("tenantId") Long tenantId);
+
+	/**
+	 * 根据数据权限查询用户列表
+	 * @param userDTO 查询条件
+	 * @param ids 用户ID数组
+	 * @param dataScope 数据权限声明
+	 * @return 用户VO列表
+	 */
+	@InterceptorIgnore(tenantLine = "true")
+	List<UserVO> getUserVoListByScope(@Param("query") UserDTO userDTO, @Param("ids") Long[] ids, DataScope dataScope);
+
+}

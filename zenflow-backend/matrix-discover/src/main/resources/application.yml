@@ -1,0 +1,44 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: @artifactId@
+  cloud:
+    nacos:
+      username: @nacos.username@
+      password: @nacos.password@
+      discovery:
+        server-addr: ${NACOS_HOST:matrix-register}:${NACOS_PORT:8848}
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+  config:
+    import:
+      - optional:nacos:application-@profiles.active@.yml
+      - optional:nacos:${spring.application.name}-@profiles.active@.yml
+
+matrix:
+  sse:
+    # Discover 按云端多实例运行；本地单实例调试可覆盖为 local。
+    message-distributor: ${MATRIX_SSE_MESSAGE_DISTRIBUTOR:redis}
+  assistant:
+    repository: jdbc
+    blocking-timeout-seconds: ${MATRIX_ASSISTANT_BLOCKING_TIMEOUT_SECONDS:60}
+    model:
+      gateway: ${MATRIX_ASSISTANT_MODEL_GATEWAY:remote}
+      service-id: ${MATRIX_ASSISTANT_MODEL_SERVICE_ID:matrix-knowledge}
+    provider-executor:
+      core-size: ${MATRIX_ASSISTANT_PROVIDER_CORE_SIZE:4}
+      max-size: ${MATRIX_ASSISTANT_PROVIDER_MAX_SIZE:8}
+      queue-capacity: ${MATRIX_ASSISTANT_PROVIDER_QUEUE_CAPACITY:64}
+    run:
+      lease-seconds: ${MATRIX_ASSISTANT_RUN_LEASE_SECONDS:30}
+      lease-renew-seconds: ${MATRIX_ASSISTANT_RUN_LEASE_RENEW_SECONDS:10}
+      scan-delay-ms: ${MATRIX_ASSISTANT_RUN_SCAN_DELAY_MS:5000}
+      scan-batch-size: ${MATRIX_ASSISTANT_RUN_SCAN_BATCH_SIZE:100}
+    events:
+      retention-days: ${MATRIX_ASSISTANT_EVENT_RETENTION_DAYS:7}
+      cleanup-interval-ms: ${MATRIX_ASSISTANT_EVENT_CLEANUP_INTERVAL_MS:3600000}
+
+
+

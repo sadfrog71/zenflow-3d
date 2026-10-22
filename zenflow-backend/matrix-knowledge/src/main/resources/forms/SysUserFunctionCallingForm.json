@@ -1,0 +1,97 @@
+[
+  {
+    "type": "fcRow",
+    "children": [
+      {
+        "type": "col",
+        "props": {
+          "span": 12
+        },
+        "children": [
+          {
+            "type": "input",
+            "field": "username",
+            "title": "用户名",
+            "value": "%s",
+            "$required": true
+          }
+        ],
+        "_fc_id": "id_Fazumdr1cbdgagc",
+        "name": "ref_Frf0mdr1cbdgahc",
+        "display": true,
+        "hidden": false,
+        "_fc_drag_tag": "col"
+      },
+      {
+        "type": "col",
+        "props": {
+          "span": 12
+        },
+        "children": [
+          {
+            "type": "input",
+            "field": "phone",
+            "title": "手机号",
+            "value": "%s",
+            "$required": true
+          }
+        ],
+        "_fc_id": "id_Fk6hmdr1cbdgaic",
+        "name": "ref_Frzymdr1cbdgajc",
+        "display": true,
+        "hidden": false,
+        "_fc_drag_tag": "col"
+      }
+    ],
+    "_fc_id": "id_Fb1gmdr1cbdgaec",
+    "name": "ref_Fatpmdr1cbdgafc",
+    "display": true,
+    "hidden": false,
+    "_fc_drag_tag": "fcRow"
+  },
+  {
+    "type": "fcRow",
+    "children": [
+      {
+        "type": "col",
+        "props": {
+          "span": 12
+        },
+        "children": [
+          {
+            "type": "input",
+            "field": "password",
+            "title": "密码",
+            "value": "%s",
+            "$required": true,
+            "props": {
+              "type": "password"
+            }
+          }
+        ],
+        "_fc_id": "id_F96tmdr1cq2aasc",
+        "name": "ref_Ffm7mdr1cq2aatc",
+        "display": true,
+        "hidden": false,
+        "_fc_drag_tag": "col"
+      },
+      {
+        "type": "col",
+        "props": {
+          "span": 12
+        },
+        "children": [],
+        "_fc_id": "id_Fr4imdr1cq2aauc",
+        "name": "ref_Fqznmdr1cq2aavc",
+        "display": true,
+        "hidden": false,
+        "_fc_drag_tag": "col"
+      }
+    ],
+    "_fc_id": "id_Fzermdr1cq2aaqc",
+    "name": "ref_Fn14mdr1cq2aarc",
+    "display": true,
+    "hidden": false,
+    "_fc_drag_tag": "fcRow"
+  }
+]

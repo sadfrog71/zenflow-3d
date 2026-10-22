@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiDocumentMapper">
+
+    <resultMap id="aiDocumentMap" type="com.deepdimen.matrix.knowledge.entity.AiDocumentEntity">
+        <id property="id" column="id"/>
+        <result property="datasetId" column="dataset_id"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="name" column="name"/>
+        <result property="fileType" column="file_type"/>
+        <result property="fileUrl" column="file_url"/>
+        <result property="fileHash" column="file_hash"/>
+        <result property="sourceType" column="source_type"/>
+        <result property="sliceCount" column="slice_count"/>
+        <result property="hitCount" column="hit_count"/>
+        <result property="fileSize" column="file_size"/>
+        <result property="fileStatus" column="file_status"/>
+        <result property="sliceStatus" column="slice_status"/>
+        <result property="graphStatus" column="graph_status"/>
+        <result property="sliceFailReason" column="slice_fail_reason"/>
+        <result property="summary" column="summary"/>
+        <result property="summaryStatus" column="summary_status"/>
+        <result property="summaryFailReason" column="summary_fail_reason"/>
+        <result property="documentConfig" column="document_config"/>
+        <result property="tags" column="tags" typeHandler="com.deepdimen.matrix.common.data.handler.JsonStringArrayTypeHandler"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="successSliceCount" column="success_slice_count"/>
+        <!-- 关联知识库信息 -->
+        <association property="dataset" javaType="com.deepdimen.matrix.knowledge.entity.AiDatasetEntity">
+            <id property="id" column="dataset_id"/>
+            <result property="name" column="dataset_name"/>
+            <result property="aiTagFlag" column="dataset_ai_tag_flag"/>
+        </association>
+    </resultMap>
+
+    <select id="getDocumentPage" resultMap="aiDocumentMap">
+        SELECT
+        d.id,
+        d.dataset_id,
+        d.category_id,
+        d.name,
+        d.file_type,
+        d.file_url,
+        d.file_hash,
+        d.source_type,
+        d.hit_count,
+        d.file_size,
+        d.file_status,
+        d.slice_status,
+        d.graph_status,
+        d.create_time,
+        d.update_time,
+        d.create_by,
+        d.update_by,
+        d.del_flag,
+        d.summary_status,
+        d.slice_fail_reason,
+        d.summary,
+        d.summary_fail_reason,
+        d.document_config,
+        d.tags,
+        (SELECT COUNT(*) FROM ai_slice s WHERE s.document_id = d.id AND s.del_flag = '0') AS slice_count,
+        (SELECT COUNT(*) FROM ai_slice s WHERE s.document_id = d.id AND s.slice_status = '1' AND s.del_flag = '0') AS success_slice_count,
+        ds.id AS dataset_id,
+        ds.name AS dataset_name,
+        ds.ai_tag_flag AS dataset_ai_tag_flag
+        FROM ai_document d
+        LEFT JOIN ai_dataset ds ON d.dataset_id = ds.id
+        <where>
+            d.del_flag = '0'
+            <if test="query.uncategorized == true">
+                AND d.category_id IS NULL
+            </if>
+            <if test="query.categoryIds != null and query.categoryIds.size() > 0">
+                AND d.category_id IN
+                <foreach collection="query.categoryIds" item="categoryId" open="(" separator="," close=")">
+                    #{categoryId}
+                </foreach>
+            </if>
+            <if test="query.datasetId != null and query.datasetId != ''">
+                AND d.dataset_id = #{query.datasetId}
+            </if>
+            <if test="query.summaryStatus != null and query.summaryStatus != ''">
+                AND d.summary_status = #{query.summaryStatus}
+            </if>
+            <if test="query.sliceStatus != null and query.sliceStatus != ''">
+                AND d.slice_status = #{query.sliceStatus}
+            </if>
+            <if test="query.sourceType != null and query.sourceType != ''">
+                AND d.source_type = #{query.sourceType}
+            </if>
+            <if test="query.name != null and query.name != ''">
+                <bind name="nameLike" value="'%'+query.name+'%'"/>
+                AND d.name LIKE #{nameLike}
+            </if>
+        </where>
+        ORDER BY d.create_time DESC
+    </select>
+</mapper>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiSliceMapper">
+
+    <resultMap id="aiSliceMap" type="com.deepdimen.matrix.knowledge.entity.AiSliceEntity">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="fileSize" column="file_size"/>
+        <result property="hitCount" column="hit_count"/>
+        <result property="charCount" column="char_count"/>
+        <result property="content" column="content"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+    </resultMap>
+
+    <resultMap id="aiSliceTextSearchMap" type="com.deepdimen.matrix.knowledge.dto.AiSliceTextSearchDTO">
+        <id property="sliceId" column="slice_id"/>
+        <result property="documentId" column="document_id"/>
+        <result property="documentName" column="document_name"/>
+        <result property="content" column="content"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="score" column="score"/>
+    </resultMap>
+
+    <select id="searchByText" resultMap="aiSliceTextSearchMap">
+        SELECT s.id AS slice_id,
+               s.document_id,
+               d.name AS document_name,
+               s.content,
+               s.create_time,
+               s.update_time,
+               (
+                 <foreach collection="terms" item="term" separator=" + ">
+                   CASE WHEN LOWER(s.content) LIKE CONCAT('%', #{term}, '%')
+                        THEN CHAR_LENGTH(#{term}) * CHAR_LENGTH(#{term}) ELSE 0 END
+                   + CASE WHEN LOWER(d.name) LIKE CONCAT('%', #{term}, '%')
+                          THEN CHAR_LENGTH(#{term}) * CHAR_LENGTH(#{term}) * 3 ELSE 0 END
+                 </foreach>
+               ) AS score
+          FROM ai_slice s
+          JOIN ai_document d
+            ON d.id = s.document_id
+           AND d.tenant_id = s.tenant_id
+         WHERE s.tenant_id = #{tenantId}
+           AND d.tenant_id = #{tenantId}
+           AND d.dataset_id = #{datasetId}
+           AND s.del_flag = '0'
+           AND d.del_flag = '0'
+           AND s.slice_status = '1'
+           AND d.slice_status = '1'
+           AND d.file_status = '1'
+           AND s.content IS NOT NULL
+           AND s.content != ''
+           AND (
+             <foreach collection="terms" item="term" separator=" OR ">
+               LOWER(s.content) LIKE CONCAT('%', #{term}, '%')
+               OR LOWER(d.name) LIKE CONCAT('%', #{term}, '%')
+             </foreach>
+           )
+         ORDER BY score DESC, s.hit_count DESC, s.update_time DESC
+         LIMIT #{limit}
+    </select>
+</mapper>

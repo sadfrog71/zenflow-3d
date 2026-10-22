@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiBillMapper">
+
+    <resultMap id="aiBillMap" type="com.deepdimen.matrix.knowledge.entity.AiBillEntity">
+        <id property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="promptTokens" column="prompt_tokens"/>
+        <result property="completionTokens" column="completion_tokens"/>
+        <result property="model" column="model"/>
+        <result property="reqid" column="reqid"/>
+        <result property="ip" column="ip"/>
+        <result property="note" column="note"/>
+        <result property="tokenId" column="token_id"/>
+        <result property="tokens" column="tokens"/>
+        <result property="tokenType" column="token_type"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="tenantId" column="tenant_id"/>
+    </resultMap>
+
+    <select id="selectBillSum" resultType="com.deepdimen.matrix.knowledge.entity.AiBillEntity">
+        SELECT id, user_id, prompt_tokens, completion_tokens, model, reqid, ip, note, 
+               token_id, tokens, token_type, create_by, create_time, update_by, update_time, del_flag
+        FROM ai_bill
+        WHERE create_time >= #{startDate}
+          AND del_flag = '0'
+        ORDER BY create_time
+    </select>
+</mapper>

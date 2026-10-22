@@ -1,0 +1,750 @@
+{
+  "schemaVersion": 1,
+  "sceneVersion": "p3-v039-runtime-2",
+  "sourceSha256": "ac5519c038d8d5f72a34e72a1062514f6be64842ebad33b387f240cdbf73bfa7",
+  "decoder": "uncompressed glTF 2 / Three.js vendored runtime",
+  "fallbackNodeId": "N00",
+  "overview": {
+    "packageId": "overview",
+    "camera": "CAM_LAYOUT_TOP"
+  },
+  "files": [
+    {
+      "file": "common.glb",
+      "bytes": 5613016,
+      "sha256": "c016a7a3b6200f8eca75246e11e300d1403dfb035b0f7b6c104fbb0b65ec21b2"
+    },
+    {
+      "file": "overview.glb",
+      "bytes": 14502604,
+      "sha256": "6a9b20307ad07945507659824fe5d302b5f01a63fd4a2d333526575ec06105f9"
+    },
+    {
+      "file": "pond.glb",
+      "bytes": 5319896,
+      "sha256": "f711170d6d5ba197f39b82b426802a2bcc565fb262534e76e9a8d99878e56786"
+    },
+    {
+      "file": "probe.glb",
+      "bytes": 860,
+      "sha256": "d9280f060073efd7074e35241dc8ea2b6f6945d455d4cbb2bd77159a80397c4e"
+    },
+    {
+      "file": "texture-0338ff38874254bbdf46.webp",
+      "bytes": 20196,
+      "sha256": "0338ff38874254bbdf46ae074f24f5f05b0485527e328522f28baf08bb586750"
+    },
+    {
+      "file": "texture-0a0f2d31d46ab90260b1.webp",
+      "bytes": 546,
+      "sha256": "0a0f2d31d46ab90260b1c851ad54ef3e1105c5af5f24004be6c7de2910208620"
+    },
+    {
+      "file": "texture-140f6a032bd3cd08b257.webp",
+      "bytes": 34498,
+      "sha256": "140f6a032bd3cd08b257d4960495dd6927a6b05c852ae83d8da254fcbe59d86a"
+    },
+    {
+      "file": "texture-156bc630731b5faa96c9.webp",
+      "bytes": 95204,
+      "sha256": "156bc630731b5faa96c9d8c1799f2577d793e01746740096e90a6ef1ea97c405"
+    },
+    {
+      "file": "texture-1f12e5e1fdc5b59fbe01.webp",
+      "bytes": 39034,
+      "sha256": "1f12e5e1fdc5b59fbe01fd04543c28ff7e9d5d7e7eacfde5be37fd2283328bd5"
+    },
+    {
+      "file": "texture-20e3d4670e328a19585d.webp",
+      "bytes": 3504,
+      "sha256": "20e3d4670e328a19585d5145e925e08fd258d586c885a9226e71d809b74b3a89"
+    },
+    {
+      "file": "texture-21191002ccda1bfa748d.webp",
+      "bytes": 12544,
+      "sha256": "21191002ccda1bfa748d143539a0ff921e4a82f6de349505ff4e2698ecb63000"
+    },
+    {
+      "file": "texture-2aad06cf7f8facef69c0.webp",
+      "bytes": 16388,
+      "sha256": "2aad06cf7f8facef69c08948c955818c2d8d458cf647f4a9e7b74548fc87ba5a"
+    },
+    {
+      "file": "texture-2d44d1a6661a7bf625a8.webp",
+      "bytes": 31424,
+      "sha256": "2d44d1a6661a7bf625a828ad0b37547b9f29e278db769356688bc2e1240343ed"
+    },
+    {
+      "file": "texture-2e07e8fa52a8fe1a60a2.webp",
+      "bytes": 19152,
+      "sha256": "2e07e8fa52a8fe1a60a2d8717a3c77db47d6c261f7df88c882bed151e892e083"
+    },
+    {
+      "file": "texture-337e5442974ca221cc73.webp",
+      "bytes": 98372,
+      "sha256": "337e5442974ca221cc739548ee7cc4ef37dc3984a536579e3e634deffae21833"
+    },
+    {
+      "file": "texture-37b64b51621373b846ae.webp",
+      "bytes": 6828,
+      "sha256": "37b64b51621373b846aebf14ce4f0fce400b3f06926f81b6324766a5497c8480"
+    },
+    {
+      "file": "texture-3dd6082c2e28104a7be0.webp",
+      "bytes": 15530,
+      "sha256": "3dd6082c2e28104a7be08af8b3dc8601db444aae83e4e7bdad4c25ecff6f278c"
+    },
+    {
+      "file": "texture-4005077339e72707bb53.webp",
+      "bytes": 31636,
+      "sha256": "4005077339e72707bb53372d241d14a74b738326cbd53d2111ed627536e1c421"
+    },
+    {
+      "file": "texture-41744aa3bae47f54c122.webp",
+      "bytes": 105922,
+      "sha256": "41744aa3bae47f54c122a23c6ebcb28f613110e6ac1c661b1ad7fe8bda207909"
+    },
+    {
+      "file": "texture-42264b6a207a8c696692.webp",
+      "bytes": 20248,
+      "sha256": "42264b6a207a8c696692d16c0959010385d075260925a973a65835b7765c78a2"
+    },
+    {
+      "file": "texture-4878a033f2c59b999ca3.webp",
+      "bytes": 1334,
+      "sha256": "4878a033f2c59b999ca36a952f4294961be3bd1d670e22bfd9e90ee34c808c17"
+    },
+    {
+      "file": "texture-49e164b25be4446e7b36.webp",
+      "bytes": 6952,
+      "sha256": "49e164b25be4446e7b36d72a0b5f59eb6208a014a26c898ea6e66dc43b8eb2ad"
+    },
+    {
+      "file": "texture-4aa5884266228e778692.webp",
+      "bytes": 2910,
+      "sha256": "4aa5884266228e778692b0d2de0280315b7a3544b988f50bd7fc1b52d8bff50d"
+    },
+    {
+      "file": "texture-4e1489562ea915658275.webp",
+      "bytes": 32148,
+      "sha256": "4e1489562ea91565827501b11e012d6ffcb2770262123c24fdc88bdc3f5cc32a"
+    },
+    {
+      "file": "texture-4e7101660a7f080d62c7.webp",
+      "bytes": 3480,
+      "sha256": "4e7101660a7f080d62c70123a3e007b46b8e27f0bf43f938f1924859a0eb4636"
+    },
+    {
+      "file": "texture-5a5e165240f9f873a9bf.webp",
+      "bytes": 48156,
+      "sha256": "5a5e165240f9f873a9bf915736870e8c35e780192d133950791f34849e2faf4b"
+    },
+    {
+      "file": "texture-5a74031d64b04fb5c956.webp",
+      "bytes": 688,
+      "sha256": "5a74031d64b04fb5c956f89e83f1d633723e3f5d9bce556e2616e4386505467a"
+    },
+    {
+      "file": "texture-5db3c508565d0ff74a6a.webp",
+      "bytes": 16428,
+      "sha256": "5db3c508565d0ff74a6a00d01d9fda9bf39b8ff857f2dda9b974a883b7bee73b"
+    },
+    {
+      "file": "texture-5ed58fec695fd0ea1f8c.webp",
+      "bytes": 50920,
+      "sha256": "5ed58fec695fd0ea1f8cbc97e8797d1a3228990cb2335d03b9809662de7a828b"
+    },
+    {
+      "file": "texture-618cd31d6d7e7497ae99.webp",
+      "bytes": 99518,
+      "sha256": "618cd31d6d7e7497ae99ea3416ae20b3979de3667ee9eb78f8cd0b22ce4cf4f7"
+    },
+    {
+      "file": "texture-657fbbd8f4f566eca57e.webp",
+      "bytes": 16096,
+      "sha256": "657fbbd8f4f566eca57e4d0f64b1f165de1f3db103ab5f230c47b84c2f8597f6"
+    },
+    {
+      "file": "texture-6a6abac1ae7d66b2ac27.webp",
+      "bytes": 3200,
+      "sha256": "6a6abac1ae7d66b2ac27f700f5dcf0a642cd82aca2a72b6d50bc0831c6a06e9a"
+    },
+    {
+      "file": "texture-6b40a0cd9ceabcaf79da.webp",
+      "bytes": 3598,
+      "sha256": "6b40a0cd9ceabcaf79dae2edf48e5d0553250090af21788e434d54648d79a947"
+    },
+    {
+      "file": "texture-6f99435b55a4490a069e.webp",
+      "bytes": 19054,
+      "sha256": "6f99435b55a4490a069ea83fc130ca3ff7997daf76015840788631b4207620dc"
+    },
+    {
+      "file": "texture-6f9ac01bf8d6d3db7fcc.webp",
+      "bytes": 10436,
+      "sha256": "6f9ac01bf8d6d3db7fcc28d29274a1ee86e311f9725a8e764df9083c056f3ced"
+    },
+    {
+      "file": "texture-7118b4741ce54bcc52d6.webp",
+      "bytes": 6108,
+      "sha256": "7118b4741ce54bcc52d60c4755adbb76ef20e7cd5520e7ab60ff677de8426b3b"
+    },
+    {
+      "file": "texture-722d861fd7c4ae704650.webp",
+      "bytes": 14836,
+      "sha256": "722d861fd7c4ae70465030701f046fca7415bcc37c9632654930260e4e560206"
+    },
+    {
+      "file": "texture-75976b4ffab6e1e52b0d.webp",
+      "bytes": 51704,
+      "sha256": "75976b4ffab6e1e52b0d5c033854f7a5d452481a8a153693c816c8b9f8c4aac2"
+    },
+    {
+      "file": "texture-7cd11eb4a2ab9770debc.webp",
+      "bytes": 85440,
+      "sha256": "7cd11eb4a2ab9770debc5ddc3995c82cdfd1ef9a4e1877aeaf0159796543da9b"
+    },
+    {
+      "file": "texture-8927ac74ad1e954a7197.webp",
+      "bytes": 8948,
+      "sha256": "8927ac74ad1e954a719746678596a220e135fe2cd507daeaece79aa48dae4543"
+    },
+    {
+      "file": "texture-9fe1a0586de1b3705e17.webp",
+      "bytes": 6252,
+      "sha256": "9fe1a0586de1b3705e17721ead200db1c93c9ae31f3bdf8b39b58189c8fb5114"
+    },
+    {
+      "file": "texture-a745d4e4ebd0f4ce0f50.webp",
+      "bytes": 6556,
+      "sha256": "a745d4e4ebd0f4ce0f50b16ada2d5ff07c1f4854b2fac47d03d5403b773ae305"
+    },
+    {
+      "file": "texture-a9bdcb0b8c939a138fae.webp",
+      "bytes": 3422,
+      "sha256": "a9bdcb0b8c939a138fae0ae0f3573264755f08a26e4156502d6ecf1c3f5abbcc"
+    },
+    {
+      "file": "texture-ac39b880c91a99cd7cbd.webp",
+      "bytes": 65566,
+      "sha256": "ac39b880c91a99cd7cbd3fe198588273855c5c2a392b76471eade90ec5f8beb2"
+    },
+    {
+      "file": "texture-ae1566073b98cb9f2024.webp",
+      "bytes": 10726,
+      "sha256": "ae1566073b98cb9f20240b8975b8aaa4fbc99fa2fe17175003aa2fe0ddaa81a1"
+    },
+    {
+      "file": "texture-b1ca0cefde82e46229b5.webp",
+      "bytes": 33964,
+      "sha256": "b1ca0cefde82e46229b504446a0b53755eb2108950e3ea4400d9fd694ef550f5"
+    },
+    {
+      "file": "texture-bc64bf45bc2fce75b6ad.webp",
+      "bytes": 18870,
+      "sha256": "bc64bf45bc2fce75b6ad55e8a856f913837c203d58b9db6d37c20fa3814fd744"
+    },
+    {
+      "file": "texture-d04b4332d02d9b809315.webp",
+      "bytes": 16968,
+      "sha256": "d04b4332d02d9b809315d1e24bacad8c818fa24d83c9f45781d7fc37469d0e63"
+    },
+    {
+      "file": "texture-e2301b30c16839adfc73.webp",
+      "bytes": 121556,
+      "sha256": "e2301b30c16839adfc73428791fe0e8081c53a7f88b7d29d3a895ed6f0a2356d"
+    },
+    {
+      "file": "texture-e6a4a6a5061ccd0edf16.webp",
+      "bytes": 51872,
+      "sha256": "e6a4a6a5061ccd0edf164756ea6e4b0f6d11fd27d1ce619a0a06ddf379feb056"
+    },
+    {
+      "file": "texture-ea45435b33f31d1c8c78.webp",
+      "bytes": 14432,
+      "sha256": "ea45435b33f31d1c8c78ffaeafe865d3a6f78619bb569d8a691a4ca1e719ec68"
+    },
+    {
+      "file": "texture-eba1195a3a5f104a8da0.webp",
+      "bytes": 14098,
+      "sha256": "eba1195a3a5f104a8da026b364ff1eff6f98ee1f920fbad7692a9ff456374bfd"
+    },
+    {
+      "file": "texture-ee7127fc40d5d0f53b40.webp",
+      "bytes": 88438,
+      "sha256": "ee7127fc40d5d0f53b40879c6dcc97865d10c4c5f81e38654e3c7cac3288d77d"
+    },
+    {
+      "file": "texture-eebe997072ca156f3e21.webp",
+      "bytes": 3080,
+      "sha256": "eebe997072ca156f3e21eb4f30a870bd5582e032920df56f3baa65b25311ac11"
+    },
+    {
+      "file": "texture-f4a12dd02a2e757b14f1.webp",
+      "bytes": 796,
+      "sha256": "f4a12dd02a2e757b14f17a8c4ab00fad29c82b7da4dfc94f18139a4b9b910a0c"
+    },
+    {
+      "file": "texture-f51c4ebc4bc7b545e1a8.webp",
+      "bytes": 53750,
+      "sha256": "f51c4ebc4bc7b545e1a8f93ef5ecdddaf598e4bec19ef253b1467038ceafff2b"
+    },
+    {
+      "file": "texture-f64891c3f40f6d06035a.webp",
+      "bytes": 4330,
+      "sha256": "f64891c3f40f6d06035a8312074358b980def8c6e01b21afbc7aa78c7ad52a8c"
+    },
+    {
+      "file": "texture-f97f6ded61ca5af4f54a.webp",
+      "bytes": 15628,
+      "sha256": "f97f6ded61ca5af4f54a5243794304af0a8e3d9f6ce67ae4424916c5b509d680"
+    },
+    {
+      "file": "texture-fb150af27865a96f6ab1.webp",
+      "bytes": 25850,
+      "sha256": "fb150af27865a96f6ab1d77b15e6e2ebf9cbd58c0921a620b359ded69ff038fd"
+    },
+    {
+      "file": "texture-fe91e2ae57d0443a76b9.webp",
+      "bytes": 3080,
+      "sha256": "fe91e2ae57d0443a76b90947f033ef0c5c5d975828346af19a3a21950a498ea4"
+    },
+    {
+      "file": "texture-feb626f4da387ece65a7.webp",
+      "bytes": 14848,
+      "sha256": "feb626f4da387ece65a769bf3e7fcc8eb86464a829e1914f58598a0f7b142f83"
+    },
+    {
+      "file": "texture-ff334c49d9dea39810ac.webp",
+      "bytes": 59422,
+      "sha256": "ff334c49d9dea39810acc7e263b8ed653160dd61d774249a0a6e24fbbf4d39f6"
+    },
+    {
+      "file": "tree.glb",
+      "bytes": 8215804,
+      "sha256": "680283169f658874383fb0cef9b368e699c9cd61a7c4a6a8fad794b937c7dda0"
+    },
+    {
+      "file": "veranda.glb",
+      "bytes": 25480924,
+      "sha256": "0fe90d6d4701c9592dd3347538dce4de965a82e35c56fab72329f7ce6423c975"
+    },
+    {
+      "file": "index.html",
+      "bytes": 628621,
+      "sha256": "dc99d53c270fb186c4447d4d5cb0857334a4f1bbccb44368317956d9d958c7a3"
+    }
+  ],
+  "viewpoints": [
+    {
+      "id": "N00",
+      "label": "廊下",
+      "labelEn": "Veranda",
+      "camera": "CAM_ENTRY_SEATED",
+      "packageId": "veranda",
+      "available": true,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N01",
+      "label": "鱼塘",
+      "labelEn": "Pond",
+      "camera": "CAM_WATER_BRIDGE",
+      "packageId": "pond",
+      "available": true,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N02",
+      "label": "坐垫",
+      "labelEn": "Meditation",
+      "camera": "CAM_ISLAND_APPROACH",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N03",
+      "label": "许愿树",
+      "labelEn": "Wish tree",
+      "camera": "CAM_WISH_APPROACH",
+      "packageId": "tree",
+      "available": true,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N04",
+      "label": "书房入口",
+      "labelEn": "Library",
+      "camera": "CAM_LIBRARY_ENTRY",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N05",
+      "label": "阅读席",
+      "labelEn": "Reading seat",
+      "camera": "CAM_LIBRARY_SEATED",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N06",
+      "label": "抄写厅",
+      "labelEn": "Writing room",
+      "camera": "CAM_COPY_ENTRY",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N07",
+      "label": "抄写席",
+      "labelEn": "Writing seat",
+      "camera": "CAM_COPY_RH",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N08",
+      "label": "私人小屋",
+      "labelEn": "Private cabin",
+      "camera": "CAM_PRIVATE_ENTRY",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N09",
+      "label": "对话小屋",
+      "labelEn": "Conversation",
+      "camera": "CAM_CHAT_ENTRY",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N10",
+      "label": "钟庭",
+      "labelEn": "Bell court",
+      "camera": "CAM_BELL_COURT",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N11",
+      "label": "老树通路",
+      "labelEn": "Old tree path",
+      "camera": "CAM_OLD_TREE_PATH",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N12",
+      "label": "观景台",
+      "labelEn": "Lookout",
+      "camera": "CAM_LOOKOUT_E",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    },
+    {
+      "id": "N13",
+      "label": "前门",
+      "labelEn": "Front gate",
+      "camera": "CAM_FRONT_GATE",
+      "packageId": null,
+      "available": false,
+      "yawRange": [
+        -0.85,
+        0.85
+      ],
+      "pitchRange": [
+        -0.3,
+        0.3
+      ],
+      "fov": 47,
+      "near": 0.04,
+      "far": 550
+    }
+  ],
+  "environmentPresets": [
+    "day",
+    "dusk",
+    "night",
+    "rain",
+    "dawn",
+    "sunset"
+  ],
+  "status": "DEVELOPMENT_ASSET_NOT_RELEASE_ACCEPTED",
+  "adaptation": {
+    "maxTextureSize": 512,
+    "nearRadius": 28,
+    "deferredDistantDetail": "Z04/Z05/Z06/Z11/Z12 roofs, tiles and pavers; visual acceptance pending",
+    "backgroundPineStride": 4,
+    "missingVisualEntities": "See spatial-bindings-v1.json; native buttons remain explicit runtime proxies"
+  },
+  "minBridgeProtocol": 1,
+  "minClientVersion": "0.1.0",
+  "runtimeDependencies": {
+    "three": {
+      "sha256": "e2b5ee6bccd38fd6d8a2428546b83c5f2426d84b152ef82be8055556e3b40eb6"
+    },
+    "GLTFLoader": {
+      "sha256": "5bc183f5f98ebcd9e98c18977dab4a675db9fd8a6bcaa5d84898586033bb9979"
+    },
+    "BufferGeometryUtils": {
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    }
+  },
+  "packages": [
+    {
+      "id": "textures",
+      "files": [
+        "texture-0338ff38874254bbdf46.webp",
+        "texture-0a0f2d31d46ab90260b1.webp",
+        "texture-140f6a032bd3cd08b257.webp",
+        "texture-156bc630731b5faa96c9.webp",
+        "texture-1f12e5e1fdc5b59fbe01.webp",
+        "texture-20e3d4670e328a19585d.webp",
+        "texture-21191002ccda1bfa748d.webp",
+        "texture-2aad06cf7f8facef69c0.webp",
+        "texture-2d44d1a6661a7bf625a8.webp",
+        "texture-2e07e8fa52a8fe1a60a2.webp",
+        "texture-337e5442974ca221cc73.webp",
+        "texture-37b64b51621373b846ae.webp",
+        "texture-3dd6082c2e28104a7be0.webp",
+        "texture-4005077339e72707bb53.webp",
+        "texture-41744aa3bae47f54c122.webp",
+        "texture-42264b6a207a8c696692.webp",
+        "texture-4878a033f2c59b999ca3.webp",
+        "texture-49e164b25be4446e7b36.webp",
+        "texture-4aa5884266228e778692.webp",
+        "texture-4e1489562ea915658275.webp",
+        "texture-4e7101660a7f080d62c7.webp",
+        "texture-5a5e165240f9f873a9bf.webp",
+        "texture-5a74031d64b04fb5c956.webp",
+        "texture-5db3c508565d0ff74a6a.webp",
+        "texture-5ed58fec695fd0ea1f8c.webp",
+        "texture-618cd31d6d7e7497ae99.webp",
+        "texture-657fbbd8f4f566eca57e.webp",
+        "texture-6a6abac1ae7d66b2ac27.webp",
+        "texture-6b40a0cd9ceabcaf79da.webp",
+        "texture-6f99435b55a4490a069e.webp",
+        "texture-6f9ac01bf8d6d3db7fcc.webp",
+        "texture-7118b4741ce54bcc52d6.webp",
+        "texture-722d861fd7c4ae704650.webp",
+        "texture-75976b4ffab6e1e52b0d.webp",
+        "texture-7cd11eb4a2ab9770debc.webp",
+        "texture-8927ac74ad1e954a7197.webp",
+        "texture-9fe1a0586de1b3705e17.webp",
+        "texture-a745d4e4ebd0f4ce0f50.webp",
+        "texture-a9bdcb0b8c939a138fae.webp",
+        "texture-ac39b880c91a99cd7cbd.webp",
+        "texture-ae1566073b98cb9f2024.webp",
+        "texture-b1ca0cefde82e46229b5.webp",
+        "texture-bc64bf45bc2fce75b6ad.webp",
+        "texture-d04b4332d02d9b809315.webp",
+        "texture-e2301b30c16839adfc73.webp",
+        "texture-e6a4a6a5061ccd0edf16.webp",
+        "texture-ea45435b33f31d1c8c78.webp",
+        "texture-eba1195a3a5f104a8da0.webp",
+        "texture-ee7127fc40d5d0f53b40.webp",
+        "texture-eebe997072ca156f3e21.webp",
+        "texture-f4a12dd02a2e757b14f1.webp",
+        "texture-f51c4ebc4bc7b545e1a8.webp",
+        "texture-f64891c3f40f6d06035a.webp",
+        "texture-f97f6ded61ca5af4f54a.webp",
+        "texture-fb150af27865a96f6ab1.webp",
+        "texture-fe91e2ae57d0443a76b9.webp",
+        "texture-feb626f4da387ece65a7.webp",
+        "texture-ff334c49d9dea39810ac.webp"
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "common",
+      "files": [
+        "common.glb"
+      ],
+      "dependencies": [
+        "textures"
+      ]
+    },
+    {
+      "id": "overview",
+      "files": [
+        "overview.glb"
+      ],
+      "dependencies": [
+        "common",
+        "textures"
+      ]
+    },
+    {
+      "id": "veranda",
+      "files": [
+        "veranda.glb"
+      ],
+      "dependencies": [
+        "common",
+        "textures"
+      ]
+    },
+    {
+      "id": "pond",
+      "files": [
+        "pond.glb"
+      ],
+      "dependencies": [
+        "common",
+        "textures"
+      ]
+    },
+    {
+      "id": "tree",
+      "files": [
+        "tree.glb"
+      ],
+      "dependencies": [
+        "common",
+        "textures"
+      ]
+    }
+  ]
+}

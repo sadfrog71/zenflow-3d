@@ -1,0 +1,7 @@
+# swagger 配置
+swagger:
+  enabled: true
+  title: Matrix Swagger API
+  gateway: http://${GATEWAY-HOST:matrix-gateway}:${GATEWAY-PORT:9999}
+  token-url: ${swagger.gateway}/auth/oauth2/token
+  scope: server

@@ -1,0 +1,6 @@
+com.deepdimen.matrix.common.core.config.JacksonConfiguration
+com.deepdimen.matrix.common.core.config.MessageSourceConfiguration
+com.deepdimen.matrix.common.core.config.WebCommonConfiguration
+com.deepdimen.matrix.common.core.config.ImmutableConfiguration
+com.deepdimen.matrix.common.core.util.SpringContextHolder
+

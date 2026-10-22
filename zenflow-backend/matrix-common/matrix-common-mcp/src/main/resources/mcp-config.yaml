@@ -1,0 +1,13 @@
+spring:
+  ai:
+    mcp:
+      server:
+        name: @project.artifactId@
+        version: @project.version@
+        type: SYNC
+        instructions: @project.description@
+        sse-message-endpoint: /mcp/messages
+        sse-endpoint: /mcp/sse
+        capabilities:
+          tool: true
+        base-url: ${server.servlet.context-path:}

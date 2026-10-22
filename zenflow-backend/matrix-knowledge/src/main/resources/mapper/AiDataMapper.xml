@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiDataMapper">
+
+    <resultMap id="aiDataMap" type="com.deepdimen.matrix.knowledge.entity.AiDataEntity">
+        <id property="dataId" column="data_id"/>
+        <result property="datasetName" column="dataset_name"/>
+        <result property="description" column="description"/>
+        <result property="datasetType" column="dataset_type"/>
+        <result property="dsName" column="ds_name"/>
+        <result property="learningStatus" column="learning_status"/>
+        <result property="tableName" column="table_name"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+    </resultMap>
+</mapper>

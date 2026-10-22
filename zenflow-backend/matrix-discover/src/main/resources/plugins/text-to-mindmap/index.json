@@ -1,0 +1,15 @@
+{
+  "author": "Matrix",
+  "createdAt": "2025-05-01",
+  "homepage": "https://deepdimen.com/matrix/chat-plugin-mindmap",
+  "identifier": "text-to-mindmap",
+  "manifest": "https://plugin.deepdimen.com/text2mindmap/manifest.json",
+  "meta": {
+    "avatar": "https://github.com/caoychn.png?size=48",
+    "tags": ["思维导图", "可视化", "知识整理", "文本分析", "创意工具"],
+    "title": "智能思维导图",
+    "description": "智能文本转思维导图工具，快速将复杂文本内容转换为清晰的可视化思维导图。支持多层级结构，帮助您更好地整理思路、分析问题和展示想法。",
+    "category": "tools"
+  },
+  "schemaVersion": 1
+}

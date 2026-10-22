@@ -1,0 +1,15 @@
+{
+  "author": "Matrix",
+  "createdAt": "2025-10-10",
+  "homepage": "https://deepdimen.com/matrix/chat-plugins",
+  "identifier": "chat-db",
+  "manifest": "https://plugin.deepdimen.com/chatdb/manifest.json",
+  "meta": {
+    "avatar": "🛢️",
+    "tags": ["chatdb", "database", "ai", "dba", "excel", "dashboard", "gbi", "数据对话", "智能分析", "报表分析"],
+    "title": "ChatDB 智能数据库对话",
+    "description": "ChatDB是专业的数据库专家，定位LLM As DBA。提供报表分析(Dashboard场景的生成式BI)、数据库对话(性能分析与优化)、Excel对话(数据解读分析)、数据对话(结构化与半结构化数据分析洞察)等全方位数据分析能力。",
+    "category": "office"
+  },
+  "schemaVersion": 1
+}

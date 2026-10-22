@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.deepdimen</groupId>
+        <artifactId>matrix-app-server</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>matrix-app-server-api</artifactId>
+
+    <dependencies>
+        <!--core 工具类-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-core</artifactId>
+        </dependency>
+        <!--mybatis plus extension,包含了mybatis plus core-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring</artifactId>
+        </dependency>
+        <!--feign 工具类-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-feign</artifactId>
+        </dependency>
+        <!-- excel 导入导出 -->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-excel</artifactId>
+        </dependency>
+        <!-- 脱敏工具类-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-sensitive</artifactId>
+        </dependency>
+    </dependencies>
+</project>

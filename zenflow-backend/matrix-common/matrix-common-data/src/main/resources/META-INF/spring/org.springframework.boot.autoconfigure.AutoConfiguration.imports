@@ -1,0 +1,9 @@
+com.deepdimen.matrix.common.data.cache.RedisTemplateConfiguration
+com.deepdimen.matrix.common.data.cache.RedisMessageConfiguration
+com.deepdimen.matrix.common.data.cache.RedisCacheManagerConfiguration
+com.deepdimen.matrix.common.data.cache.RedisCacheAutoConfiguration
+com.deepdimen.matrix.common.data.tenant.MatrixTenantConfigProperties
+com.deepdimen.matrix.common.data.tenant.TenantContextHolderFilter
+com.deepdimen.matrix.common.data.tenant.MatrixTenantConfiguration
+com.deepdimen.matrix.common.data.mybatis.MybatisPlusConfiguration
+com.deepdimen.matrix.common.data.resolver.TenantKeyStrResolver

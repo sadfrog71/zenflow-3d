@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2020 deepdimen Authors. All Rights Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.deepdimen</groupId>
+        <artifactId>matrix</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>matrix-boot</artifactId>
+    <packaging>jar</packaging>
+
+    <description>matrix 单体版本启动</description>
+
+    <dependencies>
+        <dependency><groupId>com.deepdimen</groupId><artifactId>zenflow-biz</artifactId><version>${project.version}</version>
+            <exclusions>
+                <!-- Product mail uses the Boot-managed Angus provider. Legacy providers shadow SMTP. -->
+                <exclusion><groupId>javax.mail</groupId><artifactId>mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>jakarta.mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>javax.mail</artifactId></exclusion>
+            </exclusions>
+        </dependency>
+        <!--必备：认证中心模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-auth</artifactId>
+            <version>${project.version}</version>
+        
+            <exclusions>
+                <!-- Product mail uses the Boot-managed Angus provider. Legacy providers shadow SMTP. -->
+                <exclusion><groupId>javax.mail</groupId><artifactId>mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>jakarta.mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>javax.mail</artifactId></exclusion>
+            </exclusions>
+        </dependency>
+        <!--必备：用户管理模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-upms-biz</artifactId>
+            <version>${project.version}</version>
+        
+            <exclusions>
+                <!-- Product mail uses the Boot-managed Angus provider. Legacy providers shadow SMTP. -->
+                <exclusion><groupId>javax.mail</groupId><artifactId>mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>jakarta.mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>javax.mail</artifactId></exclusion>
+            </exclusions>
+        </dependency>
+        <!--安全模块-->
+        <dependency>
+            <groupId>com.deepdimen</groupId>
+            <artifactId>matrix-common-security</artifactId>
+        
+            <exclusions>
+                <!-- Product mail uses the Boot-managed Angus provider. Legacy providers shadow SMTP. -->
+                <exclusion><groupId>javax.mail</groupId><artifactId>mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>jakarta.mail</artifactId></exclusion>
+                <exclusion><groupId>com.sun.mail</groupId><artifactId>javax.mail</artifactId></exclusion>
+            </exclusions>
+        </dependency>
+        <!--undertow容器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiModelMapper">
+
+  <resultMap id="aiModelMap" type="com.deepdimen.matrix.knowledge.entity.AiModelEntity">
+        <id property="id" column="id"/>
+        <result property="modelType" column="model_type"/>
+        <result property="modelName" column="model_name"/>
+        <result property="provider" column="provider"/>
+        <result property="name" column="name"/>
+        <result property="responseLimit" column="response_limit"/>
+        <result property="temperature" column="temperature"/>
+        <result property="topP" column="top_p"/>
+        <result property="apiKey" column="api_key"/>
+        <result property="baseUrl" column="base_url"/>
+        <result property="secretKey" column="secret_key"/>
+        <result property="endpoint" column="endpoint"/>
+        <result property="azureDeploymentName" column="azure_deployment_name"/>
+        <result property="geminiProject" column="gemini_project"/>
+        <result property="geminiLocation" column="gemini_location"/>
+        <result property="imageSize" column="image_size"/>
+        <result property="imageQuality" column="image_quality"/>
+        <result property="imageStyle" column="image_style"/>
+        <result property="dimensions" column="dimensions"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+  </resultMap>
+</mapper>

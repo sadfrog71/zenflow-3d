@@ -1,0 +1,16 @@
+com.deepdimen.matrix.admin.api.feign.RemoteDataScopeService
+com.deepdimen.matrix.admin.api.feign.RemoteClientDetailsService
+com.deepdimen.matrix.admin.api.feign.RemoteLogService
+com.deepdimen.matrix.admin.api.feign.RemoteParamService
+com.deepdimen.matrix.admin.api.feign.RemoteFileService
+com.deepdimen.matrix.admin.api.feign.RemoteTenantService
+com.deepdimen.matrix.admin.api.feign.RemoteTokenService
+com.deepdimen.matrix.admin.api.feign.RemoteUserService
+com.deepdimen.matrix.admin.api.feign.RemoteRoleService
+com.deepdimen.matrix.admin.api.feign.RemoteDeptService
+com.deepdimen.matrix.admin.api.feign.RemoteDictService
+com.deepdimen.matrix.admin.api.feign.RemoteAuditLogService
+com.deepdimen.matrix.admin.api.feign.RemoteMenuService
+com.deepdimen.matrix.admin.api.feign.RemoteRouteConfService
+com.deepdimen.matrix.admin.api.feign.RemoteMessageService
+com.deepdimen.matrix.admin.api.feign.RemoteAgentService

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiChatRecordMapper">
+
+    <!-- Dashboard统计查询 -->
+
+    <!-- 查询核心指标概览统计数据 -->
+    <select id="selectOverviewStats" resultType="java.util.HashMap">
+        SELECT
+        COUNT(*) AS totalChats,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        COUNT(DISTINCT COALESCE(f.user_id, f.username)) AS activeUsers,
+        COALESCE(AVG(f.duration_ms), 0) AS avgResponseTime
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+    </select>
+
+	<select id="selectConversationSourceUsage"
+			resultType="com.deepdimen.matrix.knowledge.dto.ConversationSourceUsageVO$SourceUsageItem">
+		SELECT f.source_type AS sourceType,
+		       COUNT(*) AS chatCount,
+		       COALESCE(SUM(f.prompt_tokens), 0) AS promptTokens,
+		       COALESCE(SUM(f.completion_tokens), 0) AS completionTokens,
+		       COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+		       ROUND(COALESCE(SUM(f.total_tokens), 0) * 100.0 /
+		         NULLIF((SELECT SUM(all_f.total_tokens) FROM ai_conversation_usage_fact all_f
+		                 WHERE all_f.tenant_id = #{params.tenantId}
+		                   AND DATE(all_f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}), 0), 1) AS percentage
+		FROM ai_conversation_usage_fact f
+		WHERE f.tenant_id = #{params.tenantId}
+		  AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+		GROUP BY f.source_type
+		ORDER BY totalTokens DESC, chatCount DESC
+	</select>
+
+    <!-- 查询上一周期核心指标统计数据（用于计算增长率） -->
+    <select id="selectPreviousOverviewStats" resultType="java.util.HashMap">
+        SELECT
+        COUNT(*) AS totalChats,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        COUNT(DISTINCT COALESCE(f.user_id, f.username)) AS activeUsers
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.prevStartDate} AND #{params.prevEndDate}
+    </select>
+
+    <!-- 查询Token使用趋势数据 -->
+    <select id="selectTokenTrend" resultType="java.util.HashMap">
+        SELECT
+        DATE(f.created_at) AS date,
+        COALESCE(SUM(f.prompt_tokens), 0) AS promptTokens,
+        COALESCE(SUM(f.completion_tokens), 0) AS completionTokens,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY DATE(f.created_at)
+        ORDER BY DATE(f.created_at)
+    </select>
+
+    <!-- 查询用户活跃度排行榜 -->
+    <select id="selectUserRanking" resultType="com.deepdimen.matrix.knowledge.dto.UserRankingVO$UserRankingItem">
+        SELECT
+        COALESCE(f.username, f.user_id) AS username,
+        COUNT(*) AS chatCount,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        ROW_NUMBER() OVER (ORDER BY
+        <choose>
+            <when test="params.orderBy == 'tokens'">
+                SUM(f.total_tokens) DESC
+            </when>
+            <otherwise>
+                COUNT(*) DESC
+            </otherwise>
+        </choose>
+        ) AS `rank`
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY COALESCE(f.username, f.user_id)
+        ORDER BY
+        <choose>
+            <when test="params.orderBy == 'tokens'">
+                totalTokens DESC
+            </when>
+            <otherwise>
+                chatCount DESC
+            </otherwise>
+        </choose>
+        LIMIT #{params.limit}
+    </select>
+
+    <!-- 查询模型使用分布统计 -->
+    <select id="selectModelDistribution"
+            resultType="com.deepdimen.matrix.knowledge.dto.ModelDistributionVO$ModelDistributionItem">
+        SELECT
+        f.model AS model,
+        COUNT(*) AS count,
+        COALESCE(SUM(f.total_tokens), 0) AS tokens,
+        ROUND(COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM ai_conversation_usage_fact all_f
+          WHERE all_f.tenant_id = #{params.tenantId}
+          AND DATE(all_f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}), 0), 1) AS percentage
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND f.model IS NOT NULL
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY f.model
+        ORDER BY count DESC
+    </select>
+
+    <!-- 查询LLM调用状态分布统计 -->
+    <select id="selectLLMStatus" resultType="com.deepdimen.matrix.knowledge.dto.LLMStatusVO$LLMStatusItem">
+        SELECT
+        CASE WHEN f.status IN ('SUCCEEDED', 'SUCCESS', 'COMPLETED') THEN '1' ELSE '9' END AS status,
+        CASE WHEN f.status IN ('SUCCEEDED', 'SUCCESS', 'COMPLETED') THEN '已使用' ELSE '失败' END AS statusName,
+        COUNT(*) AS count,
+        ROUND(COUNT(*) * 100.0 / NULLIF((SELECT COUNT(*) FROM ai_conversation_usage_fact all_f
+          WHERE all_f.tenant_id = #{params.tenantId}
+          AND DATE(all_f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}), 0), 1) AS percentage
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY CASE WHEN f.status IN ('SUCCEEDED', 'SUCCESS', 'COMPLETED') THEN '1' ELSE '9' END,
+                 CASE WHEN f.status IN ('SUCCEEDED', 'SUCCESS', 'COMPLETED') THEN '已使用' ELSE '失败' END
+        ORDER BY count DESC
+    </select>
+
+    <!-- 查询知识库使用统计（包含匹配率） -->
+    <select id="selectDatasetUsage" resultType="com.deepdimen.matrix.knowledge.dto.DatasetUsageVO$DatasetUsageItem">
+        SELECT
+        r.dataset_id AS datasetId,
+        d.name AS datasetName,
+        COUNT(DISTINCT r.record_id) AS usageCount,
+        ROUND(
+            SUM(CASE WHEN r.llm_flag = '1' THEN 1 ELSE 0 END) * 100.0 /
+            NULLIF(
+                SUM(CASE WHEN r.llm_flag = '1' THEN 1 ELSE 0 END) +
+                SUM(CASE WHEN r.llm_flag = '4' THEN 1 ELSE 0 END),
+            0),
+        1) AS avgSuitability
+        FROM ai_chat_record r
+        LEFT JOIN ai_dataset d ON r.dataset_id = d.id
+        WHERE r.del_flag = '0'
+        AND r.tenant_id = #{params.tenantId}
+        AND d.id > 100000
+        AND r.dataset_id IS NOT NULL
+        AND DATE(r.create_time) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY r.dataset_id, d.name
+        ORDER BY usageCount DESC
+        LIMIT 10
+    </select>
+
+    <!-- 查询时段活跃度热力图数据（按小时和星期分组） -->
+    <select id="selectHeatmapData" resultType="com.deepdimen.matrix.knowledge.dto.HeatmapVO$HeatmapItem">
+        SELECT
+        DAYOFWEEK(f.created_at) AS dayOfWeek,
+        HOUR(f.created_at) AS hour,
+        COUNT(*) AS count
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY DAYOFWEEK(f.created_at), HOUR(f.created_at)
+        ORDER BY dayOfWeek, hour
+    </select>
+
+    <!-- 查询响应时间分布数据（按模型分组） -->
+    <select id="selectResponseTimeStats" resultType="java.util.HashMap">
+        SELECT
+        f.model AS model,
+        f.duration_ms AS use_time
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND f.model IS NOT NULL
+        AND f.duration_ms IS NOT NULL
+        AND f.duration_ms > 0
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        ORDER BY f.model, f.duration_ms
+    </select>
+
+    <!-- 查询Token配额类型分布趋势 -->
+    <select id="selectTokenTypeDistribution" resultType="com.deepdimen.matrix.knowledge.dto.TokenTypeVO$TokenTypeItem">
+        SELECT
+        DATE(f.created_at) AS date,
+        COALESCE(SUM(CASE WHEN f.token_type = '0' THEN f.total_tokens ELSE 0 END), 0) AS systemTokens,
+        COALESCE(SUM(CASE WHEN f.token_type = '1' THEN f.total_tokens ELSE 0 END), 0) AS userTokens
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY DATE(f.created_at)
+        ORDER BY DATE(f.created_at)
+    </select>
+
+    <!-- 查询网络搜索使用统计 -->
+    <select id="selectWebSearchUsage" resultType="java.util.HashMap">
+        SELECT
+        SUM(CASE WHEN r.websearch_flag = '1' THEN 1 ELSE 0 END) AS withSearch,
+        COUNT(DISTINCT r.record_id) AS total
+        FROM ai_chat_record r
+        WHERE r.del_flag = '0'
+        AND r.tenant_id = #{params.tenantId}
+        AND DATE(r.create_time) BETWEEN #{params.startDate} AND #{params.endDate}
+    </select>
+
+    <!-- 查询用户使用统计（对话次数、Token用量、输入/输出Token、活跃天数） -->
+    <select id="selectUserStats" resultType="java.util.HashMap">
+        SELECT
+        COUNT(*) AS chatCount,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        COALESCE(SUM(f.prompt_tokens), 0) AS promptTokens,
+        COALESCE(SUM(f.completion_tokens), 0) AS completionTokens,
+        COUNT(DISTINCT DATE(f.created_at)) AS activeDays
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        <if test="params.userId != null and params.userId != ''">
+            AND f.username = #{params.userId}
+        </if>
+        <if test="params.startDate != null and params.startDate != ''">
+            AND DATE(f.created_at) &gt;= #{params.startDate}
+        </if>
+        <if test="params.endDate != null and params.endDate != ''">
+            AND DATE(f.created_at) &lt;= #{params.endDate}
+        </if>
+    </select>
+
+    <!-- 查询用户活跃度趋势（按天分组） -->
+    <select id="selectUserTrend" resultType="java.util.HashMap">
+        SELECT
+        DATE(f.created_at) AS date,
+        COUNT(*) AS chatCount
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        <if test="params.userId != null and params.userId != ''">
+            AND f.username = #{params.userId}
+        </if>
+        <if test="params.startDate != null and params.startDate != ''">
+            AND f.created_at &gt;= CONCAT(#{params.startDate}, ' 00:00:00')
+        </if>
+        <if test="params.endDate != null and params.endDate != ''">
+            AND f.created_at &lt; DATE_ADD(#{params.endDate}, INTERVAL 1 DAY)
+        </if>
+        GROUP BY DATE(f.created_at)
+        ORDER BY DATE(f.created_at)
+    </select>
+
+    <!-- 查询按部门统计 -->
+    <select id="selectDeptStats" resultType="com.deepdimen.matrix.knowledge.dto.DeptStatsVO$DeptStatsItem">
+        SELECT
+        d.dept_id AS deptId,
+        d.name AS deptName,
+        COUNT(*) AS chatCount,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens
+        FROM ai_conversation_usage_fact f
+        LEFT JOIN sys_user u ON CAST(u.user_id AS CHAR) = f.user_id
+          AND CAST(u.tenant_id AS CHAR) = f.tenant_id AND u.del_flag = '0'
+        LEFT JOIN sys_dept d ON d.dept_id = u.dept_id
+          AND CAST(d.tenant_id AS CHAR) = f.tenant_id AND d.del_flag = '0'
+        WHERE f.tenant_id = #{params.tenantId}
+        AND d.dept_id IS NOT NULL
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY d.dept_id, d.name
+        ORDER BY chatCount DESC
+        LIMIT 50
+    </select>
+
+    <!-- 查询按公司统计（按tenant_id分组） -->
+    <select id="selectCompanyStats" resultType="com.deepdimen.matrix.knowledge.dto.CompanyStatsVO$CompanyStatsItem">
+        SELECT
+        f.tenant_id AS tenantId,
+        t.name AS companyName,
+        COUNT(*) AS chatCount,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens
+        FROM ai_conversation_usage_fact f
+        LEFT JOIN sys_tenant t ON CAST(t.id AS CHAR) = f.tenant_id
+        WHERE f.tenant_id = #{params.tenantId}
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY f.tenant_id, t.name
+        ORDER BY chatCount DESC
+        LIMIT 50
+    </select>
+
+    <!-- 查询智能体费用明细 -->
+    <select id="selectAgentCost" resultType="com.deepdimen.matrix.knowledge.dto.AgentCostVO$AgentCostItem">
+        SELECT
+        f.agent_id AS agentId,
+        a.name AS agentName,
+        f.model AS modelName,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        COUNT(*) AS chatCount
+        FROM ai_conversation_usage_fact f
+        LEFT JOIN ai_agent a ON a.id = f.agent_id
+          AND CAST(a.tenant_id AS CHAR) = f.tenant_id AND a.del_flag = '0'
+        WHERE f.tenant_id = #{params.tenantId}
+        AND f.agent_id IS NOT NULL
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY f.agent_id, a.name, f.model
+        ORDER BY totalTokens DESC
+        LIMIT 50
+    </select>
+
+    <!-- 查询按模型维度Token用量统计 -->
+    <select id="selectModelStats" resultType="com.deepdimen.matrix.knowledge.dto.ModelStatsVO$ModelStatsItem">
+        SELECT
+        f.model AS modelName,
+        COUNT(*) AS chatCount,
+        COALESCE(SUM(f.total_tokens), 0) AS totalTokens,
+        COALESCE(SUM(f.prompt_tokens), 0) AS promptTokens,
+        COALESCE(SUM(f.completion_tokens), 0) AS completionTokens
+        FROM ai_conversation_usage_fact f
+        WHERE f.tenant_id = #{params.tenantId}
+        AND f.model IS NOT NULL
+        <if test="params.modelName != null and params.modelName != ''">
+            AND f.model = #{params.modelName}
+        </if>
+        AND DATE(f.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+        GROUP BY f.model
+        ORDER BY totalTokens DESC
+    </select>
+
+    <!-- 查询当前用户最近对话列表（按conversationId去重，每个会话取最新一条，LEFT JOIN ai_agent取名称） -->
+    <select id="selectRecentConversations" resultType="com.deepdimen.matrix.knowledge.dto.RecentConversationVO">
+          SELECT r.conversation_id AS conversationId,
+                 r.dataset_id AS datasetId,
+                 r.agent_id AS agentId,
+               a.name AS agentName,
+               r.question_text AS questionText,
+               r.create_time AS createTime
+        FROM ai_chat_record r
+        LEFT JOIN ai_agent a ON r.agent_id = a.id AND a.del_flag = '0'
+        WHERE r.del_flag = '0'
+          AND r.tenant_id = #{params.tenantId}
+            AND r.username = #{params.userId}
+            <if test="params.datasetId != null">
+                AND r.dataset_id = #{params.datasetId}
+            </if>
+            AND r.conversation_id IS NOT NULL
+          AND r.question_text != ''
+          AND r.record_id IN (
+              SELECT MAX(r2.record_id)
+              FROM ai_chat_record r2
+              WHERE r2.del_flag = '0'
+                AND r2.tenant_id = #{params.tenantId}
+                  AND r2.username = #{params.userId}
+                  <if test="params.datasetId != null">
+                      AND r2.dataset_id = #{params.datasetId}
+                  </if>
+                  AND r2.conversation_id IS NOT NULL
+              GROUP BY r2.conversation_id
+          )
+        ORDER BY r.create_time DESC
+        LIMIT #{params.limit}
+    </select>
+
+    <!-- 分页查询人员使用排行（按调用量或Token消耗排序） -->
+    <select id="selectUserRank" resultType="com.deepdimen.matrix.knowledge.dto.UserRankVO$UserRankItem">
+        SELECT
+        r.username AS username,
+        u.realName AS realName,
+        u.deptName AS deptName,
+        r.chatCount AS chatCount,
+        r.totalTokens AS totalTokens
+        FROM (
+            SELECT
+            fact.tenant_id AS tenantId,
+            fact.user_id AS userId,
+            COALESCE(fact.username, fact.user_id) AS username,
+            COUNT(*) AS chatCount,
+            COALESCE(SUM(fact.total_tokens), 0) AS totalTokens
+            FROM ai_conversation_usage_fact fact
+            WHERE fact.tenant_id = #{params.tenantId}
+            AND COALESCE(fact.username, fact.user_id) IS NOT NULL
+            AND COALESCE(fact.username, fact.user_id) != ''
+            <if test="params.startDate != null and params.startDate != '' and params.endDate != null and params.endDate != ''">
+                AND DATE(fact.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+            </if>
+            GROUP BY fact.tenant_id, fact.user_id, COALESCE(fact.username, fact.user_id)
+        ) r
+        LEFT JOIN (
+            SELECT user_info.userId, user_info.username, user_info.realName, user_info.deptName
+            FROM (
+                SELECT
+                su.user_id AS userId,
+                su.username,
+                su.name AS realName,
+                sd.name AS deptName,
+                ROW_NUMBER() OVER (PARTITION BY su.user_id ORDER BY su.user_id ASC) AS row_num
+                FROM sys_user su
+                INNER JOIN sys_tenant_user stu ON stu.user_id = su.user_id
+                AND stu.tenant_id = #{params.tenantId}
+                LEFT JOIN sys_dept sd ON su.dept_id = sd.dept_id
+                AND sd.del_flag = '0'
+                WHERE su.del_flag = '0'
+            ) user_info
+            WHERE user_info.row_num = 1
+        ) u ON CAST(u.userId AS CHAR) = r.userId OR (r.userId IS NULL AND r.username = u.username)
+        <if test="params.keyword != null and params.keyword != ''">
+            WHERE (r.username LIKE CONCAT('%', #{params.keyword}, '%')
+            OR u.realName LIKE CONCAT('%', #{params.keyword}, '%'))
+        </if>
+        <choose>
+            <when test="params.sortBy == 'tokens'">
+                ORDER BY totalTokens DESC, r.username ASC
+            </when>
+            <otherwise>
+                ORDER BY chatCount DESC, r.username ASC
+            </otherwise>
+        </choose>
+        LIMIT #{params.offset}, #{params.pageSize}
+    </select>
+
+    <select id="countUserRank" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM (
+            SELECT fact.tenant_id AS tenantId, fact.user_id AS userId,
+                   COALESCE(fact.username, fact.user_id) AS username
+            FROM ai_conversation_usage_fact fact
+            WHERE fact.tenant_id = #{params.tenantId}
+            AND COALESCE(fact.username, fact.user_id) IS NOT NULL
+            AND COALESCE(fact.username, fact.user_id) != ''
+            <if test="params.startDate != null and params.startDate != '' and params.endDate != null and params.endDate != ''">
+                AND DATE(fact.created_at) BETWEEN #{params.startDate} AND #{params.endDate}
+            </if>
+            GROUP BY fact.tenant_id, fact.user_id, COALESCE(fact.username, fact.user_id)
+        ) r
+        LEFT JOIN (
+            SELECT user_info.userId, user_info.username, user_info.realName
+            FROM (
+                SELECT
+                su.user_id AS userId,
+                su.username,
+                su.name AS realName,
+                ROW_NUMBER() OVER (PARTITION BY su.user_id ORDER BY su.user_id ASC) AS row_num
+                FROM sys_user su
+                INNER JOIN sys_tenant_user stu ON stu.user_id = su.user_id
+                AND stu.tenant_id = #{params.tenantId}
+                WHERE su.del_flag = '0'
+            ) user_info
+            WHERE user_info.row_num = 1
+        ) u ON CAST(u.userId AS CHAR) = r.userId OR (r.userId IS NULL AND r.username = u.username)
+        <if test="params.keyword != null and params.keyword != ''">
+            WHERE (r.username LIKE CONCAT('%', #{params.keyword}, '%')
+            OR u.realName LIKE CONCAT('%', #{params.keyword}, '%'))
+        </if>
+    </select>
+
+	<sql id="chatDetailColumns">
+		r.create_time AS questionTime,
+		r.username AS username,
+		u.name AS name,
+		d.name AS deptName,
+		CASE WHEN r.agent_id = 2026 THEN '默认助手' ELSE a.name END AS agentName,
+		r.question_text AS questionText,
+		r.llm_flag AS responseStatus,
+		r.use_time AS responseTime,
+		COALESCE(b.prompt_tokens, 0) AS promptTokens,
+		COALESCE(b.completion_tokens, 0) AS completionTokens,
+		r.evaluate AS evaluate,
+		r.conversation_id AS conversationId,
+		r.message_id AS messageId
+	</sql>
+
+	<sql id="chatDetailFrom">
+		FROM ai_chat_record r
+		LEFT JOIN (
+			SELECT tenant_id, message_key,
+				   COALESCE(SUM(prompt_tokens), 0) AS prompt_tokens,
+				   COALESCE(SUM(completion_tokens), 0) AS completion_tokens
+			FROM ai_bill
+			WHERE del_flag = '0'
+			GROUP BY tenant_id, message_key
+		) b ON b.message_key = r.record_id AND b.tenant_id = r.tenant_id
+		LEFT JOIN (
+			SELECT tenant_id, username, name, dept_id
+			FROM (
+				SELECT tenant_id, username, name, dept_id,
+					   ROW_NUMBER() OVER (PARTITION BY tenant_id, username ORDER BY user_id ASC) AS rn
+				FROM sys_user
+				WHERE del_flag = '0'
+			) user_rows
+			WHERE rn = 1
+		) u ON u.username = r.username AND u.tenant_id = r.tenant_id
+		LEFT JOIN sys_dept d ON d.dept_id = u.dept_id AND d.tenant_id = r.tenant_id AND d.del_flag = '0'
+		LEFT JOIN ai_agent a ON a.id = r.agent_id AND a.tenant_id = r.tenant_id AND a.del_flag = '0'
+	</sql>
+
+	<sql id="chatDetailWhere">
+		WHERE r.del_flag = '0'
+		AND r.tenant_id = #{query.tenantId}
+		<if test="query.startTime != null">AND r.create_time &gt;= #{query.startTime}</if>
+		<if test="query.endTime != null">AND r.create_time &lt;= #{query.endTime}</if>
+		<if test="query.userKeyword != null and query.userKeyword != ''">
+			AND (r.username LIKE CONCAT('%', #{query.userKeyword}, '%')
+				 OR u.name LIKE CONCAT('%', #{query.userKeyword}, '%'))
+		</if>
+		<if test="query.deptId != null">AND u.dept_id = #{query.deptId}</if>
+		<if test="query.agentId != null">AND r.agent_id = #{query.agentId}</if>
+		<if test="query.responseStatus != null and query.responseStatus != ''">
+			AND r.llm_flag = #{query.responseStatus}
+		</if>
+		<if test="query.evaluate == 'none'">AND (r.evaluate IS NULL OR r.evaluate = '') </if>
+		<if test="query.evaluate != null and query.evaluate != '' and query.evaluate != 'none'">
+			AND r.evaluate = #{query.evaluate}
+		</if>
+		<if test="query.questionKeyword != null and query.questionKeyword != ''">
+			AND r.question_text LIKE CONCAT('%', #{query.questionKeyword}, '%')
+		</if>
+		<if test="query.conversationId != null and query.conversationId != ''">
+			AND r.conversation_id = #{query.conversationId}
+		</if>
+		<if test="query.messageId != null and query.messageId != ''">
+			AND r.message_id = #{query.messageId}
+		</if>
+	</sql>
+
+	<select id="selectChatDetailPage" resultType="com.deepdimen.matrix.knowledge.dto.AiChatDetailVO">
+		SELECT <include refid="chatDetailColumns"/>
+		<include refid="chatDetailFrom"/>
+		<include refid="chatDetailWhere"/>
+		ORDER BY r.create_time DESC, r.record_id DESC
+	</select>
+
+	<select id="selectChatDetailList" resultType="com.deepdimen.matrix.knowledge.dto.AiChatDetailVO">
+		SELECT <include refid="chatDetailColumns"/>
+		<include refid="chatDetailFrom"/>
+		<include refid="chatDetailWhere"/>
+		ORDER BY r.create_time DESC, r.record_id DESC
+	</select>
+
+	<select id="countChatDetails" resultType="long">
+		SELECT COUNT(DISTINCT r.record_id)
+		<include refid="chatDetailFrom"/>
+		<include refid="chatDetailWhere"/>
+	</select>
+
+</mapper>

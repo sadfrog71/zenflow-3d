@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+    <parsers>
+        <parser class="org.apache.tika.parser.microsoft.OfficeParser"/>
+        <parser class="org.apache.tika.parser.microsoft.ooxml.OOXMLParser"/>
+        <parser class="org.apache.tika.parser.odf.OpenDocumentParser"/>
+    </parsers>
+    <service-loader initializableProblemHandler="ignore"/>
+</properties>

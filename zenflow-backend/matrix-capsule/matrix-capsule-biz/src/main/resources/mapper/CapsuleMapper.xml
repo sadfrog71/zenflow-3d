@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deepdimen.matrix.capsule.mapper.CapsuleMapper">
+
+    <sql id="ownedColumns">
+        c.id,
+        c.title,
+        c.record_type,
+        c.status,
+        c.source_type,
+        c.source_label,
+        c.tags,
+        c.favorite_flag,
+        LEFT(r.content, 220) AS excerpt,
+        c.current_revision_id,
+        r.revision_no,
+        c.version,
+        c.captured_at,
+        c.create_time,
+        c.update_time
+    </sql>
+
+    <select id="selectOwnedPage" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleSummaryVO">
+        SELECT <include refid="ownedColumns" />
+        FROM ai_capsule c
+        INNER JOIN ai_capsule_revision r
+            ON r.id = c.current_revision_id
+            AND r.tenant_id = #{tenantId}
+            AND r.owner_user_id = #{ownerUserId}
+          AND r.owner_subject_type = #{subjectType}
+        WHERE c.tenant_id = #{tenantId}
+          AND c.owner_user_id = #{ownerUserId}
+          AND c.owner_subject_type = #{subjectType}
+          AND c.del_flag = '0'
+        <if test="query.status != null">
+            AND c.status = #{query.status}
+        </if>
+        <if test="query.recordType != null">
+            AND c.record_type = #{query.recordType}
+        </if>
+        <if test="query.keyword != null and query.keyword != ''">
+            AND (c.title LIKE CONCAT('%', #{query.keyword}, '%')
+                OR r.content LIKE CONCAT('%', #{query.keyword}, '%'))
+        </if>
+        <if test="query.tag != null and query.tag != ''">
+            AND FIND_IN_SET(#{query.tag}, c.tags) &gt; 0
+        </if>
+        <if test="query.from != null">
+            AND c.captured_at &gt;= #{query.from}
+        </if>
+        <if test="query.to != null">
+            AND c.captured_at &lt;= #{query.to}
+        </if>
+        <if test="query.explicitIds != null and query.explicitIds.size() > 0">
+            AND c.id IN
+            <foreach collection="query.explicitIds" item="explicitId" open="(" separator="," close=")">
+                #{explicitId}
+            </foreach>
+        </if>
+        ORDER BY c.update_time DESC, c.id DESC
+    </select>
+
+    <select id="selectOwnedDetail" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleDetailVO">
+        SELECT <include refid="ownedColumns" />,
+               r.content,
+               r.content_format,
+               r.content_hash
+        FROM ai_capsule c
+        INNER JOIN ai_capsule_revision r
+            ON r.id = c.current_revision_id
+            AND r.tenant_id = #{tenantId}
+            AND r.owner_user_id = #{ownerUserId}
+          AND r.owner_subject_type = #{subjectType}
+        WHERE c.id = #{id}
+          AND c.tenant_id = #{tenantId}
+          AND c.owner_user_id = #{ownerUserId}
+          AND c.owner_subject_type = #{subjectType}
+          AND c.del_flag = '0'
+        LIMIT 1
+    </select>
+
+    <select id="selectOwnedForContext" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleDetailVO">
+        SELECT <include refid="ownedColumns" />,
+               r.content,
+               r.content_format,
+               r.content_hash
+        FROM ai_capsule c
+        INNER JOIN ai_capsule_revision r
+            ON r.id = c.current_revision_id
+            AND r.tenant_id = #{tenantId}
+            AND r.owner_user_id = #{ownerUserId}
+          AND r.owner_subject_type = #{subjectType}
+        WHERE c.tenant_id = #{tenantId}
+          AND c.owner_user_id = #{ownerUserId}
+          AND c.owner_subject_type = #{subjectType}
+          AND c.status = 'ACTIVE'
+          AND c.del_flag = '0'
+        <if test="queryText != null and queryText != ''">
+            AND (c.title LIKE CONCAT('%', #{queryText}, '%')
+                OR r.content LIKE CONCAT('%', #{queryText}, '%'))
+        </if>
+        <if test="from != null">
+            AND c.captured_at &gt;= #{from}
+        </if>
+        <if test="to != null">
+            AND c.captured_at &lt;= #{to}
+        </if>
+        <if test="recordType != null">
+            AND c.record_type = #{recordType}
+        </if>
+        <if test="explicitIds != null and explicitIds.size() > 0">
+            AND c.id IN
+            <foreach collection="explicitIds" item="explicitId" open="(" separator="," close=")">
+                #{explicitId}
+            </foreach>
+        </if>
+        ORDER BY c.update_time DESC, c.id DESC
+        LIMIT #{limit}
+    </select>
+
+    <select id="countOwnedExplicitIds" resultType="long">
+        SELECT COUNT(1)
+        FROM ai_capsule c
+        WHERE c.tenant_id = #{tenantId}
+          AND c.owner_user_id = #{ownerUserId}
+          AND c.owner_subject_type = #{subjectType}
+          AND c.del_flag = '0'
+          AND c.id IN
+          <foreach collection="explicitIds" item="explicitId" open="(" separator="," close=")">
+              #{explicitId}
+          </foreach>
+    </select>
+
+    <select id="selectTenantOverview" resultType="com.deepdimen.matrix.capsule.api.vo.CapsuleOverviewVO">
+        SELECT COUNT(1) AS total_count,
+               COALESCE(SUM(CASE WHEN status = 'ACTIVE' THEN 1 ELSE 0 END), 0) AS active_count,
+               COALESCE(SUM(CASE WHEN status = 'ARCHIVED' THEN 1 ELSE 0 END), 0) AS archived_count,
+               COALESCE(SUM(CASE WHEN status = 'TRASHED' THEN 1 ELSE 0 END), 0) AS trashed_count,
+               COALESCE(SUM(CASE WHEN create_time &gt;= CURRENT_DATE THEN 1 ELSE 0 END), 0) AS today_created_count
+        FROM ai_capsule
+        WHERE tenant_id = #{tenantId} AND owner_subject_type = 'ADMIN_USER'
+          AND del_flag = '0'
+    </select>
+</mapper>

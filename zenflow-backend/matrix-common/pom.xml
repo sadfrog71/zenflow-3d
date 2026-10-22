@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~
+  ~      Copyright (c) 2018-2025, deepdimen All rights reserved.
+  ~
+  ~  Redistribution and use in source and binary forms, with or without
+  ~  modification, are permitted provided that the following conditions are met:
+  ~
+  ~ Redistributions of source code must retain the above copyright notice,
+  ~  this list of conditions and the following disclaimer.
+  ~  Redistributions in binary form must reproduce the above copyright
+  ~  notice, this list of conditions and the following disclaimer in the
+  ~  documentation and/or other materials provided with the distribution.
+  ~  Neither the name of the deepdimen.com developer nor the names of its
+  ~  contributors may be used to endorse or promote products derived from
+  ~  this software without specific prior written permission.
+  ~  Author: caoyuan (caoyuanchn@gmail.com)
+  ~
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.deepdimen</groupId>
+        <artifactId>matrix</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>matrix-common</artifactId>
+    <packaging>pom</packaging>
+
+    <description>matrix 公共聚合模块</description>
+
+    <modules>
+        <module>matrix-common-audit</module>
+        <module>matrix-common-bom</module>
+        <module>matrix-common-core</module>
+        <module>matrix-common-data</module>
+        <module>matrix-common-datasource</module>
+        <module>matrix-common-excel</module>
+        <module>matrix-common-encrypt-api</module>
+        <module>matrix-common-feign</module>
+        <module>matrix-common-gateway</module>
+        <module>matrix-common-gray</module>
+        <module>matrix-common-idempotent</module>
+        <module>matrix-common-job</module>
+        <module>matrix-common-log</module>
+        <module>matrix-common-oss</module>
+        <module>matrix-common-seata</module>
+        <module>matrix-common-security</module>
+        <module>matrix-common-sensitive</module>
+        <module>matrix-common-sentinel</module>
+        <module>matrix-common-sequence</module>
+        <module>matrix-common-swagger</module>
+        <module>matrix-common-sse</module>
+        <module>matrix-common-websocket</module>
+        <module>matrix-common-xss</module>
+        <module>matrix-common-neo4j</module>
+        <module>matrix-common-milvus</module>
+        <module>matrix-common-mcp</module>
+    </modules>
+</project>

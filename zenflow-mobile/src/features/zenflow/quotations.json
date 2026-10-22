@@ -1,0 +1,86 @@
+[
+  {
+    "id": "hesse-wisdom",
+    "author": {
+      "zh": "赫尔曼·黑塞",
+      "en": "Hermann Hesse"
+    },
+    "work": {
+      "zh": "《悉达多》· 乔文达章",
+      "en": "Siddhartha · Govinda"
+    },
+    "quote": {
+      "zh": "智慧无法传授。",
+      "en": "Wisdom cannot be passed on."
+    },
+    "translation": {
+      "zh": "中文为本原型自译",
+      "en": "Project Gutenberg English edition"
+    },
+    "source": "https://www.gutenberg.org/files/2500/2500-h/2500-h.htm",
+    "prompt": {
+      "zh": "哪件事，是亲身经历之后，你才慢慢懂得的？",
+      "en": "What is something you only came to understand by living through it?"
+    },
+    "note": {
+      "zh": "这是小说中悉达多的台词。",
+      "en": "A line spoken by Siddhartha in the novel."
+    }
+  },
+  {
+    "id": "suzuki-beginner",
+    "author": {
+      "zh": "铃木俊隆",
+      "en": "Shunryu Suzuki"
+    },
+    "work": {
+      "zh": "初心 · 讲座录音档案",
+      "en": "Beginner’s mind · talk archive"
+    },
+    "quote": {
+      "zh": "初心中有许多可能，专家心中却没有多少可能。",
+      "en": "In beginner’s mind we have many possibilities, but in expert mind there is not much possibility."
+    },
+    "translation": {
+      "zh": "中文为本原型自译",
+      "en": "Original talk transcript"
+    },
+    "source": "https://blogs.sfzc.org/blog/2021/10/13/beginners-mind-awakening-the-archive-tape-1/",
+    "prompt": {
+      "zh": "如果暂时放下“我已经知道”，你想重新看看什么？",
+      "en": "What would you look at afresh if you set “I already know” aside?"
+    },
+    "note": {
+      "zh": "保留讲座原句，不混用书籍版本。",
+      "en": "Wording from the recorded talk."
+    }
+  },
+  {
+    "id": "zhuangzi-beauty",
+    "author": {
+      "zh": "庄子",
+      "en": "Zhuangzi"
+    },
+    "work": {
+      "zh": "《庄子》· 知北游",
+      "en": "Zhuangzi · Knowledge Rambling in the North"
+    },
+    "quote": {
+      "zh": "天地有大美而不言。",
+      "en": "Heaven and earth hold great beauty, yet say nothing."
+    },
+    "translation": {
+      "zh": "古籍原文",
+      "en": "Translation for this prototype"
+    },
+    "source": "https://ctext.org/text.pl?if=gb&node=2875&remap=gb&show=parallel",
+    "prompt": {
+      "zh": "今天，有什么微小的美，不需要解释？",
+      "en": "What small beauty today needs no explanation?"
+    },
+    "note": {
+      "zh": "原句节录。",
+      "en": "A short excerpt."
+    }
+  }
+]

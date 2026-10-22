@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deepdimen.matrix.discover.mapper.AiAgentMapper">
+
+    <!-- 权限检查公共片段: 判断当前用户是否有权访问智能体 -->
+    <sql id="accessibleCheck">
+        a.permission = 'public'
+        OR EXISTS (
+            SELECT 1 FROM ai_agent_permission p
+            WHERE p.agent_id = a.id
+            AND (
+                p.permission_type = 'all'
+                <if test="roleIds != null and roleIds.size() > 0">
+                OR (p.permission_type = 'role' AND p.target_id IN
+                    <foreach collection="roleIds" item="rid" open="(" separator="," close=")">#{rid}</foreach>)
+                </if>
+                OR (p.permission_type = 'user' AND p.target_id = #{userId})
+                <if test="deptIds != null and deptIds.size() > 0">
+                OR (p.permission_type = 'dept' AND p.target_id IN
+                    <foreach collection="deptIds" item="did" open="(" separator="," close=")">#{did}</foreach>)
+                </if>
+            )
+        )
+    </sql>
+
+    <!-- 智能体概况统计: totalCount只统计已发布+已停用, avgSatisfaction为like占比 -->
+    <select id="selectStatistics" resultType="com.deepdimen.matrix.discover.vo.AiAgentStatisticsVO">
+        SELECT
+            IFNULL(SUM(CASE WHEN status IN ('published', 'disabled') THEN 1 ELSE 0 END), 0) AS totalCount,
+            IFNULL(SUM(CASE WHEN status = 'published' THEN 1 ELSE 0 END), 0) AS publishedCount,
+            IFNULL(SUM(CASE WHEN status = 'disabled' THEN 1 ELSE 0 END), 0) AS disabledCount,
+            IFNULL(SUM(CASE WHEN status IN ('published', 'disabled') THEN use_count ELSE 0 END), 0) AS totalUseCount
+        FROM ai_agent
+        WHERE del_flag = '0'
+    </select>
+
+    <!-- 全局满意度(like数/总评价数) -->
+    <select id="selectGlobalSatisfaction" resultType="java.math.BigDecimal">
+        SELECT
+            CASE WHEN COUNT(*) = 0 THEN 0
+                 ELSE ROUND(SUM(CASE WHEN evaluate = 'like' THEN 1 ELSE 0 END) / COUNT(*), 3)
+            END
+        FROM ai_chat_record
+        WHERE evaluate IS NOT NULL AND (del_flag IS NULL OR del_flag = '0')
+    </select>
+
+    <!-- 智能体总收藏数(关联验证智能体未删除) -->
+    <select id="selectTotalFavorites" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM ai_collect c
+        INNER JOIN ai_agent a ON a.id = c.target_id AND a.del_flag = '0'
+        WHERE c.collect_type = 'agent'
+    </select>
+
+    <!-- 智能体排行Top N -->
+    <select id="selectRankList" resultType="com.deepdimen.matrix.discover.vo.AiAgentRankVO">
+        SELECT
+            a.id,
+            a.name,
+            a.avatar,
+            a.category,
+            a.use_count AS useCount,
+            IFNULL(
+                (SELECT ROUND(SUM(CASE WHEN r.evaluate='like' THEN 1 ELSE 0 END)/COUNT(*),3)
+                 FROM ai_chat_record r WHERE r.agent_id = a.id AND r.evaluate IS NOT NULL
+                 AND (r.del_flag IS NULL OR r.del_flag = '0')),
+                0
+            ) AS satisfaction
+        FROM ai_agent a
+        WHERE a.del_flag = '0' AND a.status = 'published'
+        <choose>
+            <when test="sortBy == 'rating'">ORDER BY satisfaction DESC</when>
+            <otherwise>ORDER BY a.use_count DESC</otherwise>
+        </choose>
+        LIMIT #{limit}
+    </select>
+
+    <!-- 企业排行榜（跨租户，需配合 TenantBroker.noneAs() 使用）
+         注意：关联查询 ai_chat_record/ai_collect，仅单体模式可用 -->
+    <select id="selectEnterpriseRankList" resultType="com.deepdimen.matrix.discover.vo.AiAgentEnterpriseRankVO">
+        SELECT
+            a.tenant_id AS tenantId,
+            COUNT(DISTINCT a.id) AS agentCount,
+            IFNULL(SUM(a.use_count), 0) AS totalUseCount,
+            IFNULL(
+                ROUND(SUM(CASE WHEN r.evaluate = 'like' THEN 1 ELSE 0 END) /
+                      NULLIF(SUM(CASE WHEN r.evaluate IS NOT NULL THEN 1 ELSE 0 END), 0), 3),
+                0
+            ) AS avgSatisfaction,
+            IFNULL(
+                ROUND(SUM(CASE WHEN r.evaluate = 'like' THEN 1 ELSE 0 END) /
+                      NULLIF(SUM(CASE WHEN r.evaluate IS NOT NULL THEN 1 ELSE 0 END), 0), 3),
+                0
+            ) AS avgAccuracy,
+            COUNT(DISTINCT c.id) AS totalFavorites
+        FROM ai_agent a
+        LEFT JOIN ai_chat_record r ON r.agent_id = a.id
+        LEFT JOIN ai_collect c ON c.target_id = a.id AND c.collect_type = 'agent'
+        WHERE a.del_flag = '0'
+        GROUP BY a.tenant_id
+        <choose>
+            <when test="sortBy == 'accuracy'">ORDER BY avgAccuracy DESC</when>
+            <when test="sortBy == 'favorites'">ORDER BY totalFavorites DESC</when>
+            <otherwise>ORDER BY avgSatisfaction DESC</otherwise>
+        </choose>
+    </select>
+
+    <!-- 当前用户有权限的已发布智能体数量
+         1. permission='public' 的智能体默认所有人可用
+         2. 其他智能体通过 ai_agent_permission 表判断权限
+         注意: 使用 EXISTS 子查询避免 LEFT JOIN 被多租户插件干扰 -->
+    <select id="selectAvailableCount" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM ai_agent a
+        WHERE a.del_flag = '0' AND a.status = 'published'
+          <if test="excludeTag != null and excludeTag != ''">
+              AND (a.tags IS NULL OR NOT JSON_CONTAINS(a.tags, JSON_QUOTE(#{excludeTag}), '$'))
+          </if>
+          AND (<include refid="accessibleCheck"/>)
+    </select>
+
+	<select id="selectPublishedCount" resultType="java.lang.Long">
+		SELECT COUNT(*)
+		FROM ai_agent a
+		WHERE a.del_flag = '0' AND a.status = 'published' AND a.source = #{source}
+		<if test="excludeTag != null and excludeTag != ''">
+			AND (a.tags IS NULL OR NOT JSON_CONTAINS(a.tags, JSON_QUOTE(#{excludeTag}), '$'))
+		</if>
+	</select>
+
+    <!-- 指定日期范围内的智能体相关对话数
+         注意：直接查询 ai_chat_record 表，仅单体模式可用 -->
+    <select id="selectCallCount" resultType="java.lang.Long">
+        SELECT COUNT(*)
+        FROM ai_chat_record
+        WHERE agent_id IS NOT NULL
+          AND create_time &gt;= #{startTime}
+          AND create_time &lt; #{endTime}
+          AND (del_flag IS NULL OR del_flag = '0')
+    </select>
+
+    <!-- 当前用户常用智能体(按会话维度去重统计使用次数)
+         注意：直接查询 ai_chat_record 表，仅单体模式可用 -->
+    <select id="selectUserTopAgents" resultType="com.deepdimen.matrix.discover.vo.AiUserTopAgentVO">
+        SELECT
+            r.agent_id AS agentId,
+            a.name,
+            a.avatar,
+            COUNT(DISTINCT IFNULL(r.conversation_id, r.record_id)) AS useCount
+        FROM ai_chat_record r
+        INNER JOIN ai_agent a ON a.id = r.agent_id AND a.del_flag = '0' AND a.status = 'published'
+        WHERE r.agent_id IS NOT NULL
+          AND r.username = #{username}
+          AND (r.del_flag IS NULL OR r.del_flag = '0')
+        GROUP BY r.agent_id, a.name, a.avatar
+        ORDER BY useCount DESC
+        LIMIT #{limit}
+    </select>
+
+    <resultMap id="aiAgentMarketResultMap" type="com.deepdimen.matrix.discover.vo.AiAgentMarketVO" autoMapping="true">
+        <id property="id" column="id" />
+        <result property="tags" column="tags"
+                typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler" />
+    </resultMap>
+
+    <!-- 市场智能体SQL分页查询（含实时满意度和收藏状态） -->
+    <select id="selectMarketPage" resultMap="aiAgentMarketResultMap">
+        SELECT
+            a.id, a.name, a.description, a.avatar, a.agent_type AS agentType,
+            a.dify_mode AS difyMode,
+            a.category, a.tags, a.status, a.market_config AS marketConfig,
+            a.use_count AS useCount, a.sort, a.source, a.permission, a.create_time AS createTime,
+            IFNULL(
+                (SELECT ROUND(SUM(CASE WHEN r.evaluate = 'like' THEN 1 ELSE 0 END) / COUNT(*), 3)
+                 FROM ai_chat_record r
+                 WHERE r.agent_id = a.id AND r.evaluate IS NOT NULL
+                 AND (r.del_flag IS NULL OR r.del_flag = '0')),
+                0
+            ) AS satisfaction,
+            EXISTS(
+                SELECT 1 FROM ai_collect c
+                WHERE c.target_id = a.id AND c.collect_type = 'agent'
+                AND c.user_id = #{userId}
+            ) AS favorited,
+            (SELECT COUNT(*) FROM ai_collect c3
+             WHERE c3.target_id = a.id AND c3.collect_type = 'agent'
+            ) AS collectCount,
+            (
+                <include refid="accessibleCheck"/>
+            ) AS `accessible`
+        FROM ai_agent a
+        WHERE a.del_flag = '0'
+            AND a.status = 'published'
+            <if test="keyword != null and keyword != ''">AND a.name LIKE CONCAT('%', #{keyword}, '%')</if>
+            <if test="category != null and category != ''">AND a.category = #{category}</if>
+            <if test="tag != null and tag != ''">
+                AND JSON_CONTAINS(a.tags, JSON_QUOTE(#{tag}), '$')
+            </if>
+			<if test="excludeTag != null and excludeTag != ''">
+				AND (a.tags IS NULL OR NOT JSON_CONTAINS(a.tags, JSON_QUOTE(#{excludeTag}), '$'))
+			</if>
+            <if test="accessible != null and accessible">
+                AND (<include refid="accessibleCheck"/>)
+            </if>
+            <if test="accessible != null and !accessible">
+                AND NOT (<include refid="accessibleCheck"/>)
+            </if>
+            <if test="source != null and source != ''">AND a.source = #{source}</if>
+            <if test="favoriteOnly">
+                AND EXISTS(SELECT 1 FROM ai_collect c2
+                    WHERE c2.target_id = a.id AND c2.collect_type = 'agent'
+                    AND c2.user_id = #{userId})
+            </if>
+        <choose>
+            <when test="sortBy == 'hot' or sortBy == 'hottest'">ORDER BY a.use_count DESC</when>
+            <when test="sortBy == 'rating'">ORDER BY satisfaction DESC</when>
+            <when test="sortBy == 'favorites'">ORDER BY collectCount DESC</when>
+            <when test="sortBy == 'latest'">ORDER BY a.create_time DESC</when>
+            <otherwise>ORDER BY a.sort DESC</otherwise>
+        </choose>
+    </select>
+
+    <!-- 批量查询智能体实时满意度(like数/总评价数) -->
+    <select id="selectAgentSatisfaction" resultType="java.util.HashMap">
+        SELECT
+            r.agent_id AS agentId,
+            CASE WHEN COUNT(*) = 0 THEN 0
+                 ELSE ROUND(SUM(CASE WHEN r.evaluate = 'like' THEN 1 ELSE 0 END) / COUNT(*), 3)
+            END AS satisfaction
+        FROM ai_chat_record r
+        WHERE r.evaluate IS NOT NULL
+          AND (r.del_flag IS NULL OR r.del_flag = '0')
+          AND r.agent_id IN
+          <foreach collection="agentIds" item="id" open="(" separator="," close=")">#{id}</foreach>
+        GROUP BY r.agent_id
+    </select>
+
+    <!-- 查询当前租户知识库名称，供 Dify 外部知识库同步使用 -->
+    <select id="selectDatasetNames" resultType="java.util.HashMap">
+        SELECT id, name
+        FROM ai_dataset
+        WHERE del_flag = '0'
+          AND id IN
+        <foreach collection="datasetIds" item="id" open="(" separator="," close=")">#{id}</foreach>
+    </select>
+
+</mapper>

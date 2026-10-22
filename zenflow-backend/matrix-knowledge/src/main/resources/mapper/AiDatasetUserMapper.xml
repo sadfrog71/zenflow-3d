@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiDatasetUserMapper">
+
+    <resultMap id="aiDatasetUserMap" type="com.deepdimen.matrix.knowledge.entity.AiDatasetUserEntity">
+        <id property="datasetId" column="dataset_id"/>
+        <id property="userId" column="user_id"/>
+    </resultMap>
+
+
+    <select id="selectDistinctDatasetId" resultType="java.lang.Long">
+        SELECT DISTINCT
+        dataset_id
+        FROM
+        ai_dataset_user
+        <where>
+            <if test="userId != null">
+                AND user_id = #{userId}
+            </if>
+        </where>
+    </select>
+</mapper>

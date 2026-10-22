@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22",
+  "scope": "Independent import snapshot; not full game acceptance",
+  "checks": {
+    "dependencyInstall": "PASS: existing locks, offline npm ci, no dependency upgrades",
+    "sceneBuild": "PASS: formerly external dependency now inside repository",
+    "sceneAssets": "PASS: 65 hashes, GLB references, textures and 14 viewpoint mappings",
+    "mobileTypecheck": "PASS",
+    "mobileTargetedTests": {
+      "suites": 5,
+      "passed": 25
+    },
+    "backendReactor": "BUILD SUCCESS (offline Maven)",
+    "backendTargetedTests": {
+      "suites": 4,
+      "passed": 35,
+      "skipped": 0
+    },
+    "secretScan": "PASS: gitleaks 8.30.1, zero findings after removing two embedded template auth values"
+  },
+  "modelNotes": "Current v053 master and export preserved separately from pinned v039 runtime source/export; no Blender source modified. Full model iterations and bulk evidence excluded.",
+  "notVerified": [
+    "new repository native Xcode build",
+    "actual simulator recording (prior input failure remains)",
+    "all game requirements and end-to-end acceptance",
+    "production deployment and migrations"
+  ]
+}

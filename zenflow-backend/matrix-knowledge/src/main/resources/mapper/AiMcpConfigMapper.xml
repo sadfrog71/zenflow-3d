@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiMcpConfigMapper">
+
+    <resultMap id="aiMcpConfigMap" type="com.deepdimen.matrix.knowledge.entity.AiMcpConfigEntity">
+        <id property="mcpId" column="mcp_id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="mcpType" column="mcp_type"/>
+        <result property="command" column="command"/>
+        <result property="parameters" column="parameters"/>
+        <result property="environmentVariables" column="environment_variables"/>
+        <result property="mcpEnabled" column="mcp_enabled"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+    </resultMap>
+</mapper>

@@ -1,0 +1,16 @@
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const esbuild = require('../../../zenflow-admin/node_modules/esbuild');
+const vendor = path.resolve(__dirname, 'three.module.min.js');
+if (!fs.existsSync(vendor)) throw new Error('Missing bundled Three.js vendor; restore scripts/zenflow/three.module.min.js first.');
+const script = esbuild.buildSync({entryPoints:[path.join(__dirname,'pond-scene.js')],bundle:true,write:false,format:'iife',minify:true,alias:{three:vendor}}).outputFiles[0].text;
+const floor = fs.readFileSync(path.join(__dirname, '../../assets/zenflow/pond/pond-floor.jpg')).toString('base64');
+const assetDir = path.join(__dirname, '../../assets/zenflow/pond');
+const koi = fs.readFileSync(path.join(assetDir,'koi-atlas.webp')).toString('base64');
+const stone = Object.fromEntries(['color','normal','roughness'].map(name=>[name,'data:image/jpeg;base64,'+fs.readFileSync(path.join(assetDir,`moss-${name}.jpg`)).toString('base64')]));
+const audio = Object.fromEntries(['drop','lap'].map(name=>[name,fs.readFileSync(path.join(assetDir,`water-${name==='drop'?'touch':name}.mp3`)).toString('base64')]));
+const html = fs.readFileSync(path.join(__dirname,'pond.html'),'utf8').replace('/* POND_CSS */',()=>fs.readFileSync(path.join(__dirname,'pond.css'),'utf8')).replace('/* POND_SCRIPT */',()=>`window.InvellePondFloor="data:image/jpeg;base64,${floor}";window.InvellePondKoi="data:image/webp;base64,${koi}";window.InvellePondAudio=${JSON.stringify(audio)};window.InvellePondStone=${JSON.stringify(stone)};\n${script}`);
+const revision = crypto.createHash('sha256').update(html).digest('hex').slice(0,16);
+fs.writeFileSync(path.join(__dirname,'../../src/features/zenflow/pond-source.json'),JSON.stringify({html,revision})+'\n');
+console.log('Built water garden:',revision);

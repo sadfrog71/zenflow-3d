@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiDatasourceMapper">
+
+  <resultMap id="aiDatasourceMap" type="com.deepdimen.matrix.knowledge.entity.AiDatasourceEntity">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="url" column="url"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="dsType" column="ds_type"/>
+        <result property="confType" column="conf_type"/>
+        <result property="dsName" column="ds_name"/>
+        <result property="instance" column="instance"/>
+        <result property="port" column="port"/>
+        <result property="host" column="host"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="tenantId" column="tenant_id"/>
+  </resultMap>
+</mapper>

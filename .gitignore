@@ -1,0 +1,32 @@
+# Dependencies, generated native apps and build outputs
+**/node_modules/
+**/target/
+**/dist/
+**/build/
+zenflow-mobile/ios/
+zenflow-mobile/android/
+**/.expo/
+**/Pods/
+**/DerivedData/
+**/__pycache__/
+**/coverage/
+**/.cache/
+**/.idea/
+# Credentials and runtime/private data
+**/.env*
+!**/.env.example
+**/.local-runtime/
+**/*.log
+**/*.db
+**/*.sqlite*
+**/*.p12
+**/*.pem
+**/*.key
+**/*.keystore
+**/*.mobileprovision
+**/*.xcresult/
+**/.DS_Store
+# Blender crash/backup files; selected source models are kept through LFS
+**/*.blend1
+**/*.blend2
+**/*.bak

@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Invelle",
+    "icon": "./assets/invelle-icon.png",
+    "slug": "zenflow",
+    "version": "0.1.0",
+    "orientation": "default",
+    "scheme": "zenflow",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "buildNumber": "28",
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleLocalizations": ["en", "zh-Hans"],
+        "NSMicrophoneUsageDescription": "仅在你主动开始时使用麦克风。语音输入转为文字；原声录音停止后加密保存到本机，不自动上传或转写。",
+        "NSSpeechRecognitionUsageDescription": "把你说的话转为文字；聊天会自动发送并回答，创作和记录会填入草稿。"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-asset",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "16.4"
+          }
+        }
+      ],
+      "./plugins/withQuotedReactNativeBuildScript",
+      "./plugins/withInvelleSiriVoiceNote",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "选择你希望在创作社区投稿中分享的图片。",
+          "cameraPermission": false,
+          "microphonePermission": "仅在你主动开始时使用麦克风。语音输入转为文字；原声录音停止后加密保存到本机，不自动上传或转写。"
+        }
+      ]
+    ]
+  }
+}

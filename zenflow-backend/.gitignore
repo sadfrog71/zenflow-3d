@@ -1,0 +1,15 @@
+**/target/
+.idea/
+*.iml
+*.log
+logs/
+.env
+.env.*
+*.pem
+*.p8
+*.p12
+*.key
+*.jks
+application-local.yml
+application-production.yml
+.DS_Store

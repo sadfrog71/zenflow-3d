@@ -1,0 +1,80 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /admin
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: @project.artifactId@
+  # 缓存相关配置
+  cache:
+    type: redis
+  # 上传文件大小限制
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  cloud:
+    discovery:
+      enabled: false
+    nacos:
+      config.enabled: false
+      discovery.enabled: false
+    gateway:
+      server.webflux:
+        enabled: false
+        redis.enabled: false
+    sentinel.enabled: false
+    openfeign.okhttp.enabled: true
+  freemarker: # freemarker 配置，授权码模式页面渲染使用
+    suffix: .ftl
+    template-loader-path: classpath:/templates/
+    request-context-attribute: request
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active: zenflow
+
+
+## spring security 对外暴露接口设置
+security:
+  micro: false
+  oauth2:
+    client:
+      ignore-urls:
+        - /token/login
+        - /error
+        - /zenflow/v1/auth/external/challenge
+        - /zenflow/v1/auth/external/complete
+        - /zenflow/v1/auth/policy
+        - /zenflow/v1/bootstrap
+        - /zenflow/v1/auth/email/challenges
+        - /zenflow/v1/auth/email/verifications
+        - /zenflow/v1/auth/registrations
+        - /zenflow/v1/auth/password-resets
+
+#--------------如下配置尽量不要变动-------------
+management.endpoints.access.default: none # 默认所有端点都不允许访问
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      where-strategy: not_empty
+      insert-strategy: not_empty
+      update-strategy: not_null
+  type-handlers-package: com.deepdimen.matrix.common.data.handler
+  configuration:
+    jdbc-type-for-null: 'null'
+    call-setters-on-nulls: true
+    shrink-whitespaces-in-sql: true
+# 查询以下前缀的表，不输出日志
+matrix.mybatis.skip-table:
+  - QRTZ_  #quartz 定时任务的表
+  - ACT_   #工作流相关的表

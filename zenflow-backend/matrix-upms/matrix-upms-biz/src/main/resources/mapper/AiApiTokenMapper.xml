@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deepdimen.matrix.admin.mapper.AiApiTokenMapper">
+
+    <!-- 统计租户下活跃 Token 数量 -->
+    <select id="countActiveByTenantId" resultType="long">
+        SELECT COUNT(*)
+        FROM ai_api_token
+        WHERE tenant_id = #{tenantId}
+          AND status = 'active'
+          AND del_flag = '0'
+    </select>
+
+    <select id="findValidById" resultType="com.deepdimen.matrix.admin.api.entity.AiApiTokenEntity">
+        SELECT *
+        FROM ai_api_token
+        WHERE id = #{id}
+          AND status = 'active'
+          AND del_flag = '0'
+          AND (expire_time IS NULL OR expire_time > NOW())
+    </select>
+
+    <!-- 根据 Token 值查询有效 Token（status=active 且未过期） -->
+    <select id="findValidByTokenValue" resultType="com.deepdimen.matrix.admin.api.entity.AiApiTokenEntity">
+        SELECT *
+        FROM ai_api_token
+        WHERE token_value = #{tokenValue}
+          AND status = 'active'
+          AND del_flag = '0'
+          AND (expire_time IS NULL OR expire_time > NOW())
+    </select>
+
+    <!-- 查询租户下第一个有效的 API Token -->
+    <select id="findFirstActiveByTenantId" resultType="com.deepdimen.matrix.admin.api.entity.AiApiTokenEntity">
+        SELECT *
+        FROM ai_api_token
+        WHERE tenant_id = #{tenantId}
+          AND status = 'active'
+          AND del_flag = '0'
+          AND (expire_time IS NULL OR expire_time > NOW())
+        ORDER BY create_time ASC
+        LIMIT 1
+    </select>
+
+</mapper>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiDatasetMapper">
+
+    <select id="getAiDatasetPage" resultType="com.deepdimen.matrix.knowledge.entity.AiDatasetEntity">
+        SELECT
+        d.id,
+        d.name,
+        d.avatar_url,
+        d.description,
+        d.collection_name,
+        d.file_size,
+        d.multi_round,
+        d.top_k,
+        d.score,
+        d.sort_order,
+        d.fragment_size,
+        d.empty_desc,
+        d.sensitive_flag,
+        d.sensitive_msg,
+        d.welcome_msg,
+        d.public_flag,
+        d.public_password,
+        d.embedding_model,
+        d.summary_model,
+        d.pre_summary,
+        d.pre_compress,
+        d.ai_ocr_flag,
+        d.del_flag,
+        d.create_time,
+        d.update_time,
+        d.create_by,
+        d.update_by,
+        d.footer,
+        d.standard_flag,
+        d.visibility,
+        d.category,
+        d.ai_tag_flag,
+        d.tags,
+        d.reranker_model,
+        (SELECT COUNT(*) FROM ai_document doc WHERE doc.dataset_id = d.id AND doc.del_flag = '0') AS units
+        FROM ai_dataset d
+        WHERE d.del_flag = '0'
+        ORDER BY d.create_time DESC
+    </select>
+
+    <select id="listAccessibleWithUnits" resultType="com.deepdimen.matrix.knowledge.entity.AiDatasetEntity">
+        SELECT
+        d.id,
+        d.tenant_id,
+        d.name,
+        d.avatar_url,
+        d.description,
+        d.collection_name,
+        d.store_id,
+        d.file_size,
+        d.multi_round,
+        d.top_k,
+        d.score,
+        d.sort_order,
+        d.fragment_size,
+        d.empty_llm_flag,
+        d.empty_desc,
+        d.sensitive_flag,
+        d.sensitive_msg,
+        d.welcome_msg,
+        d.public_flag,
+        d.public_password,
+        d.visibility,
+        d.embedding_model,
+        d.summary_model,
+        d.reranker_model,
+        d.pre_summary,
+        d.pre_compress,
+        d.ai_ocr_flag,
+        d.del_flag,
+        d.create_time,
+        d.update_time,
+        d.create_by,
+        d.update_by,
+        d.footer,
+        d.standard_flag,
+        d.ai_tag_flag,
+        d.tags,
+        (SELECT COUNT(*) FROM ai_document doc
+          WHERE doc.dataset_id = d.id
+            AND doc.tenant_id = #{tenantId}
+            AND doc.del_flag = '0') AS units
+        FROM ai_dataset d
+        WHERE d.del_flag = '0'
+          AND d.tenant_id = #{tenantId}
+          AND d.id IN
+        <foreach collection="datasetIds" item="datasetId" open="(" separator="," close=")">
+            #{datasetId}
+        </foreach>
+        ORDER BY d.sort_order DESC, d.create_time DESC
+    </select>
+</mapper>

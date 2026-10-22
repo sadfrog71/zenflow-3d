@@ -1,0 +1,45 @@
+# 此间独立服务配置。缺少必要环境变量时 Spring 启动失败。
+liteflow:
+  # Invelle uses the managed assistant runtime; legacy knowledge flow nodes are not assembled.
+  enable: false
+spring:
+  task:
+    scheduling:
+      pool:
+        size: 3
+      thread-name-prefix: invelle-scheduled-
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: ${ZENFLOW_DB_URL}
+      username: ${ZENFLOW_DB_USER}
+      password: ${ZENFLOW_DB_PASSWORD}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-wait: 10000
+      connect-timeout: 5000
+      socket-timeout: 15000
+  data:
+    redis:
+      host: ${ZENFLOW_REDIS_HOST}
+      port: ${ZENFLOW_REDIS_PORT:6379}
+      password: ${ZENFLOW_REDIS_PASSWORD}
+zenflow:
+  product:
+    tenant-id: ${ZENFLOW_TENANT_ID}
+    oauth-client-id: ${ZENFLOW_OAUTH_CLIENT_ID}
+    email-from: ${ZENFLOW_EMAIL_FROM:}
+    auth-hmac-key: ${ZENFLOW_AUTH_HMAC_KEY}
+    public-base-url: ${ZENFLOW_PUBLIC_BASE_URL:http://127.0.0.1:9999}
+    oauth-issuer: ${ZENFLOW_OAUTH_ISSUER:http://127.0.0.1:9999/admin}
+  external:
+    providers:
+      google:
+        enabled: ${ZENFLOW_GOOGLE_ENABLED:false}
+        audience: ${ZENFLOW_GOOGLE_WEB_CLIENT_ID:}
+        client-secret: ${ZENFLOW_GOOGLE_CLIENT_SECRET:}
+      facebook:
+        enabled: ${ZENFLOW_FACEBOOK_ENABLED:false}
+        audience: ${ZENFLOW_META_APP_ID:}
+      apple:
+        enabled: ${ZENFLOW_APPLE_ENABLED:false}
+        audience: ${ZENFLOW_APPLE_BUNDLE_ID:}

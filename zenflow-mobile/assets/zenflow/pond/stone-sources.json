@@ -1,0 +1,29 @@
+[
+  {
+    "file": "moss-color.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_diff_1k.jpg",
+    "sha256": "f8aa5cd3ff053fa2025dd55ca49cc83a57b201a0bfbd68c120052d90ae69c445",
+    "license": "CC0",
+    "asset": "mossy_rock",
+    "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+    "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/color.jpg"
+  },
+  {
+    "file": "moss-normal.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+    "sha256": "c2f71b0d152b06d1e0d57f66e22004c109a90ec00482457e0d481f7a6e211be3",
+    "license": "CC0",
+    "asset": "mossy_rock",
+    "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+    "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/normal.jpg"
+  },
+  {
+    "file": "moss-roughness.jpg",
+    "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/mossy_rock/mossy_rock_rough_1k.jpg",
+    "sha256": "b42e62800ac9d1692b6fbb9eb1cd744995ae14812d4039093b5171db2746457e",
+    "license": "CC0",
+    "asset": "mossy_rock",
+    "conversion": "512px JPEG quality 82 for mobile texture memory and transfer budget",
+    "reusedFrom": "docs/prototypes/reading-room/assets/mossy_rock/roughness.jpg"
+  }
+]

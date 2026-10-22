@@ -1,0 +1,128 @@
+/*
+ *    Copyright (c) 2018-2025, deepdimen All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ * Neither the name of the deepdimen.com developer nor the names of its
+ * contributors may be used to endorse or promote products derived from
+ * this software without specific prior written permission.
+ * Author: caoyuan (caoyuanchn@gmail.com)
+ */
+
+package com.deepdimen.matrix.admin.service;
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.deepdimen.matrix.admin.api.dto.SysTenantUserDTO;
+import com.deepdimen.matrix.admin.api.dto.UserDTO;
+import com.deepdimen.matrix.admin.api.entity.SysTenant;
+import com.deepdimen.matrix.admin.api.entity.SysUser;
+import com.deepdimen.matrix.common.core.util.R;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * 租户管理
+ *
+ * @author caoyuan
+ * @date 2019-05-15 15:55:41
+ */
+public interface SysTenantService extends IService<SysTenant> {
+
+	/**
+	 * 获取正常的租户列表
+	 * @return 正常的租户列表
+	 */
+	List<SysTenant> getNormalTenant();
+
+	/**
+	 * 保存租户信息
+	 * @param sysTenant 租户信息对象
+	 * @return 保存是否成功
+	 */
+	Boolean saveTenant(SysTenant sysTenant);
+
+	/**
+	 * 修改租户信息
+	 * @param sysTenant 租户信息对象
+	 * @return 修改是否成功
+	 */
+	Boolean updateTenant(SysTenant sysTenant);
+
+	/**
+	 * 获取用户所属租户列表
+	 * @return 用户所属租户列表
+	 */
+	List<SysTenant> getUserTenant();
+
+	/**
+	 * 获取用户租户分页信息
+	 * @param page 分页参数
+	 * @param userDTO 用户信息
+	 * @return 用户租户分页结果
+	 */
+	Page getUserTenantPage(Page page, UserDTO userDTO);
+
+	/**
+	 * 移除租户用户
+	 * @param tenantUserDTO 租户用户信息
+	 * @return 是否移除成功
+	 */
+	Boolean removeTenantUser(SysTenantUserDTO tenantUserDTO);
+
+	/**
+	 * 根据用户信息查询租户用户列表
+	 * @param userDTO 用户信息传输对象
+	 * @return 租户用户列表
+	 */
+	List<SysUser> listTenantUser(UserDTO userDTO);
+
+	/**
+	 * 保存租户用户信息
+	 * @param tenantUserDTO 租户用户信息DTO
+	 * @return 保存是否成功
+	 */
+	Boolean saveTenantUser(SysTenantUserDTO tenantUserDTO);
+
+	/**
+	 * 获取租户角色列表
+	 * @param userDTO 用户信息
+	 * @return 租户角色列表
+	 */
+	Map<String, Object> listTenantOrg(UserDTO userDTO);
+
+	/**
+	 * 移除租户
+	 * @param ids 租户ID列表
+	 * @return 是否移除成功
+	 */
+	Boolean removeTenant(Long[] ids);
+
+	/**
+	 * 更新用户租户信息
+	 * @param userDto 用户数据传输对象
+	 * @return 更新结果
+	 */
+	R updateUserTenant(UserDTO userDto);
+
+	/**
+	 * 校验用户是否可切换到目标租户。
+	 * @param userId 用户 ID
+	 * @param tenantId 目标租户 ID
+	 * @return 租户有效且用户已授权时返回 true
+	 */
+	boolean canUserAccessTenant(Long userId, Long tenantId);
+
+	/**
+	 * 检查或更新租户信息
+	 */
+	Long getOrUpdateTenant();
+
+}

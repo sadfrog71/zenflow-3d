@@ -1,0 +1,15 @@
+{
+  "author": "LobeHub",
+  "createdAt": "2023-08-15",
+  "homepage": "https://github.com/lobehub/chat-plugin-search-engine",
+  "identifier": "search-engine",
+  "manifest": "https://search-engine.chat-plugin.lobehub.com/manifest.json",
+  "meta": {
+    "avatar": "🔍",
+    "tags": ["web", "search"],
+    "title": "Search Engine",
+    "description": "Query search engine to get information",
+    "category": "web-search"
+  },
+  "schemaVersion": 1
+}

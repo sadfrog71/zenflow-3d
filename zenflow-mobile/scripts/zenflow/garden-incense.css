@@ -1,0 +1,10 @@
+.garden-incense{position:fixed;right:max(20px,env(safe-area-inset-right));top:45%;width:86px;height:196px;z-index:2;pointer-events:none;filter:drop-shadow(0 7px 8px #21372b25)}
+.garden-incense svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:none}
+.garden-incense [data-incense-stick]{stroke:#866044;stroke-width:3;stroke-linecap:butt}
+.garden-incense [data-incense-ember]{fill:#d99260;filter:drop-shadow(0 0 3px #e8b97a)}
+.garden-incense .incense-wisp{stroke:#f4f1de;stroke-width:1.3;fill:none;opacity:.55;animation:incense-drift 7s ease-in-out infinite;transform-origin:43px 44px}
+.garden-incense.burned [data-incense-stick],.garden-incense.burned [data-incense-ember],.garden-incense.burned [data-incense-smoke]{visibility:hidden}
+@keyframes incense-drift{0%,100%{transform:translateX(-2px) scaleX(.9);opacity:.3}50%{transform:translateX(3px) scaleX(1.1);opacity:.65}}
+.invelle-still .garden-incense .incense-wisp{animation:none}
+@media(prefers-reduced-motion:reduce){.garden-incense .incense-wisp{animation:none}}
+@media(max-height:560px){.garden-incense{top:29%;height:160px;width:70px}}

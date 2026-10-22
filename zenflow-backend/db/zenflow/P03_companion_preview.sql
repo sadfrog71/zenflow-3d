@@ -1,0 +1,33 @@
+-- Independent P1 administrator preview. Preflight and backup before applying once.
+-- No consumer account, capsule, memory or personal source foreign keys are present.
+CREATE TABLE `zf_companion_preview` (
+  `id` BIGINT NOT NULL,
+  `tenant_id` BIGINT NOT NULL,
+  `administrator_id` BIGINT NOT NULL,
+  `companion_revision_id` BIGINT NOT NULL,
+  `skill_release_id` BIGINT NOT NULL,
+  `release_digest` CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `model_id` VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `model_config_digest` CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `skill_binding_id` BIGINT NULL,
+  `binding_revision_id` BIGINT NULL,
+  `session_id` VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NULL,
+  `run_id` VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NULL,
+  `locale` VARCHAR(8) NOT NULL,
+  `question` TEXT NOT NULL COMMENT 'Administrator manually supplied test question',
+  `history_json` JSON NOT NULL COMMENT 'Only manually supplied bounded test history',
+  `input_digest` CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `reference_selection_json` JSON NULL COMMENT 'Frozen public IDs and hashes selected for this preview',
+  `skill_run_id` VARCHAR(64) CHARACTER SET ascii COLLATE ascii_bin NULL,
+  `validated_result_hash` CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NULL,
+  `status` VARCHAR(16) NOT NULL DEFAULT 'CREATED' COMMENT 'CREATED/ACTIVE/COMPLETED/CANCELLED/FAILED',
+  `expires_at` DATETIME(3) NOT NULL,
+  `created_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updated_at` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_preview_session` (`tenant_id`,`session_id`),
+  UNIQUE KEY `uk_preview_run` (`tenant_id`,`run_id`),
+  UNIQUE KEY `uk_preview_binding` (`tenant_id`,`skill_binding_id`),
+  KEY `ix_preview_administrator` (`tenant_id`,`administrator_id`,`created_at`),
+  KEY `ix_preview_expiry` (`status`,`expires_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='Isolated ADMIN_USER companion trial';

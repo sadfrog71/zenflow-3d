@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.deepdimen.matrix.knowledge.mapper.AiStorageFileMapper">
+
+  <resultMap id="aiStorageFileMap" type="com.deepdimen.matrix.knowledge.entity.AiStorageFileEntity">
+        <id property="id" column="id"/>
+        <result property="fileName" column="file_name"/>
+        <result property="fileType" column="file_type"/>
+        <result property="fileSize" column="file_size"/>
+        <result property="fileUrl" column="file_url"/>
+        <result property="thumbnailUrl" column="thumbnail_url"/>
+        <result property="groupId" column="group_id"/>
+        <result property="storagePath" column="storage_path"/>
+        <result property="md5" column="md5"/>
+        <result property="width" column="width"/>
+        <result property="height" column="height"/>
+        <result property="duration" column="duration"/>
+        <result property="extInfo" column="ext_info"/>
+        <result property="aiTags" column="ai_tags"/>
+        <result property="aiContent" column="ai_content"/>
+        <result property="aiAnalyzed" column="ai_analyzed"/>
+        <result property="viewCount" column="view_count"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="tenantId" column="tenant_id"/>
+  </resultMap>
+</mapper>

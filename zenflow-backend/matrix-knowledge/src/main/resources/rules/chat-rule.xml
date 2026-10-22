@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow>
+    <chain name="chat">
+        THEN(
+        // 敏感词判断，触发直接退出流程
+        sensitive,
+        // 判断是否执行风控规则，触发直接退出流程;  内部调用按用户名+总量控制，外部调用按IP+总量控制
+        IF(isNoLimit, noLimit, IF(isInner, WHEN(user,tokens), WHEN(ip,tokens)))
+        );
+    </chain>
+</flow>
+
